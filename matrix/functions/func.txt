@@ -1,0 +1,43 @@
+FUNCTIONS
+mpdl, PDL::Matrix::pdl
+
+constructs an object of class PDL::Matrix which is a piddle child class.
+
+    $m = mpdl [[1,2,3],[4,5,6]];
+    $m = PDL::Matrix->pdl([[1,2,3],[4,5,6]]);
+
+mzeroes, mones, msequence
+
+constructs a PDL::Matrix object similar to the piddle constructors zeroes, ones, sequence.
+vpdl
+
+constructs an object of class PDL::Matrix which is of matrix dimensions (n x 1)
+
+    print $v = vpdl [0,1];
+    [
+     [0]
+     [1]
+    ]
+
+vzeroes, vones, vsequence
+
+constructs a PDL::Matrix object with matrix dimensions (n x 1), therefore only the first
+scalar argument is used.
+
+    print $v = vsequence(2);
+    [
+     [0]
+     [1]
+    ]
+
+kroneckerproduct
+
+returns kroneckerproduct of two matrices. This is not efficiently implemented.
+det_general
+
+returns a generalized determinant of a matrix. If the matrix is not regular, one can specify
+the rank of the matrix and the corresponding subdeterminant is returned. This is implemented
+using the eigens function.
+trace
+
+returns the trace of a matrix (sum of diagonals)

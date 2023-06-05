@@ -1,0 +1,4 @@
+NOTES
+
+As of version 0.5 (rewrite by CED) the matrices are stored in the usual way, just constructed and
+stringified differently. That way indexing and everything else works the way you think it should.

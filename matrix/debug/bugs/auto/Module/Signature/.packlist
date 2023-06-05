@@ -1,0 +1,4 @@
+/usr/local/bin/cpansign
+/usr/local/man/man1/cpansign.1p
+/usr/local/man/man3/Module::Signature.3pm
+/usr/local/share/perl/5.30.0/Module/Signature.pm

@@ -1,0 +1,8 @@
+Furthermore one can construct and use vectors as n x 1 matrices without mentioning the
+second index '1'.
+Implementation
+
+PDL::Matrix works by overloading a number of PDL constructors and methods such that first and
+second args (corresponding to first and second dims of corresponding matrices) are effectively
+swapped. It is not yet clear if PDL::Matrix achieves a consistent column-major look-and-feel
+in this way.

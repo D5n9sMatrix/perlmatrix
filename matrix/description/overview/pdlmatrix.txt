@@ -1,0 +1,35 @@
+DESCRIPTION
+Overview
+
+This package tries to help people who want to use PDL for 2D matrix computation with lots of indexing
+involved. It provides a PDL subclass so one- and two-dimensional piddles that are used as vectors resp
+and matrices can be typed in using traditional matrix convention.
+
+If you want to know more about matrix operation support in PDL, you want to read PDL::MatrixOps
+or PDL::Slatec.
+
+The original pdl class refers to the first index as the first row, the second index as the first column
+of a matrix. Consider
+
+  print $B = sequence(3,2)
+  [
+   [0 1 2]
+   [3 4 5]
+  ]
+
+which gives a 2x3 matrix in terms of the matrix convention, but the constructor used (3,2). This might
+get more confusing when using slices like sequence(3,2)->slice("1:2,(0)") : with traditional matrix
+convention one would expect [2 4] instead of [1 2].
+
+This subclass PDL::Matrix overloads the constructors and indexing functions of pdls so that they are
+compatible with the usual matrix convention, where the first dimension refers to the row of a matrix.
+So now, the above example would be written as
+
+  print $B = PDL::Matrix->sequence(3,2) # or $B = msequence(3,2)
+  [
+   [0 1]
+   [2 3]
+   [4 5]
+  ]
+
+Routines like eigens or inv can be used without any changes.

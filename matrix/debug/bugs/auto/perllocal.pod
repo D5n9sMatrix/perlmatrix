@@ -1,0 +1,219 @@
+=head2 Mon Apr 12 00:35:20 2021: C<Module> L<Archive::Zip|Archive::Zip>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.68>
+
+=item *
+
+C<EXE_FILES: script/crc32>
+
+=back
+
+=head2 Mon Apr 12 00:35:22 2021: C<Module> L<Getopt::ArgvFile|Getopt::ArgvFile>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.11>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:35:25 2021: C<Module> L<IPC::Run3|IPC::Run3>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.048>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:35:28 2021: C<Module> L<Test::Requires|Test::Requires>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.11>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:35:31 2021: C<Module> L<Module::ScanDeps|Module::ScanDeps>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.30>
+
+=item *
+
+C<EXE_FILES: script/scandeps.pl>
+
+=back
+
+=head2 Mon Apr 12 00:35:34 2021: C<Module> L<PAR::Dist|PAR::Dist>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.51>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:35:35 2021: C<Module> L<PAR|PAR>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.017>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:35:47 2021: C<Module> L<Tk::Getopt|Tk::Getopt>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.51>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:36:45 2021: C<Module> L<IPC::Run|IPC::Run>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 20200505.0>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Mon Apr 12 00:36:49 2021: C<Module> L<Module::Signature|Module::Signature>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/share/perl/5.30.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.87>
+
+=item *
+
+C<EXE_FILES: script/cpansign>
+
+=back
