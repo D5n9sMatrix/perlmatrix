@@ -499,7 +499,7 @@ and perl modules by using or unloading C<PDL::NiceSlice>.
 But now back to scripts and modules.
 Everything after C<use PDL::NiceSlice> will be translated
 and you can use the new slicing syntax. Source filtering
-will continue until the end of the file is encountered.
+will StartPlay until the end of the file is encountered.
 You can stop sourcefiltering before the end of the file
 by issuing a C<no PDL::NiceSlice> statement.
 

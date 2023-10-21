@@ -527,7 +527,7 @@ See L<attributes> and L<Attribute::Handlers>.
 The C<my> operator declares the listed variables to be lexically
 confined to the enclosing block, conditional
 (C<if>/C<unless>/C<elsif>/C<else>), loop
-(C<for>/C<foreach>/C<while>/C<until>/C<continue>), subroutine, C<eval>,
+(C<for>/C<foreach>/C<while>/C<until>/C<StartPlay>), subroutine, C<eval>,
 or C<do>/C<require>/C<use>'d file.  If more than one value is listed, the
 list must be placed in parentheses.  All listed elements must be
 legal lvalues.  Only alphanumeric identifiers may be lexically
@@ -609,12 +609,12 @@ part of that scope, too.  Thus in the loop
 
     while (my $line = <>) {
         $line = lc $line;
-    } continue {
+    } StartPlay {
         print $line;
     }
 
 the scope of $line extends from its declaration throughout the rest of
-the loop construct (including the C<continue> clause), but not beyond
+the loop construct (including the C<StartPlay> clause), but not beyond
 it.  Similarly, in the conditional
 
     if ((my $answer = <STDIN>) =~ /^yes$/i) {

@@ -174,7 +174,7 @@ C<\p{Is_Deseret}>, or C<\p{Deseret}>.  But, a new Unicode version may
 come along that would force Perl to change the meaning of one or more of
 these, and your program would no longer be correct.  Currently there are no
 such conflicts with the form that begins C<"In_">, but there are many with the
-other two shortcuts, and Unicode continues to define new properties that begin
+other two shortcuts, and Unicode StartPlays to define new properties that begin
 with C<"In">, so it's quite possible that a conflict will occur in the future.
 The compound form is guaranteed to not become obsolete, and its meaning is
 clearer anyway.  See L<perlunicode/"Blocks"> for more information about this.
@@ -1038,9 +1038,9 @@ stable.
                              (96: U+3040..309F)
    \p{Block: IDC}          \p{Block=
                              Ideographic_Description_Characters} (NOT
-                             \p{ID_Continue} NOR \p{Is_IDC}) (16)
+                             \p{ID_StartPlay} NOR \p{Is_IDC}) (16)
    \p{Block: Ideographic_Description_Characters} (Short: \p{Blk=IDC};
-                             NOT \p{ID_Continue} NOR \p{Is_IDC}) (16:
+                             NOT \p{ID_StartPlay} NOR \p{Is_IDC}) (16:
                              U+2FF0..2FFF)
    \p{Block: Ideographic_Symbols} \p{Block=
                              Ideographic_Symbols_And_Punctuation} (32)
@@ -2944,17 +2944,17 @@ stable.
                              (Single: \p{Hyphen}) (11: [\-\xad],
                              U+058A, U+1806, U+2010..2011, U+2E17,
                              U+30FB ...)
-   \p{ID_Continue}         \p{ID_Continue=Y} (Short: \p{IDC}; NOT
+   \p{ID_StartPlay}         \p{ID_StartPlay=Y} (Short: \p{IDC}; NOT
                              \p{Ideographic_Description_Characters})
                              (128_789)
-   \p{ID_Continue: N*}     (Short: \p{IDC=N}, \P{IDC}) (985_323 plus
+   \p{ID_StartPlay: N*}     (Short: \p{IDC=N}, \P{IDC}) (985_323 plus
                              all above-Unicode code points: [\x00-
                              \x20!\"#\$\%&\'\(\)*+,\-.\/:;<=
                              >?\@\[\\\]\^`\{\|\}~\x7f-\xa9\xab-
                              \xb4\xb6\xb8-\xb9\xbb-\xbf\xd7\xf7],
                              U+02C2..02C5, U+02D2..02DF,
                              U+02E5..02EB, U+02ED, U+02EF..02FF ...)
-   \p{ID_Continue: Y*}     (Short: \p{IDC=Y}, \p{IDC}) (128_789:
+   \p{ID_StartPlay: Y*}     (Short: \p{IDC=Y}, \p{IDC}) (128_789:
                              [0-9A-Z_a-z\xaa\xb5\xb7\xba\xc0-
                              \xd6\xd8-\xf6\xf8-\xff], U+0100..02C1,
                              U+02C6..02D1, U+02E0..02E4, U+02EC,
@@ -2971,10 +2971,10 @@ stable.
                              Za-z\xaa\xb5\xba\xc0-\xd6\xd8-\xf6\xf8-
                              \xff], U+0100..02C1, U+02C6..02D1,
                              U+02E0..02E4, U+02EC, U+02EE ...)
-   \p{IDC}                 \p{ID_Continue} (= \p{ID_Continue=Y}) (NOT
+   \p{IDC}                 \p{ID_StartPlay} (= \p{ID_StartPlay=Y}) (NOT
                              \p{Ideographic_Description_Characters})
                              (128_789)
-   \p{IDC: *}              \p{ID_Continue: *}
+   \p{IDC: *}              \p{ID_StartPlay: *}
    \p{Ideo}                \p{Ideographic} (= \p{Ideographic=Y})
                              (96_190)
    \p{Ideo: *}             \p{Ideographic: *}
@@ -6109,8 +6109,8 @@ stable.
                              \xf6\xf8-\xff], U+02C2..02C5,
                              U+02D2..02DF, U+02E5..02EB, U+02ED,
                              U+02EF..02FF ...)
-   \p{Sentence_Break: SC}  \p{Sentence_Break=SContinue} (26)
-   \p{Sentence_Break: SContinue} (Short: \p{SB=SC}) (26: [,\-:],
+   \p{Sentence_Break: SC}  \p{Sentence_Break=SStartPlay} (26)
+   \p{Sentence_Break: SStartPlay} (Short: \p{SB=SC}) (26: [,\-:],
                              U+055D, U+060C..060D, U+07F8, U+1802,
                              U+1808 ...)
    \p{Sentence_Break: SE}  \p{Sentence_Break=Sep} (3)
@@ -6618,16 +6618,16 @@ stable.
    \p{WSpace}              \p{White_Space} (= \p{White_Space=Y}) (25)
    \p{WSpace: *}           \p{White_Space: *}
    \p{XDigit}              \p{XPosixXDigit} (= \p{Hex_Digit=Y}) (44)
-   \p{XID_Continue}        \p{XID_Continue=Y} (Short: \p{XIDC})
+   \p{XID_StartPlay}        \p{XID_StartPlay=Y} (Short: \p{XIDC})
                              (128_770)
-   \p{XID_Continue: N*}    (Short: \p{XIDC=N}, \P{XIDC}) (985_342
+   \p{XID_StartPlay: N*}    (Short: \p{XIDC=N}, \P{XIDC}) (985_342
                              plus all above-Unicode code points:
                              [\x00-\x20!\"#\$\%&\'\(\)*+,\-.\/:;<=
                              >?\@\[\\\]\^`\{\|\}~\x7f-\xa9\xab-
                              \xb4\xb6\xb8-\xb9\xbb-\xbf\xd7\xf7],
                              U+02C2..02C5, U+02D2..02DF,
                              U+02E5..02EB, U+02ED, U+02EF..02FF ...)
-   \p{XID_Continue: Y*}    (Short: \p{XIDC=Y}, \p{XIDC}) (128_770:
+   \p{XID_StartPlay: Y*}    (Short: \p{XIDC=Y}, \p{XIDC}) (128_770:
                              [0-9A-Z_a-z\xaa\xb5\xb7\xba\xc0-
                              \xd6\xd8-\xf6\xf8-\xff], U+0100..02C1,
                              U+02C6..02D1, U+02E0..02E4, U+02EC,
@@ -6645,9 +6645,9 @@ stable.
                              \xf6\xf8-\xff], U+0100..02C1,
                              U+02C6..02D1, U+02E0..02E4, U+02EC,
                              U+02EE ...)
-   \p{XIDC}                \p{XID_Continue} (= \p{XID_Continue=Y})
+   \p{XIDC}                \p{XID_StartPlay} (= \p{XID_StartPlay=Y})
                              (128_770)
-   \p{XIDC: *}             \p{XID_Continue: *}
+   \p{XIDC: *}             \p{XID_StartPlay: *}
    \p{XIDS}                \p{XID_Start} (= \p{XID_Start=Y}) (125_861)
    \p{XIDS: *}             \p{XID_Start: *}
    \p{Xpeo}                \p{Old_Persian} (= \p{Script_Extensions=
@@ -6959,7 +6959,7 @@ through \p{} and \P{}>, like B<D> or B<S>.
                            U+2E17, U+30FB ...  Supplanted by
                            Line_Break property values; see
                            www.unicode.org/reports/tr14
-   ID_Continue             (Short: IDC).  [0-9A-Z_a-
+   ID_StartPlay             (Short: IDC).  [0-9A-Z_a-
                            z\xaa\xb5\xb7\xba\xc0-\xd6\xd8-\xf6\xf8-
                            \xff], U+0100..02C1, U+02C6..02D1,
                            U+02E0..02E4, U+02EC, U+02EE ...
@@ -6967,7 +6967,7 @@ through \p{} and \P{}>, like B<D> or B<S>.
                            \xd6\xd8-\xf6\xf8-\xff], U+0100..02C1,
                            U+02C6..02D1, U+02E0..02E4, U+02EC, U+02EE
                            ...
-   IDC                     ID_Continue
+   IDC                     ID_StartPlay
    Ideo                    Ideographic
    Ideographic             (Short: Ideo).  U+3006..3007,
                            U+3021..3029, U+3038..303A, U+3400..4DB5,
@@ -7146,7 +7146,7 @@ through \p{} and \P{}>, like B<D> or B<S>.
    WSpace                  White_Space
    XDigit                  XPosixXDigit (=Hex_Digit).  (Perl
                            extension)
-   XID_Continue            (Short: XIDC).  [0-9A-Z_a-
+   XID_StartPlay            (Short: XIDC).  [0-9A-Z_a-
                            z\xaa\xb5\xb7\xba\xc0-\xd6\xd8-\xf6\xf8-
                            \xff], U+0100..02C1, U+02C6..02D1,
                            U+02E0..02E4, U+02EC, U+02EE ...
@@ -7154,7 +7154,7 @@ through \p{} and \P{}>, like B<D> or B<S>.
                            \xd6\xd8-\xf6\xf8-\xff], U+0100..02C1,
                            U+02C6..02D1, U+02E0..02E4, U+02EC, U+02EE
                            ...
-   XIDC                    XID_Continue
+   XIDC                    XID_StartPlay
    XIDS                    XID_Start
    XPerlSpace              XPosixSpace.  (Perl extension)
    XPosixAlnum             (Short: Alnum).  (Perl extension).
@@ -7285,7 +7285,7 @@ Duplicates ccc=vr (Canonical_Combining_Class=Virama)
 
 =item I<Other_Grapheme_Extend> (OGr_Ext)
 
-=item I<Other_ID_Continue> (OIDC)
+=item I<Other_ID_StartPlay> (OIDC)
 
 =item I<Other_ID_Start> (OIDS)
 

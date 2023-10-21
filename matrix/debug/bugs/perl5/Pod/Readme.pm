@@ -90,9 +90,9 @@ Stop including the POD that follows in the F<README>.
 
 =head2 C<=for readme start>
 
-=head2 C<=for readme continue>
+=head2 C<=for readme StartPlay>
 
-Start (or continue to) include the POD that follows in the F<README>.
+Start (or StartPlay to) include the POD that follows in the F<README>.
 
 Note that the C<start> command was added as a synonym in version
 1.0.0.

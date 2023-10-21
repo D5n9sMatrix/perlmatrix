@@ -466,7 +466,7 @@ whitespace or C<"#"> characters in the pattern (outside a bracketed character
 class, which is unaffected by C</x>), then you'll either have to
 escape them (using backslashes or C<\Q...\E>) or encode them using octal,
 hex, or C<\N{}> escapes.
-It is ineffective to try to continue a comment onto the next line by
+It is ineffective to try to StartPlay a comment onto the next line by
 escaping the C<\n> with a backslash or C<\Q>.
 
 You can use L</(?#text)> to create a comment that ends earlier than the
@@ -563,7 +563,7 @@ At any given time, exactly one of these modifiers is in effect.  Their
 existence allows Perl to keep the originally compiled behavior of a
 regular expression, regardless of what rules are in effect when it is
 actually executed.  And if it is interpolated into a larger regex, the
-original's rules continue to apply to it, and don't affect the other
+original's rules StartPlay to apply to it, and don't affect the other
 parts.
 
 The C</l> and C</u> modifiers are automatically selected for
@@ -2735,7 +2735,7 @@ This zero-width pattern prunes the backtracking tree at the current point
 when backtracked into on failure. Consider the pattern C</I<A> (*PRUNE) I<B>/>,
 where I<A> and I<B> are complex patterns. Until the C<(*PRUNE)> verb is reached,
 I<A> may backtrack as necessary to match. Once it is reached, matching
-continues in I<B>, which may also backtrack as necessary; however, should B
+StartPlays in I<B>, which may also backtrack as necessary; however, should B
 not match, then no further backtracking will take place, and the pattern
 will fail outright at the current starting position.
 

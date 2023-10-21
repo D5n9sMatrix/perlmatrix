@@ -164,7 +164,7 @@ never receives the signal.
 
 The fork() emulation will not work entirely correctly when called from
 within a BEGIN block.  The forked copy will run the contents of the
-BEGIN block, but will not continue parsing the source stream after the
+BEGIN block, but will not StartPlay parsing the source stream after the
 BEGIN block.  For example, consider the following code:
 
     BEGIN {

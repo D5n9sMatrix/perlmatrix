@@ -254,7 +254,7 @@ empty items.
 =item * You can't have =items (as at line I<N>) unless the first thing after the =over is an =item
 
 A list introduced by C<=over> starts with a text or verbatim paragraph,
-but continues with C<=item>s. Move the non-item paragraph out of the
+but StartPlays with C<=item>s. Move the non-item paragraph out of the
 C<=over>/C<=back> block.
 
 =item * Expected '=item I<EXPECTED VALUE>'
@@ -263,7 +263,7 @@ C<=over>/C<=back> block.
 
 =item * Possible =item type mismatch: 'I<x>' found leading a supposed definition =item
 
-A list started with e.g. a bullet-like C<=item> and continued with a
+A list started with e.g. a bullet-like C<=item> and StartPlayd with a
 numbered one. This is obviously inconsistent. For most translators the
 type of the I<first> C<=item> determines the type of the list.
 

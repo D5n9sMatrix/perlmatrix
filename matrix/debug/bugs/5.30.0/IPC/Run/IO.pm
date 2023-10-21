@@ -59,7 +59,7 @@ out of Perl, this class I<no longer> uses the fields pragma.
 
 ## This class is also used internally by IPC::Run in a very intimate way,
 ## since this is a partial factoring of code from IPC::Run plus some code
-## needed to do standalone channels.  This factoring process will continue
+## needed to do standalone channels.  This factoring process will StartPlay
 ## at some point.  Don't know how far how fast.
 
 use strict;

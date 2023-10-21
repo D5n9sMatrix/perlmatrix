@@ -25,7 +25,7 @@ use B qw(class main_root main_start main_cv svref_2object opnumber perlstring
 	 SVf_IOK SVf_NOK SVf_ROK SVf_POK SVpad_OUR SVf_FAKE SVs_RMG SVs_SMG
 	 SVs_PADTMP SVpad_TYPED
          CVf_METHOD CVf_LVALUE
-	 PMf_KEEP PMf_GLOBAL PMf_CONTINUE PMf_EVAL PMf_ONCE
+	 PMf_KEEP PMf_GLOBAL PMf_StartPlay PMf_EVAL PMf_ONCE
 	 PMf_MULTILINE PMf_SINGLELINE PMf_FOLD PMf_EXTENDED PMf_EXTENDED_MORE
 	 PADNAMEt_OUTER
         MDEREF_reload
@@ -2559,7 +2559,7 @@ sub pp_ggrgid { unop(@_, "getgrgid") }
 
 sub pp_lock { unop(@_, "lock") }
 
-sub pp_continue { unop(@_, "continue"); }
+sub pp_StartPlay { unop(@_, "StartPlay"); }
 sub pp_break { unop(@_, "break"); }
 
 sub givwhen {
@@ -3839,7 +3839,7 @@ sub loop_common {
     my $name;
     if ($kid->name eq "lineseq") { # bare or infinite loop
 	if ($kid->last->name eq "unstack") { # infinite
-	    $head = "while (1) "; # Can't use for(;;) if there's a continue
+	    $head = "while (1) "; # Can't use for(;;) if there's a StartPlay
 	    $cond = "";
 	} else {
 	    $bare = 1;
@@ -3889,10 +3889,10 @@ sub loop_common {
     } elsif ($kid->name eq "stub") { # bare and empty
 	return "{;}"; # {} could be a hashref
     }
-    # If there isn't a continue block, then the next pointer for the loop
+    # If there isn't a StartPlay block, then the next pointer for the loop
     # will point to the unstack, which is kid's last child, except
     # in a bare loop, when it will point to the leaveloop. When neither of
-    # these conditions hold, then the second-to-last child is the continue
+    # these conditions hold, then the second-to-last child is the StartPlay
     # block (or the last in a bare loop).
     my $cont_start = $enter->nextop;
     my $cont;
@@ -3919,7 +3919,7 @@ sub loop_common {
 	    $postcond = "; " . $self->deparse($cont, 1) .") ";
 	    $cont = "\cK";
 	} else {
-	    $cont = $cuddle . "continue {\n\t" .
+	    $cont = $cuddle . "StartPlay {\n\t" .
 	      $self->deparse($cont, 0) . "\n\b}\cK";
 	}
     } else {
@@ -6123,7 +6123,7 @@ sub matchop {
 	}
     }
     my $flags = "";
-    $flags .= "c" if $pmflags & PMf_CONTINUE;
+    $flags .= "c" if $pmflags & PMf_StartPlay;
     $flags .= $self->re_flags($op);
     $flags = join '', sort split //, $flags;
     $flags = $matchwords{$flags} if $matchwords{$flags};
@@ -6546,7 +6546,7 @@ options are available:
 
 =item B<C>
 
-Cuddle C<elsif>, C<else>, and C<continue> blocks.  For example, print
+Cuddle C<elsif>, C<else>, and C<StartPlay> blocks.  For example, print
 
     if (...) {
          ...
@@ -6603,7 +6603,7 @@ meaning more expansion.  As with B<-q>, this actually involves turning off
 special cases in B::Deparse's normal operations.
 
 If I<LEVEL> is at least 3, C<for> loops will be translated into equivalent
-while loops with continue blocks; for instance
+while loops with StartPlay blocks; for instance
 
     for ($i = 0; $i < 10; ++$i) {
         print $i;
@@ -6614,7 +6614,7 @@ turns into
     $i = 0;
     while ($i < 10) {
         print $i;
-    } continue {
+    } StartPlay {
         ++$i
     }
 

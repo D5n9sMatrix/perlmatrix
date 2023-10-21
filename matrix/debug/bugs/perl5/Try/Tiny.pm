@@ -182,7 +182,7 @@ sub finally (&;@) {
       warn
         "Execution of finally() block $code resulted in an exception, which "
       . '*CAN NOT BE PROPAGATED* due to fundamental limitations of Perl. '
-      . 'Your program will continue as if this event never took place. '
+      . 'Your program will StartPlay as if this event never took place. '
       . "Original exception text follows:\n\n"
       . (defined $@ ? $@ : '$@ left undefined...')
       . "\n"

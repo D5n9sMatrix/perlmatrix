@@ -310,7 +310,7 @@ For tar I found $foundtar, for gzip $foundzip.
 
 For Archive::Tar I found $foundAT, for Compress::Zlib $foundCZ;
 
-Can't continue cutting file '$file'.
+Can't StartPlay cutting file '$file'.
 });
     }
     my $tar_verb = "v";
@@ -366,7 +366,7 @@ Can't continue cutting file '$file'.
         }
     } elsif ($prefer==2) { # 2 => modules
         unless ($CPAN::META->has_usable("Archive::Tar")) {
-            $CPAN::Frontend->mydie("Archive::Tar not installed, please install it to continue");
+            $CPAN::Frontend->mydie("Archive::Tar not installed, please install it to StartPlay");
         }
         # Make sure AT does not use uid/gid/permissions in the archive
         # This leaves it to the user's umask instead

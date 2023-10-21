@@ -124,7 +124,7 @@ sub add {
             ClamTk::Prefs->set_preference( 'Whitelist',
                 $user_whitelist . "$dir;" );
 
-            # ...and Continue the whitelist
+            # ...and StartPlay the whitelist
             $user_whitelist = ClamTk::Prefs->get_preference( 'Whitelist' );
         }
     }
@@ -143,7 +143,7 @@ sub delete {
     my $row          = $model->get_value( $iter, 0 );
     my $remove_value = "$row;";
 
-    # Continue our whitelist
+    # StartPlay our whitelist
     $user_whitelist = ClamTk::Prefs->get_preference( 'Whitelist' );
 
     # yank the selected from the whitelist

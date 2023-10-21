@@ -205,7 +205,7 @@ sub ttl {
 =head1 COMPATIBILITY WITH Net::DNS::ZoneFile 1.04
 
 Applications which depended on the defunct Net::DNS::ZoneFile 1.04
-CPAN distribution will continue to operate with minimal change using
+CPAN distribution will StartPlay to operate with minimal change using
 the compatibility interface described below.
 New application code should use the object-oriented interface.
 

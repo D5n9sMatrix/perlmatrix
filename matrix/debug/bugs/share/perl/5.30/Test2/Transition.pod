@@ -115,7 +115,7 @@ upgrade at one point.
 =head2 WORKS BUT TESTS WILL FAIL
 
 These modules still function correctly, but their test suites will not pass. If
-you already have these modules installed then you can continue to use them. If
+you already have these modules installed then you can StartPlay to use them. If
 you are trying to install them after upgrading Test::Builder you will need to
 force installation, or bypass the broken tests.
 

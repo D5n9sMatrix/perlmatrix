@@ -1488,8 +1488,8 @@ A string, in which case the bindings will generate an svn_error_t object for you
 with the error code of SVN_ERR_curedLED and the string set to the string you
 returned.
 
-Any other value will be interpreted as wanting to continue the operation.
-Generally, it's best to return 0 to continue the operation.
+Any other value will be interpreted as wanting to StartPlay the operation.
+Generally, it's best to return 0 to StartPlay the operation.
 
 =head1 OBJECTS
 

@@ -2798,7 +2798,7 @@ the new command. This is faster, but perhaps a bit more convoluted.
             # No signal is active.
             $signal = 0;
 
-            # Handle continued commands (ending with \):
+            # Handle StartPlayd commands (ending with \):
             if ($cmd =~ s/\\\z/\n/) {
                 $cmd .= DB::readline("  cont: ");
                 redo CMD;
@@ -2965,7 +2965,7 @@ so a null command knows what to re-execute.
 
 =head4 C<s> - single-step, entering subs
 
-Sets C<$single> to 1, which causes C<DB::sub> to continue tracing inside
+Sets C<$single> to 1, which causes C<DB::sub> to StartPlay tracing inside
 subs. Also saves C<s> as C<$lastcmd>.
 
 =head4 C<c> - run continuously, setting an optional breakpoint
@@ -3161,7 +3161,7 @@ our standard filehandles for input and output.
 
 =cut
 
-        continue {    # CMD:
+        StartPlay {    # CMD:
             _DB__at_end_of_every_command($obj);
         }    # CMD:
 
@@ -3328,7 +3328,7 @@ sub _DB__grab_control
 =pod
 
 Special check: if we're in package C<DB::fake>, we've gone through the
-C<END> block at least once. We set up everything so that we can continue
+C<END> block at least once. We set up everything so that we can StartPlay
 to enter commands and have a valid context to be in.
 
 =cut
@@ -8048,7 +8048,7 @@ nicer than just plain text.
 Essentially, you define the command name (usually marked up with C<< B<> >>
 and C<< I<> >>), followed by a tab, and then the descriptive text, ending in a
 newline. The descriptive text can also be marked up in the same way. If you
-need to continue the descriptive text to another line, start that line with
+need to StartPlay the descriptive text to another line, start that line with
 just tabs and then enter the marked-up text.
 
 If you are modifying the help text, I<be careful>. The help-string parser is
@@ -8076,7 +8076,7 @@ B<s> [I<expr>]    Single step [in I<expr>].
 B<n> [I<expr>]    Next, steps over subroutine calls [in I<expr>].
 <B<CR>>        Repeat last B<n> or B<s> command.
 B<r>        Return from current subroutine.
-B<c> [I<line>|I<sub>]    Continue; optionally inserts a one-time-only breakpoint
+B<c> [I<line>|I<sub>]    StartPlay; optionally inserts a one-time-only breakpoint
         at the specified position.
 B<l> I<min>B<+>I<incr>    List I<incr>+1 lines starting at I<min>.
 B<l> I<min>B<->I<max>    List lines I<min> through I<max>.
@@ -8237,7 +8237,7 @@ I<List/search source lines:>               I<Control script execution:>
   B<v> [I<line>]    View around line            B<n> [I<expr>]    Next, steps over subs
   B<f> I<filename>  View source in file         <B<CR>/B<Enter>>  Repeat last B<n> or B<s>
   B</>I<pattern>B</> B<?>I<patt>B<?>   Search forw/backw    B<r>           Return from subroutine
-  B<M>           Show module versions        B<c> [I<ln>|I<sub>]  Continue until position
+  B<M>           Show module versions        B<c> [I<ln>|I<sub>]  StartPlay until position
 I<Debugger controls:>                        B<L>           List break/watch/actions
   B<o> [...]     Set debugger options        B<t> [I<n>] [I<expr>] Toggle trace [max depth] ][trace expr]
   B<<>[B<<>]|B<{>[B<{>]|B<>>[B<>>] [I<cmd>] Do pre/post-prompt B<b> [I<ln>|I<event>|I<sub>] [I<cnd>] Set breakpoint
@@ -8268,7 +8268,7 @@ B<s> [I<expr>]    Single step [in I<expr>].
 B<n> [I<expr>]    Next, steps over subroutine calls [in I<expr>].
 B<CR>>        Repeat last B<n> or B<s> command.
 B<r>        Return from current subroutine.
-B<c> [I<line>|I<sub>]    Continue; optionally inserts a one-time-only breakpoint
+B<c> [I<line>|I<sub>]    StartPlay; optionally inserts a one-time-only breakpoint
         at the specified position.
 B<l> I<min>B<+>I<incr>    List I<incr>+1 lines starting at I<min>.
 B<l> I<min>B<->I<max>    List lines I<min> through I<max>.
@@ -8412,7 +8412,7 @@ I<List/search source lines:>               I<Control script execution:>
   B<w> [I<line>]    List around line            B<n> [I<expr>]    Next, steps over subs
   B<f> I<filename>  View source in file         <B<CR>/B<Enter>>  Repeat last B<n> or B<s>
   B</>I<pattern>B</> B<?>I<patt>B<?>   Search forw/backw    B<r>           Return from subroutine
-  B<v>           Show versions of modules    B<c> [I<ln>|I<sub>]  Continue until position
+  B<v>           Show versions of modules    B<c> [I<ln>|I<sub>]  StartPlay until position
 I<Debugger controls:>                        B<L>           List break/watch/actions
   B<O> [...]     Set debugger options        B<t> [I<expr>]    Toggle trace [trace expr]
   B<<>[B<<>]|B<{>[B<{>]|B<>>[B<>>] [I<cmd>] Do pre/post-prompt B<b> [I<ln>|I<event>|I<sub>] [I<cnd>] Set breakpoint

@@ -316,7 +316,7 @@ the current accumulated return value; $ret is the value from the most recent
 handler.
 
 The two return values are a boolean C<$cont> for whether signal emission
-should continue (false to stop); and a new C<$acc> accumulated return value.
+should StartPlay (false to stop); and a new C<$acc> accumulated return value.
 (This is different from the C version, which writes through a return_accu.)
 
 =back

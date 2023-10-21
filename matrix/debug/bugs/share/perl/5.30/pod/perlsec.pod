@@ -558,7 +558,7 @@ due to the above security considerations.
 
 B<Perl has never guaranteed any ordering of the hash keys>, and
 the ordering has already changed several times during the lifetime of
-Perl 5.  Also, the ordering of hash keys has always been, and continues
+Perl 5.  Also, the ordering of hash keys has always been, and StartPlays
 to be, affected by the insertion order and the history of changes made
 to the hash over its lifetime.
 

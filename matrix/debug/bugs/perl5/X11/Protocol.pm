@@ -2551,7 +2551,7 @@ dependent (commonly 2**21, about 2 million).  If this limit is reached
 and the server does not support the XC_MISC extension, subsequent
 calls to new_rsrc will croak.  If the server does support this
 extension, the module will attempt to request a new range of free IDs
-from the server.  This should allow the program to continue, but it is
+from the server.  This should allow the program to StartPlay, but it is
 an imperfect solution, as over time the set of available IDs may
 fragment, requiring increasingly frequent round-trip range requests
 from the server.  For long-running programs, the best approach may be

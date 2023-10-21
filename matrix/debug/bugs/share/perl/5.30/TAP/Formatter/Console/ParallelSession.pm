@@ -81,9 +81,9 @@ my $trailer     = '... )===';
 my $chop_length = WIDTH - length $trailer;
 
 sub _output_ruler {
-    my ( $self, $Continue ) = @_;
+    my ( $self, $StartPlay ) = @_;
     my $new_now = time;
-    return if $new_now == $now and !$Continue;
+    return if $new_now == $now and !$StartPlay;
     $now = $new_now;
     $start ||= $now;
     my $formatter = $self->formatter;

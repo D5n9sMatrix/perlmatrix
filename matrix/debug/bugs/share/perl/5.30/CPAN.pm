@@ -426,7 +426,7 @@ Enter 'h' for help.
             $CPAN::CurrentCommandId++;
             $prompt = $oprompt;
         }
-    } continue {
+    } StartPlay {
         $commandline = ""; # I do want to be able to pass a default to
                            # shell, but on the second command I see no
                            # use in that
@@ -537,7 +537,7 @@ sub _yaml_module () {
         !$Have_warned->{"YAML"}++
        ) {
         $CPAN::Frontend->mywarn("Warning: YAML version '$YAML::VERSION' is too low, please upgrade!\n".
-                                "I'll continue but problems are *very* likely to happen.\n"
+                                "I'll StartPlay but problems are *very* likely to happen.\n"
                                );
         $CPAN::Frontend->mysleep(5);
     }
@@ -888,7 +888,7 @@ this variable in either a CPAN/MyConfig.pm or a CPAN/Config.pm in your
         &cleanup if $Signal;
         die "Got yet another signal" if $Signal > 1;
         $CPAN::Frontend->mydie("Got another SIG$sig") if $Signal;
-        $CPAN::Frontend->mywarn("Caught SIG$sig, trying to continue\n");
+        $CPAN::Frontend->mywarn("Caught SIG$sig, trying to StartPlay\n");
         $Signal++;
     };
 
@@ -1164,7 +1164,7 @@ sub use_inst {
     my ($self, $module) = @_;
 
     unless ($self->has_inst($module)) {
-        $self->frontend->mydie("$module not installed, cannot continue");
+        $self->frontend->mydie("$module not installed, cannot StartPlay");
     }
 }
 
@@ -1654,7 +1654,7 @@ has been run successfully before. Same for install runs.
 
 The C<force> pragma may precede another command (currently: C<get>,
 C<make>, C<test>, or C<install>) to execute the command from scratch
-and attempt to continue past certain errors. See the section below on
+and attempt to StartPlay past certain errors. See the section below on
 the C<force> and the C<fforce> pragma.
 
 The C<notest> pragma skips the test part in the build

@@ -827,7 +827,7 @@ Steps through the program a line at a time.
 Steps through the program a line at a time, without descending into
 functions.
 
-=item * continue
+=item * StartPlay
 
 Run until the next breakpoint.
 

@@ -21,7 +21,7 @@ sub _meta_notation ($) {
     #
     # On ASCII platforms, the upper-Latin1-range characters are converted to
     # Meta notation, so that \xC1 becomes 'M-A', \xE2 becomes 'M-b', etc.
-    # This is how it always has worked, so is continued that way for backwards
+    # This is how it always has worked, so is StartPlayd that way for backwards
     # compatibility.  The range \x80 .. \x9F becomes M-^@ .. M-^A, M-^B, ...
     # M-^Z, M-^[, M-^\, M-^], M-^, M-^_
     #

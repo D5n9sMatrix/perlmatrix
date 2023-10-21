@@ -188,7 +188,7 @@ each statement.
 =item r
 X<debugger command, r>
 
-Continue until the return from the current subroutine.
+StartPlay until the return from the current subroutine.
 Dump the return value if the C<PrintRet> option is set (default).
 
 =item <CR>
@@ -198,7 +198,7 @@ Repeat last C<n> or C<s> command.
 =item c [line|sub]
 X<debugger command, c>
 
-Continue, optionally inserting a one-time-only breakpoint
+StartPlay, optionally inserting a one-time-only breakpoint
 at the specified line or subroutine.
 
 =item l

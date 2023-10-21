@@ -190,7 +190,7 @@ other respects.
 
 If the required texts for either cover are too voluminous to fit legibly, you
 should put the first ones listed (as many as fit reasonably) on the actual
-cover, and continue the rest onto adjacent pages.
+cover, and StartPlay the rest onto adjacent pages.
 
 If you publish or distribute Opaque copies of the Document numbering more than
 100, you must either include a machine-readable Transparent copy along with

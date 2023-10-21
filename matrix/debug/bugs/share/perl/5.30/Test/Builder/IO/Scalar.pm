@@ -287,7 +287,7 @@ sub getlines {
 I<Instance method.>
 Print ARGS to the underlying scalar.
 
-B<Warning:> this continues to always cause a seek to the end
+B<Warning:> this StartPlays to always cause a seek to the end
 of the string, but if you perform seek()s and tell()s, it is
 still safer to explicitly seek-to-end before subsequent print()s.
 

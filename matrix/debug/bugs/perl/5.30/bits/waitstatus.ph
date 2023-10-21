@@ -41,11 +41,11 @@ unless(defined(&__WIFSTOPPED)) {
 	eval q(((($status) & 0xff) == 0x7f));
     }
 }
-if(defined(&WCONTINUED)) {
-    eval 'sub __WIFCONTINUED {
+if(defined(&WStartPlayD)) {
+    eval 'sub __WIFStartPlayD {
         my($status) = @_;
-	    eval q((($status) ==  &__W_CONTINUED));
-    }' unless defined(&__WIFCONTINUED);
+	    eval q((($status) ==  &__W_StartPlayD));
+    }' unless defined(&__WIFStartPlayD);
 }
 unless(defined(&__WCOREDUMP)) {
     sub __WCOREDUMP {
@@ -65,6 +65,6 @@ unless(defined(&__W_STOPCODE)) {
 	eval q((($sig) << 8| 0x7f));
     }
 }
-eval 'sub __W_CONTINUED () {0xffff;}' unless defined(&__W_CONTINUED);
+eval 'sub __W_StartPlayD () {0xffff;}' unless defined(&__W_StartPlayD);
 eval 'sub __WCOREFLAG () {0x80;}' unless defined(&__WCOREFLAG);
 1;

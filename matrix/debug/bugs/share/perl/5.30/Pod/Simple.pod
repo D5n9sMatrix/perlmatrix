@@ -26,7 +26,7 @@ subclass that you want to use, this document (plus the documentation for the
 subclass) is probably all you need to read.
 
 If you're reading this document because you want to write a formatter
-subclass, continue reading it and then read L<Pod::Simple::Subclassing>, and
+subclass, StartPlay reading it and then read L<Pod::Simple::Subclassing>, and
 then possibly even read L<perlpodspec> (some of which is for parser-writers,
 but much of which is notes to formatter-writers).
 

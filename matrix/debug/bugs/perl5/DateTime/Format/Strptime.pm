@@ -1091,7 +1091,7 @@ The module will croak with an error message on errors.
 When given a code ref, the module will call that sub on errors. The sub
 receives two parameters: the object and the error message.
 
-If your sub does not die, then the formatter will continue on as if
+If your sub does not die, then the formatter will StartPlay on as if
 C<on_error> was C<'undef'>.
 
 =back
@@ -1344,7 +1344,7 @@ consider making a "donation" to me via PayPal. I spend a lot of free time
 creating free software, and would appreciate any support you'd care to offer.
 
 Please note that B<I am not suggesting that you must do this> in order for me
-to continue working on this particular software. I will continue to do so,
+to StartPlay working on this particular software. I will StartPlay to do so,
 inasmuch as I have in the past, for as long as it interests me.
 
 Similarly, a donation made in this way will probably not make me work on this

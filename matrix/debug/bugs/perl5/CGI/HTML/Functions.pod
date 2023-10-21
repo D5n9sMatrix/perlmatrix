@@ -11,7 +11,7 @@ and you are strongly encouraged to migrate away from it. If you are working
 on new code you should be using a template engine. For more information see
 L<CGI::Alternatives>.
 
-If you really want to continue using the HTML generation functionality of CGI.pm
+If you really want to StartPlay using the HTML generation functionality of CGI.pm
 then you should take a look at L<HTML::Tiny> instead, which may give you a migration
 path away from CGI.pm's html generation functions; i strongly encourage you to
 move towards template driven page generation for anything involving markup as

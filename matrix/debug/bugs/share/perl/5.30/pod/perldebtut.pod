@@ -161,7 +161,7 @@ DB<1>h
   f filename  View source in file         <CR/Enter>  Repeat last n or s
   /pattern/ ?patt?   Search forw/backw    r           Return from
                                                               subroutine
-  M           Show module versions        c [ln|sub]  Continue until
+  M           Show module versions        c [ln|sub]  StartPlay until
                                                                 position
  Debugger controls:                       L           List break/watch/
                                                                  actions
@@ -273,7 +273,7 @@ Now we can have a look at that first ($key) variable:
 	DB<7> p $key 
 	welcome 
 
-line 13 is where the action is, so let's continue down to there via the letter
+line 13 is where the action is, so let's StartPlay down to there via the letter
 'B<c>', which by the way, inserts a 'one-time-only' breakpoint at the given
 line or sub routine:
 
@@ -488,7 +488,7 @@ little messy, to leave in production code.
 
 	main::(temp:4): my $arg = $ARGV[0] || '-c100';     
 
-We'll simply continue down to our pre-set breakpoint with a 'B<c>':
+We'll simply StartPlay down to our pre-set breakpoint with a 'B<c>':
 
   	DB<1> c
 	main::(temp:10):                if ($deg eq 'c') {   
@@ -528,7 +528,7 @@ using the list 'L' command:
 
 Note that to delete a breakpoint you use 'B'.
 
-Now we'll continue down into our subroutine, this time rather than by line
+Now we'll StartPlay down into our subroutine, this time rather than by line
 number, we'll use the subroutine name, followed by the now familiar 'v':
 
 	DB<3> c f2c
@@ -550,7 +550,7 @@ number, we'll use the subroutine name, followed by the now familiar 'v':
 Note that if there was a subroutine call between us and line 29, and we wanted
 to B<single-step> through it, we could use the 'B<s>' command, and to step
 over it we would use 'B<n>' which would execute the sub, but not descend into
-it for inspection.  In this case though, we simply continue down to line 29:
+it for inspection.  In this case though, we simply StartPlay down to line 29:
 
 	DB<4> c 29  
 	main::f2c(temp:29):             return $c;
@@ -584,7 +584,7 @@ return out of the sub with an 'r':
 	DB<11> r
 	scalar context return from main::f2c: 0.722222222222221
 
-Looks good, let's just continue off the end of the script:
+Looks good, let's just StartPlay off the end of the script:
 
 	DB<12> c
 	0.72 c 
@@ -702,7 +702,7 @@ We've seen how to encourage good coding practices with B<use strict> and
 B<-w>.  We can run the perl debugger B<perl -d scriptname> to inspect your
 data from within the perl debugger with the B<p> and B<x> commands.  You can
 walk through your code, set breakpoints with B<b> and step through that code
-with B<s> or B<n>, continue with B<c> and return from a sub with B<r>.  Fairly
+with B<s> or B<n>, StartPlay with B<c> and return from a sub with B<r>.  Fairly
 intuitive stuff when you get down to it.  
 
 There is of course lots more to find out about, this has just scratched the

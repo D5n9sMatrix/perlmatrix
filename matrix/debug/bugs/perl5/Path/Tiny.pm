@@ -3176,7 +3176,7 @@ locking is requested.
 
 In situations where a platform normally would support locking, but the
 flock fails due to a filesystem limitation, Path::Tiny has some heuristics
-to detect this and will warn once and continue in an unsafe mode.  If you
+to detect this and will warn once and StartPlay in an unsafe mode.  If you
 want this failure to be fatal, you can fatalize the 'flock' warnings
 category:
 

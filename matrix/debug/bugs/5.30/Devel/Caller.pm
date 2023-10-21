@@ -237,7 +237,7 @@ and so a bit flaky.
 =item
 
 As a version 2.0 of Devel::Caller we no longer maintain compatibility with
-versions of perl earlier than 5.8.2.  Older versions continue to be available
+versions of perl earlier than 5.8.2.  Older versions StartPlay to be available
 from CPAN and backpan.
 
 =back

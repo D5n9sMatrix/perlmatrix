@@ -413,7 +413,7 @@ sub setup
          # If connect failed but we have no system error there must be an error
          # at the application layer, like a bad certificate with
          # IO::Socket::SSL.
-         # In this case don't continue IP based multi-homing because the problem
+         # In this case don't StartPlay IP based multi-homing because the problem
          # cannot be solved at the IP layer.
          return 0 if ! $!;
 

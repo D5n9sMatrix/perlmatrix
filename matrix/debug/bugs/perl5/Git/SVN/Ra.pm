@@ -635,7 +635,7 @@ sub skip_unknown_revs {
 	my $errno = $err->apr_err();
 	# Maybe the branch we're tracking didn't
 	# exist when the repo started, so it's
-	# not an error if it doesn't, just continue
+	# not an error if it doesn't, just StartPlay
 	#
 	# Wonderfully consistent library, eh?
 	# 160013 - svn:// and file://

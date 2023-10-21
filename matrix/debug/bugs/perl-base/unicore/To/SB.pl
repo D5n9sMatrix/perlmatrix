@@ -25,10 +25,10 @@ D		CR
 21		STerm
 22		Close
 27	29	Close
-2C	2D	SContinue
+2C	2D	SStartPlay
 2E		ATerm
 30	39	Numeric
-3A		SContinue
+3A		SStartPlay
 3F		STerm
 41	5A	Upper
 5B		Close
@@ -595,7 +595,7 @@ F8	FF	Lower
 52F		Lower
 531	556	Upper
 559		OLetter
-55D		SContinue
+55D		SStartPlay
 560	588	Lower
 589		STerm
 591	5BD	Extend
@@ -606,7 +606,7 @@ F8	FF	Lower
 5D0	5EA	OLetter
 5EF	5F3	OLetter
 600	605	Format
-60C	60D	SContinue
+60C	60D	SStartPlay
 610	61A	Extend
 61C		Format
 61E	61F	STerm
@@ -642,7 +642,7 @@ F8	FF	Lower
 7CA	7EA	OLetter
 7EB	7F3	Extend
 7F4	7F5	OLetter
-7F8		SContinue
+7F8		SStartPlay
 7F9		STerm
 7FA		OLetter
 7FD		Extend
@@ -939,9 +939,9 @@ FC6		Extend
 17DC		OLetter
 17DD		Extend
 17E0	17E9	Numeric
-1802		SContinue
+1802		SStartPlay
 1803		STerm
-1808		SContinue
+1808		SStartPlay
 1809		STerm
 180B	180D	Extend
 180E		Format
@@ -1302,7 +1302,7 @@ FC6		Extend
 200B		Format
 200C	200D	Extend
 200E	200F	Format
-2013	2014	SContinue
+2013	2014	SStartPlay
 2018	201F	Close
 2024		ATerm
 2028	2029	Sep
@@ -1510,7 +1510,7 @@ FC6		Extend
 2E3C		STerm
 2E42		Close
 3000		Sp
-3001		SContinue
+3001		SStartPlay
 3002		STerm
 3005	3007	OLetter
 3008	3011	Close
@@ -1863,29 +1863,29 @@ FD50	FD8F	OLetter
 FD92	FDC7	OLetter
 FDF0	FDFB	OLetter
 FE00	FE0F	Extend
-FE10	FE11	SContinue
-FE13		SContinue
+FE10	FE11	SStartPlay
+FE13		SStartPlay
 FE17	FE18	Close
 FE20	FE2F	Extend
-FE31	FE32	SContinue
+FE31	FE32	SStartPlay
 FE35	FE44	Close
 FE47	FE48	Close
-FE50	FE51	SContinue
+FE50	FE51	SStartPlay
 FE52		ATerm
-FE55		SContinue
+FE55		SStartPlay
 FE56	FE57	STerm
-FE58		SContinue
+FE58		SStartPlay
 FE59	FE5E	Close
-FE63		SContinue
+FE63		SStartPlay
 FE70	FE74	OLetter
 FE76	FEFC	OLetter
 FEFF		Format
 FF01		STerm
 FF08	FF09	Close
-FF0C	FF0D	SContinue
+FF0C	FF0D	SStartPlay
 FF0E		ATerm
 FF10	FF19	Numeric
-FF1A		SContinue
+FF1A		SStartPlay
 FF1F		STerm
 FF21	FF3A	Upper
 FF3B		Close
@@ -1896,7 +1896,7 @@ FF5D		Close
 FF5F	FF60	Close
 FF61		STerm
 FF62	FF63	Close
-FF64		SContinue
+FF64		SStartPlay
 FF66	FF9D	OLetter
 FF9E	FF9F	Extend
 FFA0	FFBE	OLetter

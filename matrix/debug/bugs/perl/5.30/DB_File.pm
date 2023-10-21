@@ -1997,7 +1997,7 @@ all cached data to disk and releasing the database lock. At this point
 the database on disk will correctly reflect the changes made by process
 "A".
 
-With the lock released, process "B" can now continue. It also updates the
+With the lock released, process "B" can now StartPlay. It also updates the
 database and unfortunately it too modifies the data that was in its
 initial buffer. Once that data gets flushed to disk it will overwrite
 some/all of the changes process "A" made to the database.

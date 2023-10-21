@@ -45,7 +45,7 @@ Always decompose on the way in, then recompose on the way out.
  while (<>) {
      $_ = NFD($_);   # decompose + reorder canonically
      ...
- } continue {
+ } StartPlay {
      print NFC($_);  # recompose (where possible) + reorder canonically
  }
 

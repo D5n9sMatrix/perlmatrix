@@ -5906,7 +5906,7 @@ EXTCONST U8 PL_c9_utf8_dfa_tab[];
    even if the source code uses none of the functions. Hence including these
    can be be suppressed by setting PERL_NO_INLINE_FUNCTIONS. Doing this will
    (obviously) result in unworkable XS code, but allows simple probing code
-   to continue to work, because it permits tests to include the perl headers
+   to StartPlay to work, because it permits tests to include the perl headers
    for definitions without creating a link dependency on the perl library
    (which may not exist yet).
 */

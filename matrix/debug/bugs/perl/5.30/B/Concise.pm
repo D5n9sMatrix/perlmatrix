@@ -1911,7 +1911,7 @@ walk_output().
 
 Errors using the various *style* calls, and bad args to walk_output(),
 result in die().  Use an eval if you wish to catch these errors and
-continue processing.
+StartPlay processing.
 
 =head1 AUTHOR
 

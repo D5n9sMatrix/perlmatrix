@@ -326,7 +326,7 @@ Mozilla Public License (Version 1.0)
      6.2. Effect of New Versions. 
      Once Covered Code has been published under a
      particular version of the License, You may always
-     continue to use it under the terms of that version. You
+     StartPlay to use it under the terms of that version. You
      may also choose to use such Covered Code under the
      terms of any subsequent version of the License
      published by Netscape. No one other than Netscape

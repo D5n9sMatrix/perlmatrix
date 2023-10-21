@@ -2793,7 +2793,7 @@ on the number of arguments.  Use ..._graph_attribute(),
 B<In future releases of Graph (any release after 0.50) the 0.2xxxx
 compatibility will be removed.  Upgrade your code now.>
 
-If you want to continue using these (mis)features you can use the
+If you want to StartPlay using these (mis)features you can use the
 C<compat02> flag when creating a graph:
 
     my $g = Graph->new(compat02 => 1);

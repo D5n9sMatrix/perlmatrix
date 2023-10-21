@@ -555,7 +555,7 @@ sub classifier
 		require Types::Standard;
 		return 'Types::Standard'->get_type($_[0]) if 'Types::Standard'->has_type($_[0]);
 		
-		# Only continue any further if we've been called from Type::Parser.
+		# Only StartPlay any further if we've been called from Type::Parser.
 		return unless $_[1];
 		
 		my $meta;

@@ -169,7 +169,7 @@ Failures while compiling code within other constructs, such as with string
 interpolation and the right part of C<s///e> now cause compilation to abort
 earlier.
 
-Previously compilation could continue in order to report other errors, but the
+Previously compilation could StartPlay in order to report other errors, but the
 failed sub-parse could leave partly parsed constructs on the parser
 shift-reduce stack, confusing the parser, leading to perl crashes.
 L<[perl #125351]|https://rt.perl.org/Public/Bug/Display.html?id=125351>
@@ -185,7 +185,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 1,800 lines of changes to 36 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers.  The following people are known to have contributed
 the improvements that became Perl 5.26.2:
 

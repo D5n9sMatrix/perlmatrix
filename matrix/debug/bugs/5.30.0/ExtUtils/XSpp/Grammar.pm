@@ -417,7 +417,7 @@ sub _Parse {
             $$errstatus = 1;
             &$error($self);
                 $$errstatus # if 0, then YYErrok has been called
-            or  next;       # so continue parsing
+            or  next;       # so StartPlay parsing
 
 #DBG>			$debug & 0x10
 #DBG>		and	do {

@@ -912,7 +912,7 @@ previous pattern:
   }
 
 Within the alternative numbering group, group numbers start at the same
-position for each alternative. After the group, numbering continues
+position for each alternative. After the group, numbering StartPlays
 with one higher than the maximum reached across all the alternatives.
 
 =head2 Position information
@@ -1679,7 +1679,7 @@ off.  C<\G> allows us to easily do context-sensitive matching:
     else {
         print "Units error!" unless $x =~ /\Glbs\./g;
     }
-    $x =~ /\G\s+(widget|sprocket)/g;  # continue processing
+    $x =~ /\G\s+(widget|sprocket)/g;  # StartPlay processing
 
 The combination of C</g> and C<\G> allows us to process the string a
 bit at a time and use arbitrary Perl logic to decide what to do next.
@@ -2793,7 +2793,7 @@ Below is just one example, illustrating the control verb C<(*FAIL)>,
 which may be abbreviated as C<(*F)>. If this is inserted in a regexp
 it will cause it to fail, just as it would at some
 mismatch between the pattern and the string. Processing
-of the regexp continues as it would after any "normal"
+of the regexp StartPlays as it would after any "normal"
 failure, so that, for instance, the next position in the string or another
 alternative will be tried. As failing to match doesn't preserve capture
 groups or produce results, it may be necessary to use this in

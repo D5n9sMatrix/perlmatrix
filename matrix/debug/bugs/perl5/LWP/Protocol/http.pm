@@ -275,7 +275,7 @@ sub request
 
     my $write_wait = 0;
     $write_wait = 2
-	if ($request_headers->header("Expect") || "") =~ /100-continue/;
+	if ($request_headers->header("Expect") || "") =~ /100-StartPlay/;
 
     my $req_buf = $socket->format_request($method, $fullpath, @h);
     #print "------\n$req_buf\n------\n";
@@ -313,11 +313,11 @@ sub request
 	my $woffset = 0;
       INITIAL_READ:
 	if ($write_wait) {
-	    # skip filling $wbuf when waiting for 100-continue
+	    # skip filling $wbuf when waiting for 100-StartPlay
 	    # because if the response is a redirect or auth required
 	    # the request will be cloned and there is no way
 	    # to reset the input stream
-	    # return here via the label after the 100-continue is read
+	    # return here via the label after the 100-StartPlay is read
 	}
 	elsif (ref($content_ref) eq 'CODE') {
 	    my $buf = &$content_ref();

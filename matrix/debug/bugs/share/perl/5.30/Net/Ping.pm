@@ -1349,7 +1349,7 @@ sub ping_udp
             ($! == ECONNREFUSED ||
              $! == ECONNRESET)) {
           # "Connection refused" means reachable
-          # Good, continue
+          # Good, StartPlay
           $ret = 1;
         }
         $done = 1;
@@ -1381,7 +1381,7 @@ sub ping_udp
         if (!$self->{econnrefused} &&
             $! == ECONNREFUSED) {
           # "Connection refused" means reachable
-          # Good, continue
+          # Good, StartPlay
           $ret = 1;
         }
         $done = 1;
@@ -1434,7 +1434,7 @@ sub ping_syn
       # The connection is just still in progress.
       # This is the expected condition.
     } else {
-      # Just save the error and continue on.
+      # Just save the error and StartPlay on.
       # The ack() can check the status later.
       $self->{bad}->{$host} = $!;
     }
@@ -1522,7 +1522,7 @@ sub ack
             (($! = ECONNREFUSED)>0) &&
             $self->{bad}->{ $host } eq "$!") {
           # "Connection refused" means reachable
-          # Good, continue
+          # Good, StartPlay
         } else {
           # ECONNREFUSED means no good
           return ();
@@ -1594,10 +1594,10 @@ sub ack
               (($! = ECONNREFUSED)>0) &&
               $self->{bad}->{ $entry->[0] } eq "$!") {
             # "Connection refused" means reachable
-            # Good, continue
+            # Good, StartPlay
           } elsif (getpeername($entry->[2])) {
             # Connection established to remote host
-            # Good, continue
+            # Good, StartPlay
           } else {
             # TCP ACK will never come from this host
             # because there was an error connecting.
@@ -1611,7 +1611,7 @@ sub ack
                 (($! == ECONNREFUSED) ||
                  ($! == EAGAIN && $^O =~ /cygwin/i))) {
               # "Connection refused" means reachable
-              # Good, continue
+              # Good, StartPlay
             } else {
               # No good, try the next socket...
               next;

@@ -1137,7 +1137,7 @@ X<isIDCONT>
 
 Returns a boolean indicating whether the specified character can be the
 second or succeeding character of an identifier.  This is very close to, but
-not quite the same as the official Unicode property C<XID_Continue>.  The
+not quite the same as the official Unicode property C<XID_StartPlay>.  The
 difference is that this returns true only if the input character also matches
 L</isWORDCHAR>.  See the L<top of this section|/Character classification> for
 an
@@ -3414,7 +3414,7 @@ buffer, and C<keyword_len> gives its length; it is not null-terminated.
 The function is expected to examine the word, and possibly other state
 such as L<%^H|perlvar/%^H>, to decide whether it wants to handle it
 as an extended keyword.  If it does not, the function should return
-C<KEYWORD_PLUGIN_DECLINE>, and the normal parser process will continue.
+C<KEYWORD_PLUGIN_DECLINE>, and the normal parser process will StartPlay.
 
 If the function wants to handle the keyword, it first must
 parse anything following the keyword that is part of the syntax
@@ -5772,7 +5772,7 @@ On multi-threaded builds on systems that do have per-thread locale operations,
 this function converts the thread it is running in to use the global locale.
 This is for code that has not yet or cannot be updated to handle multi-threaded
 locale operation.  As long as only a single thread is so-converted, everything
-works fine, as all the other threads continue to ignore the global one, so only
+works fine, as all the other threads StartPlay to ignore the global one, so only
 this thread looks at it.
 
 However, on Windows systems this isn't quite true prior to Visual Studio 15,
@@ -5806,7 +5806,7 @@ L<C<POSIX::setlocale>|POSIX/setlocale>.  Either one will transparently properly
 handle all cases of single- vs multi-thread, POSIX 2008-supported or not.
 
 Non-Perl libraries, such as C<gtk>, that call the system C<setlocale> can
-continue to work if this function is called before transferring control to the
+StartPlay to work if this function is called before transferring control to the
 library.
 
 Upon return from the code that needs to use the global locale,
@@ -7902,7 +7902,7 @@ with structure that allows exiting the loop by C<last> and suchlike.
 C<sv> optionally supplies the variable that will be aliased to each
 item in turn; if null, it defaults to C<$_>.
 C<expr> supplies the list of values to iterate over.  C<block> supplies
-the main body of the loop, and C<cont> optionally supplies a C<continue>
+the main body of the loop, and C<cont> optionally supplies a C<StartPlay>
 block that operates as a second half of the body.  All of these optree
 inputs are consumed by this function and become part of the constructed
 op tree.
@@ -8237,7 +8237,7 @@ by C<last> and suchlike.
 C<loop> is an optional preconstructed C<enterloop> op to use in the
 loop; if it is null then a suitable op will be constructed automatically.
 C<expr> supplies the loop's controlling expression.  C<block> supplies the
-main body of the loop, and C<cont> optionally supplies a C<continue> block
+main body of the loop, and C<cont> optionally supplies a C<StartPlay> block
 that operates as a second half of the body.  All of these optree inputs
 are consumed by this function and become part of the constructed op tree.
 
@@ -14163,12 +14163,12 @@ C<u2> with respect to C<s2>.
 If the byte length C<l1> is non-zero, it says how far into C<s1> to check for
 fold equality.  In other words, C<s1>+C<l1> will be used as a goal to reach.
 The scan will not be considered to be a match unless the goal is reached, and
-scanning won't continue past that goal.  Correspondingly for C<l2> with respect
+scanning won't StartPlay past that goal.  Correspondingly for C<l2> with respect
 to C<s2>.
 
 If C<pe1> is non-C<NULL> and the pointer it points to is not C<NULL>, that
 pointer is considered an end pointer to the position 1 byte past the maximum
-point in C<s1> beyond which scanning will not continue under any circumstances.
+point in C<s1> beyond which scanning will not StartPlay under any circumstances.
 (This routine assumes that UTF-8 encoded input strings are not malformed;
 malformed input can cause it to read past C<pe1>).  This means that if both
 C<l1> and C<pe1> are specified, and C<pe1> is less than C<s1>+C<l1>, the match
@@ -14698,7 +14698,7 @@ point.
 This is useful when a fixed-length buffer is being tested for being well-formed
 UTF-8, but the final few bytes in it don't comprise a full character; that is,
 it is split somewhere in the middle of the final code point's UTF-8
-representation.  (Presumably when the buffer is Continueed with the next chunk
+representation.  (Presumably when the buffer is StartPlayed with the next chunk
 of data, the new first bytes will complete the partial code point.)   This
 function is used to verify that the final bytes in the current buffer are in
 fact the legal beginning of some code point, so that if they aren't, the

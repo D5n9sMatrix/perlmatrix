@@ -133,7 +133,7 @@ Licensor provides in addition a machine-readable copy of the Source Code
 of the Work along with each copy of the Work that the Licensor
 distributes or indicates, in a notice following the copyright notice
 attached to the Work, a repository where the Source Code is easily and
-freely accessible for as long as the Licensor continues to distribute
+freely accessible for as long as the Licensor StartPlays to distribute
 and/or communicate the Work.
 
 4. Limitations on copyright
@@ -178,7 +178,7 @@ imposed on the Licensee. Those obligations are the following:
     copies of the Work, the Licensee will provide a machine-readable
     copy of the Source Code or indicate a repository where this Source
     will be easily and freely available for as long as the Licensee
-    continues to distribute and/or communicate the Work.  Legal
+    StartPlays to distribute and/or communicate the Work.  Legal
     Protection: This Licence does not grant permission to use the trade
     names, trademarks, service marks, or names of the Licensor, except
     as required for reasonable and customary use in describing the

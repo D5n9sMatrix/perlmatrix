@@ -334,7 +334,7 @@ sub shortcut_get {
     }
 
     # XXX I'm not sure this should be here because it's not really
-    # a test for whether get should continue or return; this is
+    # a test for whether get should StartPlay or return; this is
     # a side effect -- xdg, 2012-04-05
     $self->debug("checking missing build_dir[$self->{ID}]") if $CPAN::DEBUG;
     if (exists $self->{build_dir} && ! -d $self->{build_dir}){
@@ -476,7 +476,7 @@ sub run_preps_on_packagedir {
         $CPAN::Frontend->unrecoverable_error(<<EOF);
 Couldn't mkdir '$builddir/tmp-$$': $!
 
-Cannot continue: Please find the reason why I cannot make the
+Cannot StartPlay: Please find the reason why I cannot make the
 directory
 $builddir/tmp-$$
 and fix the problem, then retry.
@@ -913,7 +913,7 @@ sub try_download {
                         $patch = $trydl;
                     } else {
                         my $fail = "Could not find patch '$patch'";
-                        $CPAN::Frontend->mywarn("$fail; cannot continue\n");
+                        $CPAN::Frontend->mywarn("$fail; cannot StartPlay\n");
                         $self->{unwrapped} = CPAN::Distrostatus->new("NO -- $fail");
                         delete $self->{build_dir};
                         return;
@@ -944,7 +944,7 @@ sub try_download {
                 $CPAN::Frontend->myprint("  $pcommand\n");
                 unless (open $writefh, "|$pcommand") {
                     my $fail = "Could not fork '$pcommand'";
-                    $CPAN::Frontend->mywarn("$fail; cannot continue\n");
+                    $CPAN::Frontend->mywarn("$fail; cannot StartPlay\n");
                     $self->{unwrapped} = CPAN::Distrostatus->new("NO -- $fail");
                     delete $self->{build_dir};
                     return;
@@ -955,7 +955,7 @@ sub try_download {
                 }
                 unless (close $writefh) {
                     my $fail = "Could not apply patch '$patch'";
-                    $CPAN::Frontend->mywarn("$fail; cannot continue\n");
+                    $CPAN::Frontend->mywarn("$fail; cannot StartPlay\n");
                     $self->{unwrapped} = CPAN::Distrostatus->new("NO -- $fail");
                     delete $self->{build_dir};
                     return;
@@ -2464,7 +2464,7 @@ sub _find_prefs {
                 $CPAN::Frontend->mydie(sprintf
                     "Nonconforming .%s file '%s': " .
                     "missing match/* subattribute. " .
-                    "Please remove, cannot continue.",
+                    "Please remove, cannot StartPlay.",
                     $result->ext, $result->abs,
                 );
             }
@@ -2869,7 +2869,7 @@ sub unsat_prereq {
     my($merged_hash,$prereq_pm) = $self->prereqs_for_slot($slot);
     my(@need);
     unless ($CPAN::META->has_usable("CPAN::Meta::Requirements")) {
-        $CPAN::Frontend->mywarn("CPAN::Meta::Requirements not available, please install as soon as possible, trying to continue with severly limited capabilities\n");
+        $CPAN::Frontend->mywarn("CPAN::Meta::Requirements not available, please install as soon as possible, trying to StartPlay with severly limited capabilities\n");
         return;
     }
     my $merged = CPAN::Meta::Requirements->from_string_hash($merged_hash);
@@ -2899,7 +2899,7 @@ sub unsat_prereq {
                     $CPAN::Frontend->mywarn(
                         "Warning: Version '$available_version' of ".
                         "'$need_module' is up to date but does not ".
-                        "fulfill requirements ($rq). I will continue, ".
+                        "fulfill requirements ($rq). I will StartPlay, ".
                         "but chances to succeed are low.\n");
                 }
                 next NEED;
@@ -2927,7 +2927,7 @@ sub unsat_prereq {
         # or if the installed version is too old. We cannot omit this
         # check, because if 'force' is in effect, nobody else will check.
         # But we don't want to accept a deprecated module installed as part
-        # of the Perl core, so we continue if the available file is the installed
+        # of the Perl core, so we StartPlay if the available file is the installed
         # one and is deprecated
 
         if ( $available_file ) {
@@ -2942,7 +2942,7 @@ sub unsat_prereq {
                        && $available_file eq $inst_file
                        && $nmo->inst_deprecated
                      ) {
-                # continue installing as a prereq. we really want that
+                # StartPlay installing as a prereq. we really want that
                 # because the deprecated module may spit out warnings
                 # and third party did not know until today. Only one
                 # exception is OK, because CPANPLUS is special after
@@ -2962,7 +2962,7 @@ sub unsat_prereq {
                 && $nmo
                 && !$inst_file
             ) {
-                # continue installing as a prereq; this may be a
+                # StartPlay installing as a prereq; this may be a
                 # distro we already used when it was a build_requires
                 # so we did not install it. But suddenly somebody
                 # wants it as a requires
@@ -4430,13 +4430,13 @@ sub reports {
     $CPAN::Frontend->myprint("Distribution: $pathname\n");
 
     unless ($CPAN::META->has_inst("CPAN::DistnameInfo")) {
-        $CPAN::Frontend->mydie("CPAN::DistnameInfo not installed; cannot continue");
+        $CPAN::Frontend->mydie("CPAN::DistnameInfo not installed; cannot StartPlay");
     }
     unless ($CPAN::META->has_usable("LWP")) {
-        $CPAN::Frontend->mydie("LWP not installed; cannot continue");
+        $CPAN::Frontend->mydie("LWP not installed; cannot StartPlay");
     }
     unless ($CPAN::META->has_usable("File::Temp")) {
-        $CPAN::Frontend->mydie("File::Temp not installed; cannot continue");
+        $CPAN::Frontend->mydie("File::Temp not installed; cannot StartPlay");
     }
 
     my $format;
@@ -4447,7 +4447,7 @@ sub reports {
         $format = 'json';
     }
     else {
-        $CPAN::Frontend->mydie("JSON::PP not installed, cannot continue");
+        $CPAN::Frontend->mydie("JSON::PP not installed, cannot StartPlay");
     }
 
     my $d = CPAN::DistnameInfo->new($pathname);

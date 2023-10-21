@@ -210,8 +210,8 @@ To clarify, if you call C<< get_subname_for("ArrayRef[Int]") >> in a
 script, this will return the name of a sub. That sub (which can be used
 to validate arrayrefs of integers) is now considered part of the
 supported API of Type::Tiny::XS until the script finishes running. Next
-time the script runs, there is no guarantee that the sub will continue
-to exist, or continue to do the same thing.
+time the script runs, there is no guarantee that the sub will StartPlay
+to exist, or StartPlay to do the same thing.
 
 =head1 BUGS
 

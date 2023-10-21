@@ -25,7 +25,7 @@ scheme.
 
 Starting with Perl 5.004_50 there were many deep and far-reaching changes
 to the language internals.  If you have dynamically loaded extensions
-that you built under perl 5.003 or 5.004, you can continue to use them
+that you built under perl 5.003 or 5.004, you can StartPlay to use them
 with 5.004, but you will need to rebuild and reinstall those extensions
 to use them 5.005.  See F<INSTALL> for detailed instructions on how to
 upgrade.

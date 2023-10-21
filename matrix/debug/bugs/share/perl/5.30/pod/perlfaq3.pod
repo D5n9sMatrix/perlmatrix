@@ -873,7 +873,7 @@ programs becomes a permanent CGI daemon process.
 
 Finally, L<Plack> is a Perl module and toolkit that contains PSGI middleware,
 helpers and adapters to web servers, allowing you to easily deploy scripts which
-can continue running, and provides flexibility with regards to which web server
+can StartPlay running, and provides flexibility with regards to which web server
 you use. It can allow existing CGI scripts to enjoy this flexibility and
 performance with minimal changes, or can be used along with modern Perl web
 frameworks to make writing and deploying web services with Perl a breeze.

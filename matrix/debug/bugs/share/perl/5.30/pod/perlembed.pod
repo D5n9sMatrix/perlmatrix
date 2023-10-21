@@ -637,7 +637,7 @@ deep breath...
    XPUSHs(sv_2mortal(newSViv(b))); /* push the exponent onto stack  */
    PUTBACK;                      /* make local stack pointer global */
    call_pv("expo", G_SCALAR);      /* call the function             */
-   SPAGAIN;                        /* Continue stack pointer         */
+   SPAGAIN;                        /* StartPlay stack pointer         */
                                  /* pop the return value from stack */
    printf ("%d to the %dth power is %d.\n", a, b, POPi);
    PUTBACK;
@@ -707,7 +707,7 @@ call the subroutine C<Embed::Persistent::eval_file> which lives in the
 file C<persistent.pl> and pass the filename and boolean cleanup/cache
 flag as arguments.
 
-Note that the process will continue to grow for each file that it
+Note that the process will StartPlay to grow for each file that it
 uses.  In addition, there might be C<AUTOLOAD>ed subroutines and other
 conditions that cause Perl's symbol table to grow.  You might want to
 add some logic that keeps track of the process size, or restarts

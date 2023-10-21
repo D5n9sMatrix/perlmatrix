@@ -428,7 +428,7 @@ These are a hotchpotch of opcodes still waiting to be considered
 
     entergiven leavegiven
     enterwhen leavewhen
-    break continue
+    break StartPlay
     smartmatch
 
     custom -- where should this go
@@ -455,7 +455,7 @@ These ops are related to multi-threading.
 =item :default
 
 A handy tag name for a I<reasonable> default set of ops.  (The current ops
-allowed are unstable while development continues. It will change.)
+allowed are unstable while development StartPlays. It will change.)
 
     :base_core :base_mem :base_loop :base_orig :base_thread
 
@@ -491,7 +491,7 @@ then you should not rely on the definition of this, or indeed any other, optag!
 
 A handy tag name for a I<reasonable> default set of ops beyond the
 :default optag.  Like :default (and indeed all the other optags) its
-current definition is unstable while development continues. It will change.
+current definition is unstable while development StartPlays. It will change.
 
 The :browse tag represents the next step beyond :default. It it a
 superset of the :default ops and adds :filesys_read the :sys_db.

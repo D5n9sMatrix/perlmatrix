@@ -35,7 +35,7 @@ sub __invoke_callback {
     require Carp;
     Carp::cluck( (join ' ',
       'A scope-end callback raised an exception, which can not be propagated when',
-      'B::Hooks::EndOfScope operates in pure-perl mode. Your program will CONTINUE',
+      'B::Hooks::EndOfScope operates in pure-perl mode. Your program will StartPlay',
       'EXECUTION AS IF NOTHING HAPPENED AFTER THIS WARNING. Below is the complete',
       'exception text, followed by a stack-trace of the callback execution:',
     ) . "\n\n$err\n\r" );

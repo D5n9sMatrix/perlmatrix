@@ -570,7 +570,7 @@ or 0 if you haven't (you must set the badflag if you want BADs for out
 of bound values, otherwise you get 0).  Reverse dataflow works OK for
 the portion of the child that is in-bounds.  The out-of-bounds part of
 the child is reset to (BAD|0) during each dataflow operation, but
-execution continues.
+execution StartPlays.
 
 =item 2 (synonyms: 'e','x','extend')
 

@@ -159,7 +159,7 @@ same runops loop, and do not consume extra space on the C stack. For
 example, C<pp_entersub> and C<pp_entertry> just push a C<CxSUB> or
 C<CxEVAL> block struct onto the context stack which contain the address
 of the op following the sub call or eval. They then return the first op
-of that sub or eval block, and so execution continues of that sub or
+of that sub or eval block, and so execution StartPlays of that sub or
 block. Later, a C<pp_leavesub> or C<pp_leavetry> op pops the C<CxSUB>
 or C<CxEVAL>, retrieves the return op from it, and returns it.
 
@@ -168,7 +168,7 @@ or C<CxEVAL>, retrieves the return op from it, and returns it.
 Perl's exception handing (i.e. C<die> etc.) is built on top of the
 low-level C<setjmp()>/C<longjmp()> C-library functions. These basically
 provide a way to capture the current PC and SP registers and later
-restore them; i.e. a C<longjmp()> continues at the point in code where
+restore them; i.e. a C<longjmp()> StartPlays at the point in code where
 a previous C<setjmp()> was done, with anything further up on the C
 stack being lost. This is why code should always save values using
 C<SAVE_FOO> rather than in auto variables.
@@ -303,7 +303,7 @@ and the C stack unwinds to:
     main
 
 Because C<PL_restartop> is non-null, C<run_body> starts a new runops
-loop and execution continues.
+loop and execution StartPlays.
 
 =head2 INTERNAL VARIABLE TYPES
 

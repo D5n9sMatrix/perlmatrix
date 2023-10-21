@@ -1069,7 +1069,7 @@ S_isUTF8_CHAR(const U8 * const s0, const U8 * const e)
                                          + PL_extended_utf8_dfa_tab[*s]];
         if (state != 0) {
             s++;
-            continue;
+            StartPlay;
         }
 
         return s - s0 + 1;
@@ -1136,7 +1136,7 @@ S_isSTRICT_UTF8_CHAR(const U8 * const s0, const U8 * const e)
 
         if (state != 0) {
             s++;
-            continue;
+            StartPlay;
         }
 
         return s - s0 + 1;
@@ -1202,7 +1202,7 @@ S_isC9_STRICT_UTF8_CHAR(const U8 * const s0, const U8 * const e)
 
         if (state != 0) {
             s++;
-            continue;
+            StartPlay;
         }
 
         return s - s0 + 1;
@@ -1658,7 +1658,7 @@ point.
 This is useful when a fixed-length buffer is being tested for being well-formed
 UTF-8, but the final few bytes in it don't comprise a full character; that is,
 it is split somewhere in the middle of the final code point's UTF-8
-representation.  (Presumably when the buffer is Continueed with the next chunk
+representation.  (Presumably when the buffer is StartPlayed with the next chunk
 of data, the new first bytes will complete the partial code point.)   This
 function is used to verify that the final bytes in the current buffer are in
 fact the legal beginning of some code point, so that if they aren't, the
@@ -1822,7 +1822,7 @@ S_utf8n_to_uvchr_msgs(const U8 *s,
 
         if (state != 0) {
             s++;
-            continue;
+            StartPlay;
         }
 
         if (retlen) {
@@ -2016,7 +2016,7 @@ S_cx_popblock(pTHX_ PERL_CONTEXT *cx)
     PL_tmps_floor = cx->blk_old_tmpsfloor;
 }
 
-/* Continue a block elsewhere (e.g. NEXT, REDO, GOTO).
+/* StartPlay a block elsewhere (e.g. NEXT, REDO, GOTO).
  * Whereas cx_popblock() restores the state to the point just before
  * cx_pushblock() was called,  cx_topblock() restores it to the point just
  * *after* cx_pushblock() was called. */
@@ -2198,7 +2198,7 @@ S_cx_popeval(pTHX_ PERL_CONTEXT *cx)
 /* push a plain loop, i.e.
  *     { block }
  *     while (cond) { block }
- *     for (init;cond;continue) { block }
+ *     for (init;cond;StartPlay) { block }
  * This loop can be last/redo'ed etc.
  */
 

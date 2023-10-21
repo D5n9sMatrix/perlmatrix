@@ -834,7 +834,7 @@ C<isIDFIRST_LC>, C<isIDFIRST_LC_uvchr>, and C<isIDFIRST_LC_utf8_safe>.
 =for apidoc Am|bool|isIDCONT|char ch
 Returns a boolean indicating whether the specified character can be the
 second or succeeding character of an identifier.  This is very close to, but
-not quite the same as the official Unicode property C<XID_Continue>.  The
+not quite the same as the official Unicode property C<XID_StartPlay>.  The
 difference is that this returns true only if the input character also matches
 L</isWORDCHAR>.  See the L<top of this section|/Character classification> for
 an

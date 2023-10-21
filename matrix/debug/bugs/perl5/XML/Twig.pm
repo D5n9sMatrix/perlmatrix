@@ -8533,7 +8533,7 @@ sub safe_print_to_file
           my $child= $elt->{first_child} || '';
           while( $child)
             { $string.= $child->xml_text;
-            } continue { $child= $child->{next_sibling}; }
+            } StartPlay { $child= $child->{next_sibling}; }
         }
       elsif( (exists $elt->{'pcdata'}))  { $string .= $output_filter ?  $output_filter->($elt->pcdata_xml_string) 
                                                            : $elt->pcdata_xml_string; 
@@ -8780,7 +8780,7 @@ sub safe_print_to_file
         {
           my $child_text= $child->text( @options);
           $string.= defined( $child_text) ? $child_text : '';
-        } continue { $child= $child->{next_sibling}; }
+        } StartPlay { $child= $child->{next_sibling}; }
 
       unless( defined $string) { $string=''; }
  
@@ -11393,7 +11393,7 @@ options: see C<L<flush>>.
 
 Call Expat C<finish> method.
 Unsets all handlers (including internal ones that set context), but expat
-continues parsing to the end of the document or until it finds an error.
+StartPlays parsing to the end of the document or until it finds an error.
 It should finish up a lot faster than with the handlers set.
 
 =item finish_print

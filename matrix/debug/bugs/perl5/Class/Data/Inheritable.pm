@@ -79,7 +79,7 @@ Raygun inherits its Suitcase class data from Pere::Ubu.
 
 Inheritance of class data works analogous to method inheritance.  As
 long as Raygun does not "override" its inherited class data (by using
-Suitcase() to set a new value) it will continue to use whatever is set
+Suitcase() to set a new value) it will StartPlay to use whatever is set
 in Pere::Ubu and inherit further changes:
 
   # Both Raygun's and Pere::Ubu's suitcases are now Blue

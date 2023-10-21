@@ -240,7 +240,7 @@ sub _split_header_words {
                 @cur = ();
             }
             elsif (s/^\s*;// || s/^\s+//) {
-                # continue
+                # StartPlay
             }
             else {
                 die "This should not happen: '$_'";

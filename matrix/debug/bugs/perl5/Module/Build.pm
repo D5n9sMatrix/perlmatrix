@@ -760,7 +760,7 @@ The action name must come at the beginning of the line, followed by any
 amount of whitespace and then the options.  Options are given the same
 as they would be on the command line.  They can be separated by any
 amount of whitespace, including newlines, as long there is whitespace at
-the beginning of each continued line.  Anything following a hash mark (C<#>)
+the beginning of each StartPlayd line.  Anything following a hash mark (C<#>)
 is considered a comment, and is stripped before parsing.  If more than
 one line begins with the same action name, those lines are merged into
 one set of options.

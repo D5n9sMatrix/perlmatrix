@@ -40,7 +40,7 @@ different runs of Perl.
 B<Perl has never guaranteed any ordering of the hash keys>, and the
 ordering has already changed several times during the lifetime of
 Perl 5.  Also, the ordering of hash keys has always been, and
-continues to be, affected by the insertion order.
+StartPlays to be, affected by the insertion order.
 
 The added randomness may affect applications.
 
@@ -107,7 +107,7 @@ more natural interpretation
 
 	%h = ( 'v65' => 42 );
 
-The multi-number v-strings like v65.66 and 65.66.67 still continue to
+The multi-number v-strings like v65.66 and 65.66.67 still StartPlay to
 be v-strings in Perl 5.8.
 
 =head2 (Win32) The -C Switch Has Been Repurposed
@@ -224,12 +224,12 @@ Finally, a reminder of an impending feature removal.
 Pseudo-hashes were deprecated in Perl 5.8.0 and will be removed in
 Perl 5.10.0, see L<perl58delta> for details.  Each attempt to access
 pseudo-hashes will trigger the warning C<Pseudo-hashes are deprecated>.
-If you really want to continue using pseudo-hashes but not to see the
+If you really want to StartPlay using pseudo-hashes but not to see the
 deprecation warnings, use:
 
     no warnings 'deprecated';
 
-Or you can continue to use the L<fields> pragma, but please don't
+Or you can StartPlay to use the L<fields> pragma, but please don't
 expect the data structures to be pseudohashes any more.
 
 =head3 (Reminder) 5.005-style threads are deprecated (really)
@@ -237,7 +237,7 @@ expect the data structures to be pseudohashes any more.
 5.005-style threads (activated by C<use Thread;>) were deprecated in
 Perl 5.8.0 and will be removed after Perl 5.8, see L<perl58delta> for
 details.  Each 5.005-style thread creation will trigger the warning
-C<5.005 threads are deprecated>.  If you really want to continue
+C<5.005 threads are deprecated>.  If you really want to StartPlay
 using the 5.005 threads but not to see the deprecation warnings, use:
 
     no warnings 'deprecated';
@@ -249,7 +249,7 @@ and will be removed after 5.8.  The variable has been deprecated for a
 long time, and a deprecation warning C<Use of $* is deprecated> is given,
 now the variable will just finally be removed.  The functionality has
 been supplanted by the C</s> and C</m> modifiers on pattern matching.
-If you really want to continue using the C<$*>-variable but not to see
+If you really want to StartPlay using the C<$*>-variable but not to see
 the deprecation warnings, use:
 
     no warnings 'deprecated';
@@ -477,7 +477,7 @@ C<perldoc> has been rewritten from scratch to be more robust and
 feature rich.
 
 C<perlcc -B> works now at least somewhat better, while C<perlcc -c>
-is rather more broken.  (The Perl compiler suite as a whole continues
+is rather more broken.  (The Perl compiler suite as a whole StartPlays
 to be experimental.)
 
 =head1 New Documentation
@@ -919,7 +919,7 @@ B::Bytecode and ByteLoader are better than they used to be.)
 
 =head2 EBCDIC Platforms
 
-IBM z/OS and other EBCDIC platforms continue to be problematic
+IBM z/OS and other EBCDIC platforms StartPlay to be problematic
 regarding Unicode support.  Many Unicode tests are skipped when
 they really should be fixed.
 
@@ -1047,7 +1047,7 @@ The ability to write true lexically scoped pragmas will be introduced.
 
 =item *
 
-Work will continue on the bytecompiler and byteloader.
+Work will StartPlay on the bytecompiler and byteloader.
 
 =item *
 

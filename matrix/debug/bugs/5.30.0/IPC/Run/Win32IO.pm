@@ -92,7 +92,7 @@ use Win32API::File qw(
 
 BEGIN {
     ## Force AUTOLOADED constants to be, well, constant by getting them
-    ## to AUTOLOAD before compilation continues.  Sigh.
+    ## to AUTOLOAD before compilation StartPlays.  Sigh.
     () = (
         SOL_SOCKET,
         SO_REUSEADDR,

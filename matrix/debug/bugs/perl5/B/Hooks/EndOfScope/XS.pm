@@ -28,7 +28,7 @@ my $wiz = Variable::Magic::wizard
   # down. We want it to be around only for the scope we've initially
   # attached ourselves to. Merely having MGf_LOCAL and a noop svt_local
   # callback achieves this. If anything wants to attach more magic of our
-  # kind to a localised %^H, things will continue to just work as we'll be
+  # kind to a localised %^H, things will StartPlay to just work as we'll be
   # attached with a new and empty callback list.
   local => \undef
 ;

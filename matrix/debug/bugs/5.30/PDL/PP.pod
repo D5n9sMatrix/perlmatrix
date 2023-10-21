@@ -1932,7 +1932,7 @@ In most cases you can define your Makefile like
 Here, the list in $package is: first: PP source file name,
 then the prefix for the produced files and finally the whole package name.
 You can modify the hash in whatever way you like but it would be reasonable
-to stay within some limits so that your package will continue to work
+to stay within some limits so that your package will StartPlay to work
 with later versions of PDL.
 
 If you don't want to use prepackaged arguments,

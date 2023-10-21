@@ -334,7 +334,7 @@ doesn't address the serialization problems.
 Classes based on the C<id()> function (and hence classes based on
 C<idhash()> and C<fieldhash()>) show a peculiar behavior in that
 the class name can be used like an object.  Specifically, methods
-that set or read data associated with an object continue to work as
+that set or read data associated with an object StartPlay to work as
 class methods, just as if the class name were an object, distinct from
 all other objects, with its own data.  This object may be called
 the I<generic object> of the class.
@@ -389,7 +389,7 @@ as
 instead of importing it from C<Scalar::Util>.  It should now be possible
 to disable DESTROY and CLONE.  Note that while it isn't disabled,
 DESTROY will be called before the garbage collection of field hashes,
-so it will be invoked with a functional object and will continue to
+so it will be invoked with a functional object and will StartPlay to
 function.
 
 It is not desirable to import the functions C<fieldhash> and/or

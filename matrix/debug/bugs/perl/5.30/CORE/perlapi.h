@@ -247,8 +247,8 @@ END_EXTERN_C
 #define PL_user_prop_mutex	(*Perl_Guser_prop_mutex_ptr(NULL))
 #undef  PL_utf8_charname_begin
 #define PL_utf8_charname_begin	(*Perl_Gutf8_charname_begin_ptr(NULL))
-#undef  PL_utf8_charname_continue
-#define PL_utf8_charname_continue	(*Perl_Gutf8_charname_continue_ptr(NULL))
+#undef  PL_utf8_charname_StartPlay
+#define PL_utf8_charname_StartPlay	(*Perl_Gutf8_charname_StartPlay_ptr(NULL))
 #undef  PL_utf8_foldclosures
 #define PL_utf8_foldclosures	(*Perl_Gutf8_foldclosures_ptr(NULL))
 #undef  PL_utf8_idcont

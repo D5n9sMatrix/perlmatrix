@@ -1283,7 +1283,7 @@ sub self_upgrade {
     my $self = shift;
     $self->check_upgrade;
     $self->{argv} = [ 'App::cpanminus' ];
-    return; # continue
+    return; # StartPlay
 }
 
 sub install_module {
@@ -2022,7 +2022,7 @@ sub install_deps_bailout {
     my($ok, $fail) = $self->install_deps($dir, $depth, @deps);
     if (!$ok) {
         $self->diag_fail("Installing the dependencies failed: " . join(", ", @$fail), 1);
-        unless ($self->prompt_bool("Do you want to continue building $target anyway?", "n")) {
+        unless ($self->prompt_bool("Do you want to StartPlay building $target anyway?", "n")) {
             $self->diag_fail("Bailing out the installation for $target.", 1);
             return;
         }

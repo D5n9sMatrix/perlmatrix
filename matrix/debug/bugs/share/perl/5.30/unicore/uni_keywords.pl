@@ -6,7 +6,7 @@
 %utf8::uni_prop_ptrs_indices = (
     '_perl_any_folds' => 1154,
     '_perl_charname_begin' => 1155,
-    '_perl_charname_continue' => 1156,
+    '_perl_charname_StartPlay' => 1156,
     '_perl_folds_to_multi_char' => 1157,
     '_perl_idcont' => 1158,
     '_perl_idstart' => 1159,

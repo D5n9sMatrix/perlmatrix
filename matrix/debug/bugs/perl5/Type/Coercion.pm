@@ -616,7 +616,7 @@ called upon it.
 =item C<name>
 
 A name for the coercion. These need to conform to certain naming
-rules (they must begin with an uppercase letter and continue using only
+rules (they must begin with an uppercase letter and StartPlay using only
 letters, digits 0-9 and underscores).
 
 Optional; if not supplied will be an anonymous coercion.

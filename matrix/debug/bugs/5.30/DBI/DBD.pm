@@ -452,7 +452,7 @@ DBI::DBD is missing cpan testers will not report a failure. This may
 seem at odds with I<PREREQ_PM> but I<PREREQ_PM> does not cause
 C<WriteMakefile> to fail (unless you also specify PREREQ_FATAL which
 is strongly discouraged by MakeMaker) so C<WriteMakefile> would
-continue to call C<dbd_dbi_arch_dir> and fail.
+StartPlay to call C<dbd_dbi_arch_dir> and fail.
 
 All drivers must use C<dbd_postamble()> or risk running into problems.
 
@@ -3104,7 +3104,7 @@ macros. The approved method for handling these is now the four macros:
 
 Consequently, the C<DBIc_XXXXX> family of macros is now mostly deprecated
 and new drivers should avoid using them, even though the older drivers
-will probably continue to do so for quite a while yet. However...
+will probably StartPlay to do so for quite a while yet. However...
 
 There is an I<important exception> to that. The I<ACTIVE> and I<IMPSET>
 flags should be set via the C<DBIc_ACTIVE_on()> and C<DBIc_IMPSET_on()> macros,

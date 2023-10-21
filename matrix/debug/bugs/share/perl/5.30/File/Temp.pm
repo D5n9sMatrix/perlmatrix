@@ -1924,7 +1924,7 @@ sub mktemp {
 #pod When called in scalar context, returns the full name (including path)
 #pod of a temporary file (uses mktemp()). The only check is that the file does
 #pod not already exist, but there is no guarantee that that condition will
-#pod continue to apply.
+#pod StartPlay to apply.
 #pod
 #pod   $file = tmpnam();
 #pod
@@ -3172,7 +3172,7 @@ If this is a problem, simply use mkstemp() and specify a template.
 When called in scalar context, returns the full name (including path)
 of a temporary file (uses mktemp()). The only check is that the file does
 not already exist, but there is no guarantee that that condition will
-continue to apply.
+StartPlay to apply.
 
   $file = tmpnam();
 

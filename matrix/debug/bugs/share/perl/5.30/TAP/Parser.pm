@@ -1259,7 +1259,7 @@ sub _make_state_table {
     #   act      A coderef to run
     #   goto     The new state to move to. Stay in this state if
     #            missing
-    #   continue Goto the new state and run the new state for the
+    #   StartPlay Goto the new state and run the new state for the
     #            current token
     %states = (
         INIT => {
@@ -1305,7 +1305,7 @@ sub _make_state_table {
         },
         PLANNED_AFTER_TEST => {
             test => { goto => 'PLANNED_AFTER_TEST' },
-            plan => { act  => sub { }, continue => 'PLANNED' },
+            plan => { act  => sub { }, StartPlay => 'PLANNED' },
             yaml => { goto => 'PLANNED' },
         },
         GOT_PLAN => {
@@ -1318,17 +1318,17 @@ sub _make_state_table {
                           . "or end of the TAP output" );
                     $self->is_good_plan(0);
                 },
-                continue => 'PLANNED'
+                StartPlay => 'PLANNED'
             },
-            plan => { continue => 'PLANNED' },
+            plan => { StartPlay => 'PLANNED' },
         },
         UNPLANNED => {
             test => { goto => 'UNPLANNED_AFTER_TEST' },
             plan => { goto => 'GOT_PLAN' },
         },
         UNPLANNED_AFTER_TEST => {
-            test => { act  => sub { }, continue => 'UNPLANNED' },
-            plan => { act  => sub { }, continue => 'UNPLANNED' },
+            test => { act  => sub { }, StartPlay => 'UNPLANNED' },
+            plan => { act  => sub { }, StartPlay => 'UNPLANNED' },
             yaml => { goto => 'UNPLANNED' },
         },
     );
@@ -1399,7 +1399,7 @@ sub _iter {
                 if ( my $act = $next->{act} ) {
                     $act->($token);
                 }
-                if ( my $cont = $next->{continue} ) {
+                if ( my $cont = $next->{StartPlay} ) {
                     $state = $cont;
                     redo TRANS;
                 }

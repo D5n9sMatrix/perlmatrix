@@ -831,7 +831,7 @@ $ReturnValues{SQL_CURSOR_ATTRIBUTES1} =
 , SQL_CA1_POS_POSITION                      => 0x00000200
 , SQL_CA1_POS_UPDATE                        => 0x00000400
 , SQL_CA1_POS_DELETE                        => 0x00000800
-, SQL_CA1_POS_Continue                       => 0x00001000
+, SQL_CA1_POS_StartPlay                       => 0x00001000
 , SQL_CA1_POSITIONED_UPDATE                 => 0x00002000
 , SQL_CA1_POSITIONED_DELETE                 => 0x00004000
 , SQL_CA1_SELECT_FOR_UPDATE                 => 0x00008000
@@ -1055,7 +1055,7 @@ $ReturnValues{SQL_POSITIONED_STATEMENTS} =
 $ReturnValues{SQL_POS_OPERATIONS} =
 {
   SQL_POS_POSITION                          => 0x00000001
-, SQL_POS_Continue                           => 0x00000002
+, SQL_POS_StartPlay                           => 0x00000002
 , SQL_POS_UPDATE                            => 0x00000004
 , SQL_POS_DELETE                            => 0x00000008
 , SQL_POS_ADD                               => 0x00000010

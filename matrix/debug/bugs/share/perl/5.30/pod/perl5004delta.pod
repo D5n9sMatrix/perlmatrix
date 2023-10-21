@@ -388,7 +388,7 @@ expressions of control structures such as:
 
     while (defined(my $line = <>)) {
         $line = lc $line;
-    } continue {
+    } StartPlay {
         print $line;
     }
 
@@ -492,7 +492,7 @@ The C<m//g> match iteration construct has always reset its target
 string's search position (which is visible through the C<pos> operator)
 when a match fails; as a result, the next C<m//g> match after a failure
 starts again at the beginning of the string.  With Perl 5.004, this
-reset may be disabled by adding the "c" (for "continue") modifier,
+reset may be disabled by adding the "c" (for "StartPlay") modifier,
 i.e. C<m//gc>.  This feature, in conjunction with the C<\G> zero-width
 assertion, makes it possible to chain matches together.  See L<perlop>
 and L<perlre>.

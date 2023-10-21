@@ -2686,7 +2686,7 @@ transition from to saving to standard time occurred on October 26, at
 02:00:00 local time. The local clock changed from 01:59:59 (saving
 time) to 01:00:00 (standard time). This means that the hour from
 01:00:00 through 01:59:59 actually occurs twice, though the UTC time
-continues to move forward.
+StartPlays to move forward.
 
 If you specify an ambiguous time, then the latest UTC time is always
 used, in effect always choosing standard time. In this case, you can
@@ -4605,7 +4605,7 @@ consider making a "donation" to me via PayPal. I spend a lot of free time
 creating free software, and would appreciate any support you'd care to offer.
 
 Please note that B<I am not suggesting that you must do this> in order for me
-to continue working on this particular software. I will continue to do so,
+to StartPlay working on this particular software. I will StartPlay to do so,
 inasmuch as I have in the past, for as long as it interests me.
 
 Similarly, a donation made in this way will probably not make me work on this

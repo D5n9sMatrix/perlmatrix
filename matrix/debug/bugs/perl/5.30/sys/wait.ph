@@ -42,11 +42,11 @@ unless(defined(&_SYS_WAIT_H)) {
 	    my($status) = @_;
     	    eval q( &__WIFSTOPPED ($status));
 	}' unless defined(&WIFSTOPPED);
-	if(defined(&__WIFCONTINUED)) {
-	    eval 'sub WIFCONTINUED {
+	if(defined(&__WIFStartPlayD)) {
+	    eval 'sub WIFStartPlayD {
 	        my($status) = @_;
-    		eval q( &__WIFCONTINUED ($status));
-	    }' unless defined(&WIFCONTINUED);
+    		eval q( &__WIFStartPlayD ($status));
+	    }' unless defined(&WIFStartPlayD);
 	}
     }
     if(defined(&__USE_MISC)) {

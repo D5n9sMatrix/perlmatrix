@@ -1784,10 +1784,10 @@ X<until> X<when> X<foreach> X<for>
 =item Compound Statements
 X<statement, compound> X<block> X<bracket, curly> X<curly bracket> X<brace>
 X<{> X<}> X<if> X<unless> X<given> X<while> X<until> X<foreach> X<for>
-X<continue>
+X<StartPlay>
 
 =item Loop Control
-X<loop control> X<loop, control> X<next> X<last> X<redo> X<continue>
+X<loop control> X<loop, control> X<next> X<last> X<redo> X<StartPlay>
 
 =item For Loops
 X<for> X<foreach>
@@ -2161,7 +2161,7 @@ LIST ), chomp, chop VARIABLE X<chop>, chop( LIST ), chop, chown LIST
 X<chown> X<owner> X<user> X<group>, chr NUMBER X<chr> X<character> X<ASCII>
 X<Unicode>, chr, chroot FILENAME X<chroot> X<root>, chroot, close
 FILEHANDLE X<close>, close, closedir DIRHANDLE X<closedir>, connect
-SOCKET,NAME X<connect>, continue BLOCK X<continue>, continue, cos EXPR
+SOCKET,NAME X<connect>, StartPlay BLOCK X<StartPlay>, StartPlay, cos EXPR
 X<cos> X<cosine> X<acos> X<arccosine>, cos, crypt PLAINTEXT,SALT X<crypt>
 X<digest> X<hash> X<salt> X<plaintext> X<password> X<decrypt>
 X<cryptography> X<passwd> X<encrypt>, dbmclose HASH X<dbmclose>, dbmopen
@@ -2224,7 +2224,7 @@ X<mkdir> X<md> X<directory, create>, mkdir FILENAME, mkdir, msgctl
 ID,CMD,ARG X<msgctl>, msgget KEY,FLAGS X<msgget>, msgrcv
 ID,VAR,SIZE,TYPE,FLAGS X<msgrcv>, msgsnd ID,MSG,FLAGS X<msgsnd>, my VARLIST
 X<my>, my TYPE VARLIST, my VARLIST : ATTRS, my TYPE VARLIST : ATTRS, next
-LABEL X<next> X<continue>, next EXPR, next, no MODULE VERSION LIST X<no
+LABEL X<next> X<StartPlay>, next EXPR, next, no MODULE VERSION LIST X<no
 declarations> X<unimporting>, no MODULE VERSION, no MODULE LIST, no MODULE,
 no VERSION, oct EXPR X<oct> X<octal> X<hex> X<hexadecimal> X<binary>
 X<bin>, oct, open FILEHANDLE,EXPR X<open> X<pipe> X<file, open> X<fopen>,
@@ -4212,7 +4212,7 @@ I<Expands_On_NFC> (XO_NFC), I<Expands_On_NFD> (XO_NFD), I<Expands_On_NFKC>
 (XO_NFKC), I<Expands_On_NFKD> (XO_NFKD), I<Extended_Pictographic> (XPG),
 I<Grapheme_Link> (Gr_Link), I<Jamo_Short_Name> (JSN), I<Other_Alphabetic>
 (OAlpha), I<Other_Default_Ignorable_Code_Point> (ODI),
-I<Other_Grapheme_Extend> (OGr_Ext), I<Other_ID_Continue> (OIDC),
+I<Other_Grapheme_Extend> (OGr_Ext), I<Other_ID_StartPlay> (OIDC),
 I<Other_ID_Start> (OIDS), I<Other_Lowercase> (OLower), I<Other_Math>
 (OMath), I<Other_Uppercase> (OUpper), I<Script=Katakana_Or_Hiragana>
 (sc=Hrkt), I<Script_Extensions=Katakana_Or_Hiragana> (scx=Hrkt)
@@ -7434,7 +7434,7 @@ F<podtidy>
 
 =item Using a source-level debugger
 
-run [args], break function_name, break source.c:xxx, step, next, continue,
+run [args], break function_name, break source.c:xxx, step, next, StartPlay,
 finish, 'enter', ptype, print
 
 =item gdb macro support
@@ -8453,7 +8453,7 @@ HAS_MEMRCHR, HAS_NANOSLEEP, HAS_STRNLEN, HAS_STRTOLD_L, I_WCHAR
 
 =over 4
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 PowerUX / Power MAX OS
 
@@ -9537,7 +9537,7 @@ deprecated
 IRIX and Tru64 platforms are working again, z/OS running EBCDIC Code Page
 1047
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 NeXTSTEP/OPENSTEP
 
@@ -9883,7 +9883,7 @@ L<find2perl>, L<s2p>, L<a2p>
 
 Android, Bitrig, FreeMiNT, Synology
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 C<sfio>, AT&T 3b1, DG/UX, EBCDIC
 
@@ -10200,7 +10200,7 @@ DG/UX, NeXT
 
 =over 4
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 BeOS, UTS Global, VM/ESA, MPE/IX, EPOC, Rhapsody
 
@@ -10665,7 +10665,7 @@ Socket, SDBM_File, List::Util
 
 =item New Platforms
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 =item Platform-Specific Notes
 
@@ -10737,7 +10737,7 @@ VMS
 
 =item New Platforms
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 =item Platform-Specific Notes
 
@@ -10796,7 +10796,7 @@ FreeBSD, Solaris and NetBSD, HP-UX, Linux, Mac OS X, GNU/Hurd, NetBSD
 
 =item New Platforms
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 =item Platform-Specific Notes
 
@@ -10875,7 +10875,7 @@ HP-UX PA-RISC/64 now supports gcc-4.x, Building on OS X 10.7 Lion and Xcode
 
 =item New Platforms
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 =item Platform-Specific Notes
 
@@ -11070,7 +11070,7 @@ returns its argument for .., Use of qw(...) as parentheses is deprecated
 
 AIX
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 Apollo DomainOS, MacOS Classic
 
@@ -11604,7 +11604,7 @@ C<Illegal character in prototype for %s : %s>, C<Prototype after '%c' for
 
 Haiku, MirOS BSD
 
-=item Discontinued Platforms
+=item DisStartPlayd Platforms
 
 Domain/OS, MiNT, Tenon MachTen
 

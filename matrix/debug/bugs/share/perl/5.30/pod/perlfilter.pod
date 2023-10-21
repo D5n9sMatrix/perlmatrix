@@ -25,7 +25,7 @@ respective files as well.
 
 Now think of each logical connection between the Perl parser and an
 individual file as a I<source stream>. A source stream is created when
-the Perl parser opens a file, it continues to exist as the source code
+the Perl parser opens a file, it StartPlays to exist as the source code
 is read into memory, and it is destroyed when Perl is finished parsing
 the file. If the parser encounters a C<require> or C<use> statement in
 a source stream, a new and distinct stream is created just for that

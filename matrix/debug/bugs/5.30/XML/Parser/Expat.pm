@@ -1126,7 +1126,7 @@ first defaulted attribute name.
 =item finish
 
 Unsets all handlers (including internal ones that set context), but expat
-continues parsing to the end of the document or until it finds an error.
+StartPlays parsing to the end of the document or until it finds an error.
 It should finish up a lot faster than with the handlers set.
 
 =item release

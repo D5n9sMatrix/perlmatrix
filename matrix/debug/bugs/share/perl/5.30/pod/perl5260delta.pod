@@ -42,7 +42,7 @@ See L</Unescaped literal C<"{"> characters in regular expression patterns are no
 
 Using the C<lexical_subs> feature introduced in v5.18 no longer emits a warning.  Existing
 code that disables the C<experimental::lexical_subs> warning category
-that the feature previously used will continue to work.  The
+that the feature previously used will StartPlay to work.  The
 C<lexical_subs> feature has no effect; all Perl code can use lexical
 subroutines, regardless of what feature declarations are in scope.
 
@@ -2595,7 +2595,7 @@ L<[perl #129274]|https://rt.perl.org/Public/Bug/Display.html?id=129274>
 =item *
 
 When checking for an indirect object method call, in some rare cases
-the parser could reallocate the line buffer but then continue to use
+the parser could reallocate the line buffer but then StartPlay to use
 pointers to the old buffer.
 L<[perl #129190]|https://rt.perl.org/Public/Bug/Display.html?id=129190>
 
@@ -3260,7 +3260,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 230,000 lines of changes to 1,800 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers.  The following people are known to have contributed the
 improvements that became Perl 5.26.0:
 

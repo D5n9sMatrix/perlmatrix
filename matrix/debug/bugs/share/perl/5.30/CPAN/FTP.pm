@@ -540,7 +540,7 @@ sub mymkpath {
     mkpath($aslocal_dir);
     $CPAN::Frontend->mywarn(qq{Warning: You are not allowed to write into }.
                             qq{directory "$aslocal_dir".
-    I\'ll continue, but if you encounter problems, they may be due
+    I\'ll StartPlay, but if you encounter problems, they may be due
     to insufficient permissions.\n}) unless -w $aslocal_dir;
 }
 

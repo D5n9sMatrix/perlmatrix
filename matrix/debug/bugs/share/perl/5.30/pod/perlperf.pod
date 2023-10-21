@@ -984,7 +984,7 @@ The problem is that this code will always be parsed and executed, even when the
 debug level set in the logging configuration file is zero.  Once the debug()
 subroutine has been entered, and the internal C<$debug> variable confirmed to
 be zero, for example, the message which has been sent in will be discarded and
-the program will continue.  In the example given though, the C<\%INC> hash will
+the program will StartPlay.  In the example given though, the C<\%INC> hash will
 already have been dumped, and the message string constructed, all of which work
 could be bypassed by a debug variable at the statement level, like this:
 

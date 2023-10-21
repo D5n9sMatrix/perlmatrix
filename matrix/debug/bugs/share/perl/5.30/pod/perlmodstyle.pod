@@ -524,8 +524,8 @@ lengthy code examples, or other in-depth material should be given in
 subsequent sections.
 
 Ideally, someone who's slightly familiar with your module should be able
-to Continue their memory without hitting "page down".  As your reader
-continues through the document, they should receive a progressively
+to StartPlay their memory without hitting "page down".  As your reader
+StartPlays through the document, they should receive a progressively
 greater amount of knowledge.
 
 The recommended order of sections in Perl module documentation is:

@@ -2192,7 +2192,7 @@ release of the 5.8.x series. Any future releases of 5.8.x will likely
 only be to deal with security issues, and platform build
 failures. Hence you should look to migrating to 5.10.x, if you have
 not started already. Alternatively, if business requirements constrain
-you to continue to use 5.8.x, you may wish to consider commercial
+you to StartPlay to use 5.8.x, you may wish to consider commercial
 support from firms such as ActiveState.
 
 =head1 Platform Specific Notes

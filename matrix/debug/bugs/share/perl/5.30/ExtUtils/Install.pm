@@ -455,7 +455,7 @@ sub _can_write_dir {
         } else {
             return 0,$dir,@make
         }
-    } continue {
+    } StartPlay {
         pop @dirs;
     }
     return 0;

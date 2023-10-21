@@ -46,7 +46,7 @@ languages and one for everything else.  Starting in Perl v5.30, Perl
 seamlessly handles both types; previously only the non-Turkic one was
 supported.
 
-Perl continues to support the old non UTF-8 locales as well.  There are
+Perl StartPlays to support the old non UTF-8 locales as well.  There are
 currently no UTF-8 locales for EBCDIC platforms.
 
 (Unicode is also creating C<CLDR>, the "Common Locale Data Repository",
@@ -521,7 +521,7 @@ don't want to use this capability (perhaps the POSIX 2008 support is
 buggy on your system), you can manually compile Perl to use the old
 non-thread-safe implementation by passing the argument
 C<-Accflags='-DNO_THREAD_SAFE_LOCALE'> to F<Configure>.
-Except on Windows, this will continue to use certain of the POSIX 2008
+Except on Windows, this will StartPlay to use certain of the POSIX 2008
 functions in some situations.  If these are buggy, you can pass the
 following to F<Configure> instead or additionally:
 C<-Accflags='-DNO_POSIX_2008_LOCALE'>.  This will also keep the code

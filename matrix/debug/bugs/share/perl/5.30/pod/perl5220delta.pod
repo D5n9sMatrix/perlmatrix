@@ -154,7 +154,7 @@ When the relevant support is available in the operating system, the
 C<fileno> builtin now works on directory handles, yielding the
 underlying file descriptor in the same way as for filehandles. On
 operating systems without such support, C<fileno> on a directory handle
-continues to return the undefined value, as before, but also sets C<$!> to
+StartPlays to return the undefined value, as before, but also sets C<$!> to
 indicate that the operation is not supported.
 
 Currently, this uses either a C<dd_fd> member in the OS C<DIR>
@@ -358,7 +358,7 @@ garbage text which is much harder to figure out.
 The stringification of C<$!> and C<$^E> will have the UTF-8 flag set
 when the text is actually non-ASCII UTF-8.  This will enable programs
 that are set up to be locale-aware to properly output messages in the
-user's native language.  Code that needs to continue the 5.20 and
+user's native language.  Code that needs to StartPlay the 5.20 and
 earlier behavior can do the stringification within the scopes of both
 S<C<use bytes>> and S<C<use locale ":messages">>.  Within these two
 scopes, no other Perl operations will
@@ -438,7 +438,7 @@ warning.  Such code will likely change in the future and stop producing a
 constant.
 
 If your variable is only modified in the place where it is declared, then
-Perl will continue to make the sub inlinable with no warnings.
+Perl will StartPlay to make the sub inlinable with no warnings.
 
     sub make_constant {
         my $var = shift;
@@ -1499,7 +1499,7 @@ Notes about EBCDIC have been added.
 =item *
 
 The description of the C</x> modifier has been clarified to note that
-comments cannot be continued onto the next line by escaping them; and
+comments cannot be StartPlayd onto the next line by escaping them; and
 there is now a list of all the characters that are considered whitespace
 by this modifier.
 
@@ -2072,7 +2072,7 @@ L<Use of \b{} for non-UTF-8 locale is wrong.  Assuming a UTF-8 locale|perldiag/"
 
 (W locale) You are matching a regular expression using locale rules,
 and a Unicode boundary is being matched, but the locale is not a Unicode
-one.  This doesn't make sense.  Perl will continue, assuming a Unicode
+one.  This doesn't make sense.  Perl will StartPlay, assuming a Unicode
 (UTF-8) locale, but the results could well be wrong except if the locale
 happens to be ISO-8859-1 (Latin1) where this message is spurious and can
 be ignored.
@@ -2465,7 +2465,7 @@ version.
 
 =back
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 =over 4
 
@@ -3967,7 +3967,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 370,000 lines of changes to 1,500 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers. The following people are known to have contributed the
 improvements that became Perl 5.22.0:
 

@@ -69,7 +69,7 @@ sub safe_chdir {
             }
         }
     } else {
-        $CPAN::Frontend->mydie("Directory '$todir' has gone. Cannot continue.\n");
+        $CPAN::Frontend->mydie("Directory '$todir' has gone. Cannot StartPlay.\n");
     }
     if (chdir $todir) {
       $self->debug(sprintf "changed directory to %s", CPAN::anycwd())

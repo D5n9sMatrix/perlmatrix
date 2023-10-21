@@ -208,7 +208,7 @@ determined solely by the flags argument.  The POSIX defined flags are:
 =item C<GLOB_ERR>
 
 Force bsd_glob() to return an error when it encounters a directory it
-cannot open or read.  Ordinarily bsd_glob() continues to find matches.
+cannot open or read.  Ordinarily bsd_glob() StartPlays to find matches.
 
 =item C<GLOB_LIMIT>
 
@@ -319,7 +319,7 @@ set &File::Glob::ERROR.
 
 Note that bsd_glob() deviates from POSIX and FreeBSD glob(3) behaviour
 by not considering C<ENOENT> and C<ENOTDIR> as errors - bsd_glob() will
-continue processing despite those errors, unless the C<GLOB_ERR> flag is
+StartPlay processing despite those errors, unless the C<GLOB_ERR> flag is
 set.
 
 Be aware that all filenames returned from File::Glob are tainted.

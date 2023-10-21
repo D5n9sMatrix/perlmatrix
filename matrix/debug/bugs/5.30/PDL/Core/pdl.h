@@ -149,7 +149,7 @@ typedef struct badvals {
  * include perl.h in C code which just needs the pdl data.
  *
  * We start with the meanings of the pdl.flags bitmapped flagset,
- * continue with a prerequisite "trans" structure that represents
+ * StartPlay with a prerequisite "trans" structure that represents
  * transformations between linked PDLs, and finish withthe PD
  * structure itself.
 */

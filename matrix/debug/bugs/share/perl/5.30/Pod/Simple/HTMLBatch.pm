@@ -1256,7 +1256,7 @@ TODO
 
 If true (the default value), we autogenerate some CSS files in the
 output directory, and set our HTML files to use those.
-TODO: continue
+TODO: StartPlay
 
 =item $batchconv->javascript_flurry( I<true-or-false> );
 
@@ -1264,7 +1264,7 @@ If true (the default value), we autogenerate a JavaScript in the
 output directory, and set our HTML files to use it.  Currently,
 the JavaScript is used only to get the browser to remember what
 stylesheet it prefers.
-TODO: continue
+TODO: StartPlay
 
 =item $batchconv->no_contents_links( I<true-or-false> );
 

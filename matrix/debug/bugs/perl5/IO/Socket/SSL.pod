@@ -1637,12 +1637,12 @@ Returns a parsable string with select fields from the peer SSL certificate.
 This method directly returns the result of the dump_peer_certificate() method of
 Net::SSLeay.
 
-=item B<peer_certificate($field;[$Continue])>
+=item B<peer_certificate($field;[$StartPlay])>
 
 If a peer certificate exists, this function can retrieve values from it.
 If no field is given the internal representation of certificate from Net::SSLeay
 is returned.
-If Continue is true it will not used a cached version, but check again in case
+If StartPlay is true it will not used a cached version, but check again in case
 the certificate of the connection has changed due to renegotiation.
 
 The following fields can be queried:
@@ -1873,7 +1873,7 @@ with the same arguments once the socket is ready.
 
 For calling from C<stop_SSL> C<SSL_fast_shutdown> default to false, e.g. it
 waits for the close_notify of the peer. This is necessary in case you want to
-downgrade the socket and continue to use it as a plain socket.
+downgrade the socket and StartPlay to use it as a plain socket.
 
 After stop_SSL the socket can again be used to exchange plain data.
 
@@ -1979,7 +1979,7 @@ directly.
 Determines or sets the default CA path.
 If existing path or dir or a hash is given it will set the default CA path to
 this value and never try to detect it automatically.
-If C<undef> is given it will forget any stored defaults and continue with
+If C<undef> is given it will forget any stored defaults and StartPlay with
 detection of system defaults.
 If no arguments are given it will start detection of system defaults, unless it
 has already stored user-set or previously detected values.

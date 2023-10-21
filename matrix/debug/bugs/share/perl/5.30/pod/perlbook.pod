@@ -60,7 +60,7 @@ programming:
 
 =back
 
-The tutorial started in the Llama continues in the Alpaca, which
+The tutorial started in the Llama StartPlays in the Alpaca, which
 introduces the intermediate features of references, data structures,
 object-oriented programming, and modules:
 

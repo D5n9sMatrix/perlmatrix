@@ -236,7 +236,7 @@ method. If omitted, no names will be assigned.
 =item strict_exceptions
 
 Exceptions thrown by this method which are not of type L<Net::DBus::Error> will
-not be caught and converted to D-Bus errors. They will be rethrown and continue
+not be caught and converted to D-Bus errors. They will be rethrown and StartPlay
 up the stack until something else catches them (or the process dies).
 
 =back

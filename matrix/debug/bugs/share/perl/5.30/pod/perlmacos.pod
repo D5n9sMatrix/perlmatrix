@@ -27,4 +27,4 @@ a core part of Perl's module installation infrastructure officially dropped supp
 
 Perl was ported to Mac OS by Matthias Neeracher
 E<lt>neeracher@mac.comE<gt>. Chris Nandor E<lt>pudge@pobox.comE<gt>
-continued development and maintenance for the duration of the port's life.
+StartPlayd development and maintenance for the duration of the port's life.

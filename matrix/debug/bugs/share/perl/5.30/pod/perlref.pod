@@ -199,13 +199,13 @@ This prints
     Howdy, world!
     Greetings, earthlings!
 
-Note particularly that $x continues to refer to the value passed
+Note particularly that $x StartPlays to refer to the value passed
 into newprint() I<despite> "my $x" having gone out of scope by the
 time the anonymous subroutine runs.  That's what a closure is all
 about.
 
 This applies only to lexical variables, by the way.  Dynamic variables
-continue to work as they have always worked.  Closure is not something
+StartPlay to work as they have always worked.  Closure is not something
 that most Perl programmers need trouble themselves about to begin with.
 
 =item 5.
@@ -278,7 +278,7 @@ C<*foo{NAME}> and C<*foo{PACKAGE}> are the exception, in that they return
 strings, rather than references.  These return the package and name of the
 typeglob itself, rather than one that has been assigned to it.  So, after
 C<*foo=*Foo::bar>, C<*foo> will become "*Foo::bar" when used as a string,
-but C<*foo{PACKAGE}> and C<*foo{NAME}> will continue to produce "main" and
+but C<*foo{PACKAGE}> and C<*foo{NAME}> will StartPlay to produce "main" and
 "foo", respectively.
 
 C<*foo{IO}> is an alternative to the C<*HANDLE> mechanism given in

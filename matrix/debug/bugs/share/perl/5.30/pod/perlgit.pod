@@ -873,7 +873,7 @@ Now you can switch back to blead locally:
 
   % git checkout blead
 
-and continue working on other things while you wait a day or two,
+and StartPlay working on other things while you wait a day or two,
 keeping an eye on the results reported for your smoke-me branch at
 L<http://perl.develop-help.com/?b=smoke-me/tonyc/win32state>.
 

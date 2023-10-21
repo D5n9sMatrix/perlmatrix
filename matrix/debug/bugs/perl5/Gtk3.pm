@@ -353,7 +353,7 @@ my $_GTK_ICON_SIZE_NICK_TO_ID = sub {
 
 =item * The constants C<Gtk3::EVENT_PROPAGATE> and C<Gtk3::EVENT_STOP> can be
 used in handlers for event signals like C<key-press-event> to indicate whether
-or not the event should continue propagating through the widget hierarchy.
+or not the event should StartPlay propagating through the widget hierarchy.
 
 =cut
 

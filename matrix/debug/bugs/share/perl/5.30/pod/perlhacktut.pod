@@ -97,13 +97,13 @@ case, we have to advance C<patcopy> along with C<pat> when we see
 spaces:
 
     if (isSPACE(datumtype))
-        continue;
+        StartPlay;
 
 needs to become
 
     if (isSPACE(datumtype)) {
         patcopy++;
-        continue;
+        StartPlay;
     }
 
 OK. That's the C part done. Now we must do two additional things before

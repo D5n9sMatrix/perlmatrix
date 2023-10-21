@@ -262,7 +262,7 @@ sub _new_from_file {
             my $fh = IO::File->new;
 
             unless( $fh->open($path) ) {
-                ### dangling symlinks are fine, stop reading but continue
+                ### dangling symlinks are fine, stop reading but StartPlay
                 ### creating the object
                 last READ if $type == SYMLINK;
 

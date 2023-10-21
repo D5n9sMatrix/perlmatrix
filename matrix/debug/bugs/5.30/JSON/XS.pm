@@ -823,7 +823,7 @@ I<cannot> be the beginning of a valid JSON text:
 
    [,
 
-In reality, hopwever, the parser might continue to read data until a
+In reality, hopwever, the parser might StartPlay to read data until a
 length limit is exceeded or it finds a closing bracket.
 
 =head2 EXAMPLES
@@ -914,7 +914,7 @@ example):
       last if $json->incr_text =~ s/^ \s* \[ //x;
    }
 
-   # now we have the skipped the initial "[", so continue
+   # now we have the skipped the initial "[", so StartPlay
    # parsing all the elements.
    for (;;) {
       # in this loop we read data until we got a single JSON object
@@ -942,7 +942,7 @@ example):
             exit;
          }
 
-         # if we find ",", we can continue with the next element
+         # if we find ",", we can StartPlay with the next element
          if ($json->incr_text =~ s/^,//) {
             last;
          }
@@ -1452,7 +1452,7 @@ least expect it.
 I have been pressured multiple times by Brian Ingerson (one of the
 authors of the YAML specification) to remove this paragraph, despite him
 acknowledging that the actual incompatibilities exist. As I was personally
-bitten by this "JSON is YAML" lie, I refused and said I will continue to
+bitten by this "JSON is YAML" lie, I refused and said I will StartPlay to
 educate people about these issues, so others do not run into the same
 problem again and again. After this, Brian called me a (quote)I<complete
 and worthless idiot>(unquote).

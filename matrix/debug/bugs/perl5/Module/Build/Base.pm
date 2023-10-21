@@ -2715,7 +2715,7 @@ sub do_tests {
     if($self->use_tap_harness or ($args and %$args)) {
       my $aggregate = $self->run_tap_harness($tests);
       if ( $aggregate->has_errors ) {
-        die "Errors in testing.  Cannot continue.\n";
+        die "Errors in testing.  Cannot StartPlay.\n";
       }
     }
     else {

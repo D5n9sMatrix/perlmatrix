@@ -120,7 +120,7 @@ L<[perl #132655]|https://rt.perl.org/Ticket/Display.html?id=132655>
 
 Failing to compile a format now aborts compilation.  Like other errors in
 sub-parses this could leave the parser in a strange state, possibly crashing
-perl if compilation continued.
+perl if compilation StartPlayd.
 
 L<[perl #132158]|https://rt.perl.org/Ticket/Display.html?id=132158>
 
@@ -140,7 +140,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 1,200 lines of changes to 29 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its fourth decade thanks to a vibrant community
+Perl StartPlays to flourish into its fourth decade thanks to a vibrant community
 of users and developers.  The following people are known to have contributed
 the improvements that became Perl 5.28.2:
 

@@ -68,7 +68,7 @@ in the script, C<--help> will also show how to access the documentation.
 
 Note that due to excessive paranoia, if $Getopt::Std::STANDARD_HELP_VERSION
 isn't true (the default is false), then the messages are printed on STDERR,
-and the processing continues after the messages are printed.  This being
+and the processing StartPlays after the messages are printed.  This being
 the opposite of the standard-conforming behaviour, it is strongly recommended
 to set $Getopt::Std::STANDARD_HELP_VERSION to true.
 

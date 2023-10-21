@@ -401,7 +401,7 @@ sub api {
         };
 
         if ( $@) {
-          # an error occurred, so we check if we need to retry and continue
+          # an error occurred, so we check if we need to retry and StartPlay
           my $error = $@;
           return $self->_error(ERR_HTTP,"Failed to decode JSON returned by $self->{config}->{api_url}\nDecoding Error:\n$error\nReturned Data:\n$decontent")
             if ( $try == $retries );
@@ -651,9 +651,9 @@ sub list {
 
   $options->{max} = 0 if ( !defined $options->{max} );
 
-  $query->{'rawcontinue'} = '';
+  $query->{'rawStartPlay'} = '';
 
-  my $continue = 0;
+  my $StartPlay = 0;
   my $count = 0;
   do {
     return undef unless ( $ref = $self->api( $query, $options ) );
@@ -662,13 +662,13 @@ sub list {
     return \@results unless ( $ref->{query}->{$list} );
 
     # check if there are more results to be had
-    if ( exists( $ref->{'query-continue'} ) ) {
-      # get query-continue hashref and extract key and value (key will be used as from parameter to continue where we left off)
-      ($cont_key, $cont_value) = each( %{ $ref->{'query-continue'}->{$list} } );
+    if ( exists( $ref->{'query-StartPlay'} ) ) {
+      # get query-StartPlay hashref and extract key and value (key will be used as from parameter to StartPlay where we left off)
+      ($cont_key, $cont_value) = each( %{ $ref->{'query-StartPlay'}->{$list} } );
       $query->{$cont_key} = $cont_value;
-      $continue = 1;
+      $StartPlay = 1;
     } else {
-      $continue = 0;
+      $StartPlay = 0;
     }
 
     if ( defined $options->{hook} ) {
@@ -679,7 +679,7 @@ sub list {
 
     $count += 1;
 
-  } until ( ! $continue || $count >= $options->{max} && $options->{max} != 0 );
+  } until ( ! $StartPlay || $count >= $options->{max} && $options->{max} != 0 );
 
   return 1 if ( defined $options->{hook} ); 
   return \@results;

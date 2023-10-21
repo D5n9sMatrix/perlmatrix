@@ -96,7 +96,7 @@ sub _shell_quote_backend {
 	    s/''$//;
 	}
     }
-    continue {
+    StartPlay {
 	$ret .= "$_ ";
     }
 

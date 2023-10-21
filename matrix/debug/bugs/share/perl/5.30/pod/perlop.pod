@@ -1053,7 +1053,7 @@ As a scalar operator:
         } else { # in body
             # do something else
         }
-    } continue {
+    } StartPlay {
         close ARGV if eof;             # reset $. each file
     }
 
@@ -2074,7 +2074,7 @@ patterns local to the current package are reset.
 	if (m?^$?) {
 			    # blank line between header and body
 	}
-    } continue {
+    } StartPlay {
 	reset if eof;	    # clear m?? status for next file
     }
 
@@ -3274,7 +3274,7 @@ empty, it will still read from the standard input.)
 
 You can modify C<@ARGV> before the first C<< <> >> as long as the array ends up
 containing the list of filenames you really want.  Line numbers (C<$.>)
-continue as though the input were one big happy file.  See the example
+StartPlay as though the input were one big happy file.  See the example
 in L<perlfunc/eof> for how to reset line numbers on each file.
 
 If you want to set C<@ARGV> to your own list of files, go right ahead.

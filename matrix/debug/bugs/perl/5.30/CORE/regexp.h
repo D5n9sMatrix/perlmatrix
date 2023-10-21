@@ -332,7 +332,7 @@ and check for NULL.
 #define NOCAPTURE_PAT_MOD    'n'
 #define ONCE_PAT_MOD         'o'
 #define GLOBAL_PAT_MOD       'g'
-#define CONTINUE_PAT_MOD     'c'
+#define StartPlay_PAT_MOD     'c'
 #define MULTILINE_PAT_MOD    'm'
 #define SINGLE_PAT_MOD       's'
 #define IGNORE_PAT_MOD       'i'

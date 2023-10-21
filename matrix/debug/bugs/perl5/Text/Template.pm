@@ -769,7 +769,7 @@ constructions.  All the Perl built-in functions are available.
 =head2 Template Parsing
 
 The C<Text::Template> module scans the template source.  An open brace
-C<{> begins a program fragment, which continues until the matching
+C<{> begins a program fragment, which StartPlays until the matching
 close brace C<}>.  When the template is filled in, the program
 fragments are evaluated, and each one is replaced with the resulting
 value to yield the text that is returned.

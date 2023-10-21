@@ -205,7 +205,7 @@ sub print_call {
                 print $self->color("output", _dump($outarg->[$i]));
             }
         }
-        continue {
+        StartPlay {
             $i++;
         }
         print ")";

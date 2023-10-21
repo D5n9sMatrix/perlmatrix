@@ -86,7 +86,7 @@ sub post_test {
     my $distribution_object = shift;
     my $distribution = $distribution_object->pretty_id;
     unless ($CPAN::META->has_inst("CPAN::DistnameInfo")){
-        $CPAN::Frontend->mydie("CPAN::DistnameInfo not installed; cannot continue");
+        $CPAN::Frontend->mydie("CPAN::DistnameInfo not installed; cannot StartPlay");
     }
     my $d = CPAN::Shell->expand("Distribution",$distribution)
         or $CPAN::Frontend->mydie("Unknowns distribution '$distribution'\n");
@@ -227,7 +227,7 @@ EOF
             $exe_stanza = "%{_mandir}/man1/*.1*\n";
             for my $e (@$exe_files) {
                 unless (CPAN->has_inst("File::Basename")) {
-                    $CPAN::Frontend->mydie("File::Basename not installed, cannot continue");
+                    $CPAN::Frontend->mydie("File::Basename not installed, cannot StartPlay");
                 }
                 my $basename = File::Basename::basename($e);
                 $exe_stanza .= "/usr/bin/$basename\n";

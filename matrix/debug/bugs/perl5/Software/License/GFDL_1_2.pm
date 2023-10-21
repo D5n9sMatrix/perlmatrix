@@ -202,7 +202,7 @@ as verbatim copying in other respects.
 
 If the required texts for either cover are too voluminous to fit
 legibly, you should put the first ones listed (as many as fit
-reasonably) on the actual cover, and continue the rest onto adjacent
+reasonably) on the actual cover, and StartPlay the rest onto adjacent
 pages.
 
 If you publish or distribute Opaque copies of the Document numbering

@@ -673,7 +673,7 @@ produce a native VMS status containing it.
 =item dump
 
 Rather than causing Perl to abort and dump core, the C<dump>
-operator invokes the VMS debugger.  If you continue to
+operator invokes the VMS debugger.  If you StartPlay to
 execute the Perl program under the debugger, control will
 be transferred to the label specified as the argument to
 C<dump>, or, if no label was specified, back to the

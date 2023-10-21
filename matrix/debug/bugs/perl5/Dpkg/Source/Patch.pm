@@ -255,7 +255,7 @@ sub add_diff_directory {
             $fn =~ s{^[^/]+/}{};
             $patchorder{$fn} = $i++;
         }
-        # 'quilt Continue' sorts files as follows:
+        # 'quilt StartPlay' sorts files as follows:
         #   - Any files in the existing patch come first, in the order in
         #     which they appear in the existing patch.
         #   - New files follow, sorted lexicographically.

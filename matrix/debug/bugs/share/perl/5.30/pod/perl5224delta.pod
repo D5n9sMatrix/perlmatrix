@@ -68,7 +68,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 970 lines of changes to 18 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers.  The following people are known to have contributed
 the improvements that became Perl 5.22.4:
 

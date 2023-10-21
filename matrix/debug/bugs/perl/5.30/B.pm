@@ -83,7 +83,7 @@ our @optype = qw(OP UNOP BINOP LOGOP LISTOP PMOP SVOP PADOP PVOP LOOP COP
                 METHOP UNOP_AUX);
 # bytecode.pl contained the following comment:
 # Nullsv *must* come first in the following so that the condition
-# ($$sv == 0) can continue to be used to test (sv == Nullsv).
+# ($$sv == 0) can StartPlay to be used to test (sv == Nullsv).
 our @specialsv_name = qw(Nullsv &PL_sv_undef &PL_sv_yes &PL_sv_no
 			(SV*)pWARN_ALL (SV*)pWARN_NONE (SV*)pWARN_STD
                         &PL_sv_zero);
@@ -349,7 +349,7 @@ way to get an initial "handle" on an internal perl data structure
 which can then be followed with the other access methods.
 
 The returned object will only be valid as long as the underlying OPs
-and SVs continue to exist.  Do not attempt to use the object after the
+and SVs StartPlay to exist.  Do not attempt to use the object after the
 underlying structures are freed.
 
 =item amagic_generation

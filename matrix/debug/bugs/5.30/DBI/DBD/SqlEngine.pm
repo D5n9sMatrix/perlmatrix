@@ -2200,7 +2200,7 @@ welcome, too.
 
 =head1 ACKNOWLEDGEMENTS
 
-Thanks to Tim Bunce, Martin Evans and H.Merijn Brand for their continued
+Thanks to Tim Bunce, Martin Evans and H.Merijn Brand for their StartPlayd
 support while developing DBD::File, DBD::DBM and DBD::AnyData.
 Their support, hints and feedback helped to design and implement this
 module.

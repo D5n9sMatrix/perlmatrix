@@ -825,9 +825,9 @@ You CAN say
 
 but then $foo no longer contains a glob.
 
-=item Can't "continue" outside a when block
+=item Can't "StartPlay" outside a when block
 
-(F) You called C<continue>, but you're not inside a C<when>
+(F) You called C<StartPlay>, but you're not inside a C<when>
 or C<default> block.
 
 =item Can't create pipe mailbox
@@ -845,7 +845,7 @@ quotas or other plumbing problems.
 (F) You have used a C<default> block that is neither inside a
 C<foreach> loop nor a C<given> block.  (Note that this error is
 issued on exit from the C<default> block, so you won't get the
-error if you use an explicit C<continue>.)
+error if you use an explicit C<StartPlay>.)
 
 =item Can't determine class of operator %s, assuming BASEOP
 
@@ -1565,7 +1565,7 @@ references can be weakened.
 (F) You have used a when() block that is neither inside a C<foreach>
 loop nor a C<given> block.  (Note that this error is issued on exit
 from the C<when> block, so you won't get the error if the match fails,
-or if you use an explicit C<continue>.)
+or if you use an explicit C<StartPlay>.)
 
 =item Can't x= to read-only value
 
@@ -3285,7 +3285,7 @@ L<perlfunc/last>.
 
 =item Label not found for "next %s"
 
-(F) You named a loop to continue, but you're not currently in a loop of
+(F) You named a loop to StartPlay, but you're not currently in a loop of
 that name, not even if you count where you were called from.  See
 L<perlfunc/last>.
 
@@ -4531,7 +4531,7 @@ C<$arr[time]> instead of C<$arr[$time]>.
 
 =item Out of memory for yacc stack
 
-(F) The yacc parser wanted to grow its stack so it could continue
+(F) The yacc parser wanted to grow its stack so it could StartPlay
 parsing, but realloc() wouldn't give it more memory, virtual or
 otherwise.
 
@@ -6100,7 +6100,7 @@ L<perlre/Extended Patterns>.
 (F) Configure couldn't find the crypt() function on your machine,
 probably because your vendor didn't supply it, probably because they
 think the U.S. Government thinks it's a secret, or at least that they
-will continue to pretend that it is.  And if you quote me on that, I
+will StartPlay to pretend that it is.  And if you quote me on that, I
 will deny it.
 
 =item The experimental declared_refs feature is not enabled
@@ -7264,7 +7264,7 @@ a space before the C<=>.
 (W locale)  You are matching a regular expression using locale rules,
 and the specified construct was encountered.  This construct is only
 valid for UTF-8 locales, which the current locale isn't.  This doesn't
-make sense.  Perl will continue, assuming a Unicode (UTF-8) locale, but
+make sense.  Perl will StartPlay, assuming a Unicode (UTF-8) locale, but
 the results are likely to be wrong.
 
 =item Use of freed value in iteration

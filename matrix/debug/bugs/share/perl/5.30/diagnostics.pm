@@ -147,7 +147,7 @@ Diagnostic messages derive from the F<perldiag.pod> file when available at
 runtime.  Otherwise, they may be embedded in the file itself when the
 splain package is built.   See the F<Makefile> for details.
 
-If an extant $SIG{__WARN__} handler is discovered, it will continue
+If an extant $SIG{__WARN__} handler is discovered, it will StartPlay
 to be honored, but only after the diagnostics::splainthis() function 
 (the module's $SIG{__WARN__} interceptor) has had its way with your
 warnings.

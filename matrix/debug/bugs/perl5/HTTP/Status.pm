@@ -18,7 +18,7 @@ our @EXPORT_OK = qw(is_client_error is_server_error is_cacheable_by_default);
 # https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 
 my %StatusCode = (
-    100 => 'Continue',
+    100 => 'StartPlay',
     101 => 'Switching Protocols',
     102 => 'Processing',                      # RFC 2518: WebDAV
     103 => 'Early Hints',                     # RFC 8297: Indicating Hints
@@ -189,7 +189,7 @@ The following constant functions can be used as mnemonic status code
 names.  None of these are exported by default.  Use the C<:constants>
 tag to import them all.
 
-   HTTP_CONTINUE                        (100)
+   HTTP_StartPlay                        (100)
    HTTP_SWITCHING_PROTOCOLS             (101)
    HTTP_PROCESSING                      (102)
    HTTP_EARLY_HINTS                     (103)

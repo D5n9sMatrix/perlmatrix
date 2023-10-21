@@ -563,7 +563,7 @@ value provided is not callable.
 Note - This function was formerly known as _CALLABLE but has been renamed
 for greater symmetry with the other _XXXXLIKE functions.
 
-The use of _CALLABLE has been deprecated. It will continue to work, but
+The use of _CALLABLE has been deprecated. It will StartPlay to work, but
 with a warning, until end-2006, then will be removed.
 
 I apologise for any inconvenience caused.

@@ -241,7 +241,7 @@ example that uses C<smb> to fetch files from a remote server:
    $h->finish;
 
 Notice that we carefully clear $out after the first command/response
-cycle? That's because IPC::Run does not delete $out when we continue,
+cycle? That's because IPC::Run does not delete $out when we StartPlay,
 and we don't want to trip over the old output in the second
 command/response cycle.
 
@@ -392,10 +392,10 @@ to take place before the parent writes to the child via pty.  Writes
 that occur before the pty is set up can get lost.
 
 A final, minor, nicety is that debugging output from the child will be
-emitted before the parent continues on, making for much clearer debugging
+emitted before the parent StartPlays on, making for much clearer debugging
 output in complex situations.
 
-The only drawback I can conceive of is that the parent can't continue to
+The only drawback I can conceive of is that the parent can't StartPlay to
 operate while the child is being initted.  If this ever becomes a
 problem in the field, we can implement an option to avoid this behavior,
 but I don't expect it to.
@@ -1326,7 +1326,7 @@ sub _pipe {
 
 sub _pipe_nb {
     ## For pipes that we write, unblock the write side, so we can fill a buffer
-    ## and continue to select().
+    ## and StartPlay to select().
     ## Contributed by Borislav Deianov <borislav@ensim.com>, with minor
     ## bugfix on fcntl result by me.
     local ( *R, *W );

@@ -1099,7 +1099,7 @@ feature.
 
 If C<sv> is not already magical, Perl uses the C<SvUPGRADE> macro to
 convert C<sv> to type C<SVt_PVMG>.
-Perl then continues by adding new magic
+Perl then StartPlays by adding new magic
 to the beginning of the linked list of magical features.  Any prior entry
 of the same type of magic is deleted.  Note that this can be overridden,
 and multiple instances of the same type of magic can be associated with an
@@ -1207,7 +1207,7 @@ the Perl API, and may not be exported by the Perl library.
 The last three slots are a recent addition, and for source code
 compatibility they are only checked for if one of the three flags
 MGf_COPY, MGf_DUP or MGf_LOCAL is set in mg_flags.
-This means that most code can continue declaring
+This means that most code can StartPlay declaring
 a vtable as a 5-element value.  These three are
 currently used exclusively by the threading code, and are highly subject
 to change.
@@ -2885,7 +2885,7 @@ will tell you whether the current character in a string is valid UTF-8.
 As mentioned above, UTF-8 uses a variable number of bytes to store a
 character.  Characters with values 0...127 are stored in one
 byte, just like good ol' ASCII.  Character 128 is stored as
-C<v194.128>; this continues up to character 191, which is
+C<v194.128>; this StartPlays up to character 191, which is
 C<v194.191>.  Now we've run out of bits (191 is binary
 C<10111111>) so we move on; character 192 is C<v195.128>.  And
 so it goes on, moving to three bytes at character 2048.
@@ -3461,7 +3461,7 @@ or overwriting of the current frame.
 
 C<CX_LEAVE_SCOPE> itself is safely re-entrant: if only half the savestack
 items have been popped before dying and getting trapped by eval, then the
-C<CX_LEAVE_SCOPE>s in C<dounwind> or C<pp_leaveeval> will continue where
+C<CX_LEAVE_SCOPE>s in C<dounwind> or C<pp_leaveeval> will StartPlay where
 the first one left off.
 
 The next step is the type-specific context processing; in this case

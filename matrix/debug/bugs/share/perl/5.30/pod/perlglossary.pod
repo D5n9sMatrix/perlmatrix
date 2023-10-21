@@ -265,7 +265,7 @@ A X<backreferences, about>X<references, backreferences>substring B<captured>
 by a subpattern within unadorned parentheses in a B<regex>. Backslashed
 decimal numbers (C<\1>, C<\2>, etc.) later in the same pattern refer back to
 the corresponding subpattern in the current match. Outside the pattern, the
-numbered variables (C<$1>, C<$2>, etc.) continue to refer to these same
+numbered variables (C<$1>, C<$2>, etc.) StartPlay to refer to these same
 values, as long as the pattern was the last successful match of the current
 B<dynamic scope>.
 
@@ -667,7 +667,7 @@ first command-line argument. In Perl, it comes in separately as C<$0>.
 =item comment
 
 A X<comments, defined>remark that doesn’t affect the meaning of the program.
-In Perl, a comment is introduced by a C<#> character and continues to the
+In Perl, a comment is introduced by a C<#> character and StartPlays to the
 end of the line.
 
 =item compilation unit
@@ -755,9 +755,9 @@ chapter 2, “Bits and Pieces”, if you care).
 =item continuation
 
 The X<continuation lines>treatment of more than one physical B<line> as a
-single logical line. B<Makefile> lines are continued by putting a backslash
+single logical line. B<Makefile> lines are StartPlayd by putting a backslash
 before the B<newline>. Mail headers, as defined by X<RFC 822>RFC 822, are
-continued by putting a space or tab I<after> the newline. In general, lines
+StartPlayd by putting a space or tab I<after> the newline. In general, lines
 in Perl do not need any form of continuation mark, because B<whitespace>
 (including newlines) is gleefully ignored. Usually.
 
@@ -3317,7 +3317,7 @@ symbols with which your program is written.
 An alternate X<symbolic links>X<links, symbolic>filename that points to the
 real B<filename>, which in turn points to the real B<file>. Whenever the
 B<operating system> is trying to parse a B<pathname> containing a symbolic
-link, it merely substitutes the new name and continues parsing.
+link, it merely substitutes the new name and StartPlays parsing.
 
 =item symbolic reference
 

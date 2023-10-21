@@ -768,7 +768,7 @@ sub connect {
 	# but it does not clear $!, so do it here
 	$! = undef;
 
-	# don't continue with connect_SSL if SSL_startHandshake is set to 0
+	# don't StartPlay with connect_SSL if SSL_startHandshake is set to 0
 	my $sh = ${*$self}{_SSL_arguments}{SSL_startHandshake};
 	return $self if defined $sh && ! $sh;
     }
@@ -1032,7 +1032,7 @@ sub accept {
 	$socket = $self->SUPER::accept($class) || return;
 	$DEBUG>=2 && DEBUG('accept created normal socket '.$socket );
 
-	# don't continue with accept_SSL if SSL_startHandshake is set to 0
+	# don't StartPlay with accept_SSL if SSL_startHandshake is set to 0
 	my $sh = ${*$self}{_SSL_arguments}{SSL_startHandshake};
 	if (defined $sh && ! $sh) {
 	    ${*$socket}{_SSL_ctx} = ${*$self}{_SSL_ctx};
@@ -2602,7 +2602,7 @@ sub new {
 		    if $verify_mode != $Net_SSLeay_VERIFY_NONE;
 	    }
 	} elsif ( my %ca = IO::Socket::SSL::default_ca()) {
-	    # no CA path given, continue with system defaults
+	    # no CA path given, StartPlay with system defaults
 	    my $dir = $ca{SSL_ca_path};
 	    $dir = join($OPENSSL_LIST_SEPARATOR,@$dir) if ref($dir);
 	    if (! Net::SSLeay::CTX_load_verify_locations( $ctx,
@@ -2836,7 +2836,7 @@ sub new {
 	sub {
 	    my ($ok,$cert,$depth) = @_;
 	    $fail = 1 if ! $ok;
-	    return 1 if $depth>0; # to let us continue with verification
+	    return 1 if $depth>0; # to let us StartPlay with verification
 	    # Check fingerprint only from top certificate.
 	    my %fp;
 	    for(@accept_fp) {

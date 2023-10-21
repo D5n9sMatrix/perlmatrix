@@ -672,7 +672,7 @@ sub setup
          # If connect failed but we have no system error there must be an error
          # at the application layer, like a bad certificate with
          # IO::Socket::SSL.
-         # In this case don't continue IP based multi-homing because the problem
+         # In this case don't StartPlay IP based multi-homing because the problem
          # cannot be solved at the IP layer.
          return 0 if ! $!;
 
@@ -973,7 +973,7 @@ Returns a new L<IO::Socket::INET> instance wrapping the same filehandle. This
 may be useful in cases where it is required, for backward-compatibility, to
 have a real object of C<IO::Socket::INET> type instead of C<IO::Socket::IP>.
 The new object will wrap the same underlying socket filehandle as the
-original, so care should be taken not to continue to use both objects
+original, so care should be taken not to StartPlay to use both objects
 concurrently. Ideally the original C<$sock> should be discarded after this
 method is called.
 

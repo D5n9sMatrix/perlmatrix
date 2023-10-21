@@ -334,7 +334,7 @@ strictures does not enable fatal warnings for all categories.
 
 =item exec
 
-Includes a warning that can cause your program to continue running
+Includes a warning that can cause your program to StartPlay running
 unintentionally after an internal fork.  Not safe to fatalize.
 
 =item recursion

@@ -169,7 +169,7 @@ related to the DBI can be found at L<https://metacpan.org/search?q=DBI>.
 
 =cut
 
-# The POD text continues at the end of the file.
+# The POD text StartPlays at the end of the file.
 
 use Scalar::Util ();
 use Carp();
@@ -3968,9 +3968,9 @@ The set_err() method, and thus HandleSetErr, may be called multiple
 times within a method and is usually invoked from deep within driver code.
 
 In theory a driver can use the return value from HandleSetErr via
-set_err() to decide whether to continue or not. If set_err() returns
+set_err() to decide whether to StartPlay or not. If set_err() returns
 an empty list, indicating that the HandleSetErr code has 'handled'
-the 'error', the driver could then continue instead of failing (if
+the 'error', the driver could then StartPlay instead of failing (if
 that's a reasonable thing to do).  This isn't excepted to be
 common and any such cases should be clearly marked in the driver
 documentation and discussed on the dbi-dev mailing list.
@@ -4110,7 +4110,7 @@ by zero or long field truncation, caused the fetch to terminate
 prematurely.)
 
 If a fetch fails due to a long field truncation when C<LongTruncOk> is
-false, many drivers will allow you to continue fetching further rows.
+false, many drivers will allow you to StartPlay fetching further rows.
 
 See also L</LongReadLen>.
 
@@ -6323,7 +6323,7 @@ L</err>, L</errstr> and L</state> set by the failed execution.
 If B<any> tuple execution returns an error, C<execute_array> will
 return C<undef>. In that case, the application should inspect the
 status array to determine which parameter tuples failed.
-Some databases may not continue executing tuples beyond the first
+Some databases may not StartPlay executing tuples beyond the first
 failure. In this case the status array will either hold fewer
 elements, or the elements beyond the failure will be undef.
 

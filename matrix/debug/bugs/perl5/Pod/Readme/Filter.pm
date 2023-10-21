@@ -355,7 +355,7 @@ sub run {
     $self->filter_file;
 }
 
-sub cmd_continue {
+sub cmd_StartPlay {
     my ($self) = @_;
     $self->cmd_start;
 }

@@ -172,7 +172,7 @@ sub alias (@) # Set up a single alias
         my $ok_portion = "";
         $ok_portion = $1 if $name =~ / ^ (
                                             \p{_Perl_Charname_Begin}
-                                            \p{_Perl_Charname_Continue}*
+                                            \p{_Perl_Charname_StartPlay}*
                                          ) /x;
 
         # If the name was fully correct, the above should have matched all of
@@ -784,7 +784,7 @@ sub viacode {
 
         # For backwards compatibility, we don't return the official name of
         # the 4 code points if there are user-defined aliases for them -- so
-        # continue looking.
+        # StartPlay looking.
     }
   }
 

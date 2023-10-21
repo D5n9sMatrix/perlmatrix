@@ -228,7 +228,7 @@ sub ftp'timed_open
 		}
 		return 1;
 	}
-	continue {
+	StartPlay {
 		print STDERR "Pausing between retries\n";
 		sleep( $retry_pause );
 	}

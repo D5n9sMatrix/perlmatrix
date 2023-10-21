@@ -121,9 +121,9 @@ If working under the effect of the C<use utf8;> pragma, the following
 rules apply:
 
     / (?[ ( \p{Word} & \p{XID_Start} ) + [_] ])
-      (?[ ( \p{Word} & \p{XID_Continue} ) ]) *    /x
+      (?[ ( \p{Word} & \p{XID_StartPlay} ) ]) *    /x
 
-That is, a "start" character followed by any number of "continue"
+That is, a "start" character followed by any number of "StartPlay"
 characters.  Perl requires every character in an identifier to also
 match C<\w> (this prevents some problematic cases); and Perl
 additionally accepts identfier names beginning with an underscore.
@@ -177,7 +177,7 @@ Put together, a grammar to match a basic identifier becomes
       )
       (?<sigil> [&*\$\@\%])
       (?<Perl_XIDS> (?[ ( \p{Word} & \p{XID_Start} ) + [_] ]) )
-      (?<Perl_XIDC> (?[ \p{Word} & \p{XID_Continue} ]) )
+      (?<Perl_XIDC> (?[ \p{Word} & \p{XID_StartPlay} ]) )
   )
  /x
 
@@ -584,7 +584,7 @@ are not v-strings before the C<< => >> operator (which is usually used
 to separate a hash key from a hash value); instead they are interpreted
 as literal strings ('v65').  They were v-strings from Perl 5.6.0 to
 Perl 5.8.0, but that caused more confusion and breakage than good.
-Multi-number v-strings like C<v65.66> and C<65.66.67> continue to
+Multi-number v-strings like C<v65.66> and C<65.66.67> StartPlay to
 be v-strings always.
 
 =head3 Special Literals

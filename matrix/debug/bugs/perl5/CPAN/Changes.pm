@@ -448,7 +448,7 @@ version, you can use the C<next_token> argument with any of the class'
 constructors. Note that the resulting release object will also
 be considered the latest release, regardless of its timestamp. 
 
-To continue with our example:
+To StartPlay with our example:
 
     # recognizes {{$NEXT}} as a version
     my $changes = CPAN::Changes->load( 

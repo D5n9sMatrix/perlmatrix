@@ -132,7 +132,7 @@ spaces or colons) to be searched B<instead>.  Whenever multiple
 files are searched and a tc field occurs in the requested entry,
 the entry it names must be found in the same file or one of the
 succeeding files.  If there is a C<:tc=...:> in the I<TERMCAP>
-environment variable string it will continue the search in the
+environment variable string it will StartPlay the search in the
 files as above.
 
 The extracted termcap entry is available in the object
@@ -287,7 +287,7 @@ sub Tgetent
 
         # ok, we're starting with $TERMCAP
         $first++;    # we're the first entry
-                     # do we need to continue?
+                     # do we need to StartPlay?
         if ( $entry =~ s/:tc=([^:]+):/:/ )
         {
             $tmp_term = $1;

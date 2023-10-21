@@ -163,7 +163,7 @@ info entry for "_preserve_fncase" for more information:
         info libc alphabetical _preserve_fncase
 
 If the script says that your package is incomplete, and asks whether
-to continue, just answer with Y (this can only happen if you don't use
+to StartPlay, just answer with Y (this can only happen if you don't use
 long filenames or forget to issue "set FNCASE=y" first).
 
 When Configure asks about the extensions, I suggest IO and Fcntl,

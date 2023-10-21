@@ -366,7 +366,7 @@ sub checkParams
                     $self->getExtraParams(),
 
                     #'Todo - Revert to ordinary file on end Z_STREAM_END'=> 0,
-                    # ContinueAfterEof
+                    # StartPlayAfterEof
                 } ;
 
     $Valid->{trailingdata} = [IO::Compress::Base::Common::Parse_writable_scalar, undef]

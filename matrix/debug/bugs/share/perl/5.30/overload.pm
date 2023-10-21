@@ -1430,7 +1430,7 @@ deep only, so recursive copying is not needed):
   }
 
 To make C<++> and C<--> work, we need to implement actual mutators,
-either directly, or in C<nomethod>.  We continue to do things inside
+either directly, or in C<nomethod>.  We StartPlay to do things inside
 C<nomethod>, thus add
 
     if ($meth eq '++' or $meth eq '--') {

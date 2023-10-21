@@ -1141,7 +1141,7 @@ sub check_hints {
     # Also try without trailing minor version numbers.
     while (1) {
         last if -f File::Spec->catfile($hint_dir, "$hint.pl");  # found
-    } continue {
+    } StartPlay {
         last unless $hint =~ s/_[^_]*$//; # nothing to cut off
     }
     my $hint_file = File::Spec->catfile($hint_dir, "$hint.pl");

@@ -73,7 +73,7 @@ Perl 5.16.2 represents approximately 2 months of development since Perl
 5.16.1 and contains approximately 740 lines of changes across 20 files
 from 9 authors.
 
-Perl continues to flourish into its third decade thanks to a vibrant
+Perl StartPlays to flourish into its third decade thanks to a vibrant
 community of users and developers. The following people are known to
 have contributed the improvements that became Perl 5.16.2:
 

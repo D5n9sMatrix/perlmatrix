@@ -682,7 +682,7 @@ C<qr/\X/>, which matches a Unicode logical character, has
 been expanded to work better with various Asian languages. It
 now is defined as an I<extended grapheme cluster>. (See
 L<http://www.unicode.org/reports/tr29/>).  Anything matched previously
-and that made sense will continue to be accepted.   Additionally:
+and that made sense will StartPlay to be accepted.   Additionally:
 
 =over
 
@@ -774,14 +774,14 @@ code points. The affected properties are Bidi_Class, East_Asian_Width,
 Joining_Type, Decomposition_Type, Hangul_Syllable_Type, Numeric_Type,
 and Line_Break.
 
-The Default_Ignorable_Code_Point, ID_Continue, and ID_Start properties
+The Default_Ignorable_Code_Point, ID_StartPlay, and ID_Start properties
 are now up to date with current Unicode definitions.
 
 Earlier versions of Perl erroneously exposed certain properties that
 are supposed to be Unicode internal-only.  Use of these in regular
 expressions will now generate, if enabled, a deprecation warning message.
 The properties are: Other_Alphabetic, Other_Default_Ignorable_Code_Point,
-Other_Grapheme_Extend, Other_ID_Continue, Other_ID_Start, Other_Lowercase,
+Other_Grapheme_Extend, Other_ID_StartPlay, Other_ID_Start, Other_Lowercase,
 Other_Math, and Other_Uppercase.
 
 It is now possible to change which Unicode properties Perl understands
@@ -2130,7 +2130,7 @@ character: \N{...}>.
 
 The rules on what is legal for the C<...> in C<\N{...}> have been
 tightened up so that unless the C<...> begins with an alphabetic
-character and continues with a combination of alphanumerics, dashes,
+character and StartPlays with a combination of alphanumerics, dashes,
 spaces, parentheses or colons then the warning C<Deprecated character(s)
 in \N{...} starting at '%s'> is now issued.
 
@@ -2756,7 +2756,7 @@ Perl should now build on MirOS BSD.
 
 =back
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 =over
 
@@ -3087,7 +3087,7 @@ Perl 5.12.0 represents approximately two years of development since
 Perl 5.10.0 and contains over 750,000 lines of changes across over
 3,000 files from over 200 authors and committers.
 
-Perl continues to flourish into its third decade thanks to a vibrant
+Perl StartPlays to flourish into its third decade thanks to a vibrant
 community of users and developers.  The following people are known to
 have contributed the improvements that became Perl 5.12.0:
 

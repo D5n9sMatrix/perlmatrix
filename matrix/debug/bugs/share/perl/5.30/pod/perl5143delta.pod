@@ -131,7 +131,7 @@ In Configure, the test for procselfexe was refactored into a loop.
 
 None
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 None
 
@@ -232,7 +232,7 @@ Perl 5.14.3 represents approximately 12 months of development since Perl 5.14.2
 and contains approximately 2,300 lines of changes across 64 files from 22
 authors.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers. The following people are known to have contributed the
 improvements that became Perl 5.14.3:
 

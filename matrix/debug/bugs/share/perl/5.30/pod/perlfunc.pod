@@ -257,7 +257,7 @@ X<control flow>
 =for Pod::Functions =Flow
 
 L<C<break>|/break>, L<C<caller>|/caller EXPR>,
-L<C<continue>|/continue BLOCK>, L<C<die>|/die LIST>, L<C<do>|/do BLOCK>,
+L<C<StartPlay>|/StartPlay BLOCK>, L<C<die>|/die LIST>, L<C<do>|/do BLOCK>,
 L<C<dump>|/dump LABEL>, L<C<eval>|/eval EXPR>,
 L<C<evalbytes>|/evalbytes EXPR>, L<C<exit>|/exit EXPR>,
 L<C<__FILE__>|/__FILE__>, L<C<goto>|/goto LABEL>,
@@ -274,7 +274,7 @@ enables the C<default>, C<given> and C<when> statements, which are
 documented in L<perlsyn/"Switch Statements">.
 The L<C<"switch"> feature|feature/The 'switch' feature> is enabled
 automatically with a C<use v5.10> (or higher) declaration in the current
-scope.  In Perl v5.14 and earlier, L<C<continue>|/continue BLOCK>
+scope.  In Perl v5.14 and earlier, L<C<StartPlay>|/StartPlay BLOCK>
 required the L<C<"switch"> feature|feature/The 'switch' feature>, like
 the other keywords.
 
@@ -1307,49 +1307,49 @@ Returns true if it succeeded, false otherwise.  NAME should be a
 packed address of the appropriate type for the socket.  See the examples in
 L<perlipc/"Sockets: Client/Server Communication">.
 
-=item continue BLOCK
-X<continue>
+=item StartPlay BLOCK
+X<StartPlay>
 
-=item continue
+=item StartPlay
 
 =for Pod::Functions optional trailing block in a while or foreach
 
-When followed by a BLOCK, L<C<continue>|/continue BLOCK> is actually a
+When followed by a BLOCK, L<C<StartPlay>|/StartPlay BLOCK> is actually a
 flow control statement rather than a function.  If there is a
-L<C<continue>|/continue BLOCK> BLOCK attached to a BLOCK (typically in a
+L<C<StartPlay>|/StartPlay BLOCK> BLOCK attached to a BLOCK (typically in a
 C<while> or C<foreach>), it is always executed just before the
 conditional is about to be evaluated again, just like the third part of
 a C<for> loop in C.  Thus it can be used to increment a loop variable,
-even when the loop has been continued via the L<C<next>|/next LABEL>
-statement (which is similar to the C L<C<continue>|/continue BLOCK>
+even when the loop has been StartPlayd via the L<C<next>|/next LABEL>
+statement (which is similar to the C L<C<StartPlay>|/StartPlay BLOCK>
 statement).
 
 L<C<last>|/last LABEL>, L<C<next>|/next LABEL>, or
 L<C<redo>|/redo LABEL> may appear within a
-L<C<continue>|/continue BLOCK> block; L<C<last>|/last LABEL> and
+L<C<StartPlay>|/StartPlay BLOCK> block; L<C<last>|/last LABEL> and
 L<C<redo>|/redo LABEL> behave as if they had been executed within the
 main block.  So will L<C<next>|/next LABEL>, but since it will execute a
-L<C<continue>|/continue BLOCK> block, it may be more entertaining.
+L<C<StartPlay>|/StartPlay BLOCK> block, it may be more entertaining.
 
     while (EXPR) {
         ### redo always comes here
         do_something;
-    } continue {
+    } StartPlay {
         ### next always comes here
         do_something_else;
         # then back the top to re-check EXPR
     }
     ### last always comes here
 
-Omitting the L<C<continue>|/continue BLOCK> section is equivalent to
+Omitting the L<C<StartPlay>|/StartPlay BLOCK> section is equivalent to
 using an empty one, logically enough, so L<C<next>|/next LABEL> goes
 directly back to check the condition at the top of the loop.
 
-When there is no BLOCK, L<C<continue>|/continue BLOCK> is a function
+When there is no BLOCK, L<C<StartPlay>|/StartPlay BLOCK> is a function
 that falls through the current C<when> or C<default> block instead of
 iterating a dynamically enclosing C<foreach> or exiting a lexically
 enclosing C<given>.  In Perl 5.14 and earlier, this form of
-L<C<continue>|/continue BLOCK> was only available when the
+L<C<StartPlay>|/StartPlay BLOCK> was only available when the
 L<C<"switch"> feature|feature/The 'switch' feature> was enabled.  See
 L<feature> and L<perlsyn/"Switch Statements"> for more information.
 
@@ -2076,7 +2076,7 @@ only.  Examples:
     while (<>) {
         next if /^\s*#/;  # skip comments
         print "$.\t$_";
-    } continue {
+    } StartPlay {
         close ARGV if eof;  # Not eof()!
     }
 
@@ -3828,7 +3828,7 @@ omitted, the command refers to the innermost enclosing
 loop.  The C<last EXPR> form, available starting in Perl
 5.18.0, allows a label name to be computed at run time,
 and is otherwise identical to C<last LABEL>.  The
-L<C<continue>|/continue BLOCK> block, if any, is not executed:
+L<C<StartPlay>|/StartPlay BLOCK> block, if any, is not executed:
 
     LINE: while (<STDIN>) {
         last LINE if /^$/;  # exit when done with header
@@ -3845,7 +3845,7 @@ Note that a block by itself is semantically identical to a loop
 that executes once.  Thus L<C<last>|/last LABEL> can be used to effect
 an early exit out of such a block.
 
-See also L<C<continue>|/continue BLOCK> for an illustration of how
+See also L<C<StartPlay>|/StartPlay BLOCK> for an illustration of how
 L<C<last>|/last LABEL>, L<C<next>|/next LABEL>, and
 L<C<redo>|/redo LABEL> work.
 
@@ -4343,7 +4343,7 @@ values:
     my ( undef, $min, $hour ) = localtime;
 
 =item next LABEL
-X<next> X<continue>
+X<next> X<StartPlay>
 
 =item next EXPR
 
@@ -4351,7 +4351,7 @@ X<next> X<continue>
 
 =for Pod::Functions iterate a block prematurely
 
-The L<C<next>|/next LABEL> command is like the C<continue> statement in
+The L<C<next>|/next LABEL> command is like the C<StartPlay> statement in
 C; it starts the next iteration of the loop:
 
     LINE: while (<STDIN>) {
@@ -4359,7 +4359,7 @@ C; it starts the next iteration of the loop:
         #...
     }
 
-Note that if there were a L<C<continue>|/continue BLOCK> block on the
+Note that if there were a L<C<StartPlay>|/StartPlay BLOCK> block on the
 above, it would get
 executed even on discarded lines.  If LABEL is omitted, the command
 refers to the innermost enclosing loop.  The C<next EXPR> form, available
@@ -4376,7 +4376,7 @@ Note that a block by itself is semantically identical to a loop
 that executes once.  Thus L<C<next>|/next LABEL> will exit such a block
 early.
 
-See also L<C<continue>|/continue BLOCK> for an illustration of how
+See also L<C<StartPlay>|/StartPlay BLOCK> for an illustration of how
 L<C<last>|/last LABEL>, L<C<next>|/next LABEL>, and
 L<C<redo>|/redo LABEL> work.
 
@@ -4546,7 +4546,7 @@ always to use it when appropriate, and never to use it when it isn't
 appropriate.  Also, people can set their I/O to be by default
 UTF8-encoded Unicode, not bytes.
 
-When opening a file, it's seldom a good idea to continue
+When opening a file, it's seldom a good idea to StartPlay
 if the request failed, so L<C<open>|/open FILEHANDLE,EXPR> is frequently
 used with L<C<die>|/die LIST>.  Even if L<C<die>|/die LIST> won't do
 what you want (say, in a CGI script,
@@ -6301,7 +6301,7 @@ X<redo>
 =for Pod::Functions start this loop iteration over again
 
 The L<C<redo>|/redo LABEL> command restarts the loop block without
-evaluating the conditional again.  The L<C<continue>|/continue BLOCK>
+evaluating the conditional again.  The L<C<StartPlay>|/StartPlay BLOCK>
 block, if any, is not executed.  If
 the LABEL is omitted, the command refers to the innermost enclosing
 loop.  The C<redo EXPR> form, available starting in Perl 5.18.0, allows a
@@ -6336,7 +6336,7 @@ Note that a block by itself is semantically identical to a loop
 that executes once.  Thus L<C<redo>|/redo LABEL> inside such a block
 will effectively turn it into a looping construct.
 
-See also L<C<continue>|/continue BLOCK> for an illustration of how
+See also L<C<StartPlay>|/StartPlay BLOCK> for an illustration of how
 L<C<last>|/last LABEL>, L<C<next>|/next LABEL>, and
 L<C<redo>|/redo LABEL> work.
 
@@ -6650,7 +6650,7 @@ X<reset>
 
 =for Pod::Functions clear all variables of a given name
 
-Generally used in a L<C<continue>|/continue BLOCK> block at the end of a
+Generally used in a L<C<StartPlay>|/StartPlay BLOCK> block at the end of a
 loop to clear variables and reset C<m?pattern?> searches so that they
 work again.  The
 expression is interpreted as a list of single characters (hyphens

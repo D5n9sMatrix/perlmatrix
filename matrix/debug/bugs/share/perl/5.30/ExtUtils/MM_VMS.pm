@@ -471,7 +471,7 @@ target needs to be updated.
 sub init_tools {
     my($self) = @_;
 
-    $self->{NOOP}               = 'Continue';
+    $self->{NOOP}               = 'StartPlay';
     $self->{NOECHO}             ||= '@ ';
 
     $self->{MAKEFILE}           ||= $self->{FIRST_MAKEFILE} || 'Descrip.MMS';

@@ -298,7 +298,7 @@ sub rd_modpacks {
 
         $CPAN::Frontend->mywarn(qq{Warning: Your $index_target does not contain a Line-Count header.
 Please check the validity of the index file by comparing it to more
-than one CPAN mirror. I'll continue but problems seem likely to
+than one CPAN mirror. I'll StartPlay but problems seem likely to
 happen.\a
 });
         $errors++;
@@ -308,7 +308,7 @@ happen.\a
         $CPAN::Frontend->mywarn(sprintf qq{Warning: Your %s
 contains a Line-Count header of %d but I see %d lines there. Please
 check the validity of the index file by comparing it to more than one
-CPAN mirror. I'll continue but problems seem likely to happen.\a\n},
+CPAN mirror. I'll StartPlay but problems seem likely to happen.\a\n},
 $index_target, $line_count, scalar(@lines));
 
     }
@@ -316,7 +316,7 @@ $index_target, $line_count, scalar(@lines));
 
         $CPAN::Frontend->mywarn(qq{Warning: Your $index_target does not contain a Last-Updated header.
 Please check the validity of the index file by comparing it to more
-than one CPAN mirror. I'll continue but problems seem likely to
+than one CPAN mirror. I'll StartPlay but problems seem likely to
 happen.\a
 });
         $errors++;
@@ -346,7 +346,7 @@ happen.\a
                 ->mywarn(sprintf
                          qq{Warning: This index file is %d days old.
   Please check the host you chose as your CPAN mirror for staleness.
-  I'll continue but problems seem likely to happen.\a\n},
+  I'll StartPlay but problems seem likely to happen.\a\n},
                          $age);
 
         } elsif ($age < -1) {

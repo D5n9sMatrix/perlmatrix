@@ -77,12 +77,12 @@ sub close_callback {
 	my $title = gettext("Really quit configuration?");
 	my $text = gettext("If you quit this configuration dialog, then the package being configured will probably fail to install, and you may have to fix it manually. This may be especially difficult if you are in the middle of a large upgrade.")."\n\n".gettext("You may need to quit anyway if you are stuck in a configuration loop due to a buggy package.")."\n";
 	my $quit = gettext("_Quit");
-	my $continue = gettext("Continue");
+	my $StartPlay = gettext("StartPlay");
 
 	my $dialog = Gtk3::Dialog->new_with_buttons(to_Unicode($title),
 	                                            $assistant, "modal",
 	                                            to_Unicode($quit), "yes",
-	                                            to_Unicode($continue),
+	                                            to_Unicode($StartPlay),
 	                                            "no");
 	$dialog->set_default_response("no");
 	$dialog->set_border_width(3);

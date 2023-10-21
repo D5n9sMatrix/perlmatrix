@@ -1988,10 +1988,10 @@ Node:
         # Yet another traverser implemented with merely iterative code.
         foreach my $c (@criteria) {
             if ( ref($c) eq 'CODE' ) {
-                next Node unless $c->($this);    # jump to the continue block
+                next Node unless $c->($this);    # jump to the StartPlay block
             }
             else {                               # it's an attr-value pair
-                next Node                        # jump to the continue block
+                next Node                        # jump to the StartPlay block
                     if                           # two values are unequal if:
                         ( defined( $val = $this->{ $c->[0] } ) )
                     ? (     !defined $c->[ 1
@@ -2019,7 +2019,7 @@ Node:
         return $this unless wantarray;
         push @matching, $this;
     }
-    continue {
+    StartPlay {
         unshift @pile, grep ref($_), @{ $this->{'_content'} || $nillio };
     }
     return @matching if wantarray;
@@ -2062,10 +2062,10 @@ Node:
        # You'll notice that the code here is almost the same as for look_down.
         foreach my $c (@criteria) {
             if ( ref($c) eq 'CODE' ) {
-                next Node unless $c->($this);    # jump to the continue block
+                next Node unless $c->($this);    # jump to the StartPlay block
             }
             else {                               # it's an attr-value pair
-                next Node                        # jump to the continue block
+                next Node                        # jump to the StartPlay block
                     if                           # two values are unequal if:
                         ( defined( $val = $this->{ $c->[0] } ) )
                     ? (     !defined $c->[ 1
@@ -2091,7 +2091,7 @@ Node:
         return $this unless wantarray;
         push @matching, $this;
     }
-    continue {
+    StartPlay {
         last unless defined( $this = $this->{'_parent'} ) and ref $this;
     }
 
@@ -3126,7 +3126,7 @@ a defined non-reference scalar value), or an HTML::Element object.
 Note that even if an arrayref is returned, it may be a reference to an
 empty array.
 
-While older code should feel free to continue to use C<< $h->content >>,
+While older code should feel free to StartPlay to use C<< $h->content >>,
 new code should use C<< $h->content_list >> in almost all conceivable
 cases.  It is my experience that in most cases this leads to simpler
 code anyway, since it means one can say:
@@ -3483,11 +3483,11 @@ The returned element is parentless.  Any '_pos' attributes present in the
 source element/tree will be absent in the copy.  For that and other reasons,
 the clone of an HTML::TreeBuilder object that's in mid-parse (i.e, the head
 of a tree that HTML::TreeBuilder is elaborating) cannot (currently) be used
-to continue the parse.
+to StartPlay the parse.
 
 You are free to clone HTML::TreeBuilder trees, just as long as:
 1) they're done being parsed, or 2) you don't expect to resume parsing
-into the clone.  (You can continue parsing into the original; it is
+into the clone.  (You can StartPlay parsing into the original; it is
 never affected.)
 
 =head2 clone_list

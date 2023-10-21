@@ -114,7 +114,7 @@ And in fact, "." itself can be the beginning of a number.)
 
 =item *
 
-The C<next>, C<exit>, and C<continue> keywords work differently.
+The C<next>, C<exit>, and C<StartPlay> keywords work differently.
 
 =item *
 
@@ -164,7 +164,7 @@ You must use C<elsif> rather than C<else if>.
 
 =item *
 
-The C<break> and C<continue> keywords from C become in Perl C<last>
+The C<break> and C<StartPlay> keywords from C become in Perl C<last>
 and C<next>, respectively.  Unlike in C, these do I<not> work within a
 C<do { } while> construct.  See L<perlsyn/"Loop Control">.
 

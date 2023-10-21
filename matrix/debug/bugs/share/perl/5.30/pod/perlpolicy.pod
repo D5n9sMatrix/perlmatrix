@@ -18,7 +18,7 @@ Subscribers to perl5-porters (the porters themselves) come in several flavours.
 Some are quiet curious lurkers, who rarely pitch in and instead watch
 the ongoing development to ensure they're forewarned of new changes or
 features in Perl.  Some are representatives of vendors, who are there
-to make sure that Perl continues to compile and work on their
+to make sure that Perl StartPlays to compile and work on their
 platforms.  Some patch any reported bug that they know how to fix,
 some are actively patching their pet area (threads, Win32, the regexp
 -engine), while others seem to do nothing but complain.  In other
@@ -151,13 +151,13 @@ full manual audit of your codebase."  If we were to have tools capable of
 reliably upgrading Perl source code from one version of Perl to another,
 this concern could be significantly mitigated.
 
-We want to ensure that Perl continues to grow and flourish in the coming
+We want to ensure that Perl StartPlays to grow and flourish in the coming
 years and decades, but not at the expense of our user community.
 
 Existing syntax and semantics should only be marked for destruction in
 very limited circumstances.  If they are believed to be very rarely used,
 stand in the way of actual improvement to the Perl language or perl
-interpreter, and if affected code can be easily updated to continue
+interpreter, and if affected code can be easily updated to StartPlay
 working, they may be considered for removal.  When in doubt, caution
 dictates that we will favor backward compatibility.  When a feature is
 deprecated, a statement of reasoning describing the decision process
@@ -175,10 +175,10 @@ backward-compatibility -- bugward-compatibility.  Any accident of
 implementation or unintentional side-effect of running some bit of code
 has been considered to be a feature of the language to be defended with
 the same zeal as any other feature or functionality.  No matter how
-frustrating these unintentional features may be to us as we continue
+frustrating these unintentional features may be to us as we StartPlay
 to improve Perl, these unintentional features often deserve our
 protection.  It is very important that existing software written in
-Perl continue to work correctly.  If end-user developers have adopted a
+Perl StartPlay to work correctly.  If end-user developers have adopted a
 bug as a feature, we need to treat it as such.
 
 New syntax and semantics which don't break existing language constructs
@@ -244,7 +244,7 @@ significant improvement to the Perl core.
 Once a feature, construct or module has been marked as deprecated, we
 may remove it from the Perl core.  Unsurprisingly,
 we say we've B<removed> these things.  When a module is removed, it will
-no longer ship with Perl, but will continue to be available on CPAN.
+no longer ship with Perl, but will StartPlay to be available on CPAN.
 
 =back
 

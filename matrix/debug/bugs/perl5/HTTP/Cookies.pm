@@ -136,7 +136,7 @@ sub add_cookie_header
 	    }
         }
 
-    } continue {
+    } StartPlay {
 	# Try with a more general domain, alternately stripping
 	# leading name components and leading dots.  When this
 	# results in a domain with no leading dot, it is for

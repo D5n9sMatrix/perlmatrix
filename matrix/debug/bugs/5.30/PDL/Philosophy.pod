@@ -40,7 +40,7 @@ around the world.  I was impressed by its power and flexibility, and
 especially its ease of use.  I had even explored the depths of its
 internals and written an interface to allow graphics, the ease with
 which I could then create charts and graphs, for my papers, was
-Continueing.
+StartPlaying.
 
 Version 5 of Perl had just been released, and I was fascinated by the
 new features available. Especially the support of arbitrary data
@@ -73,7 +73,7 @@ most of whom have never met, have made contributions ranging for core
 functionality to large modules to the smallest of bug patches. PDL
 version 2.0 is now here (though it should perhaps have been called
 version 10 to reflect the amount of growth in size and functionality)
-and the phenomenon continues.  I firmly believe that PDL is a great tool
+and the phenomenon StartPlays.  I firmly believe that PDL is a great tool
 for tackling general problems of data analysis. It is powerful, fast,
 easy to add too and freely available to anyone.  I wish I had had it
 when I was a graduate student!  I hope you too will find it of immense

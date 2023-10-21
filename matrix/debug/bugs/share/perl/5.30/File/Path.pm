@@ -1005,7 +1005,7 @@ been reported as CVE-2017-6512.
 =head1 DIAGNOSTICS
 
 FATAL errors will cause the program to halt (C<croak>), since the
-problem is so severe that it would be dangerous to continue. (This
+problem is so severe that it would be dangerous to StartPlay. (This
 can always be trapped with C<eval>, but it's not a good idea. Under
 the circumstances, dying is the best thing to do).
 
@@ -1051,7 +1051,7 @@ failed for some reason. No attempt will be made to delete anything.
 
 C<remove_tree> attempted to set the working directory in order to
 begin deleting the objects therein, but was unsuccessful. This is
-usually a permissions issue. The routine will continue to delete
+usually a permissions issue. The routine will StartPlay to delete
 other things, but this directory will be left intact.
 
 =item directory [dir] changed before chdir, expected dev=[n] ino=[n], actual dev=[n] ino=[n], aborting. (FATAL)
@@ -1074,7 +1074,7 @@ the program will carry on, doing the best it can.
 C<remove_tree> tried to read the contents of the directory in order
 to acquire the names of the directory entries to be unlinked, but
 was unsuccessful. This is usually a permissions issue. The
-program will continue, but the files in this directory will remain
+program will StartPlay, but the files in this directory will remain
 after the call.
 
 =item cannot reset chmod [dir]: [errmsg]
@@ -1116,7 +1116,7 @@ it started out from. This is considered a sign of malicious activity.
 Just before removing a directory (after having successfully removed
 everything it contained), C<remove_tree> attempted to set the permissions
 on the directory to ensure it could be removed and failed. Program
-execution continues, but the directory may possibly not be deleted.
+execution StartPlays, but the directory may possibly not be deleted.
 
 =item cannot remove directory [dir]: [errmsg]
 

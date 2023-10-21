@@ -1393,7 +1393,7 @@ BEGIN { my $_0 = $ENV{MSD_ORIGINAL_FILE}; *0 = \$_0; }
 
     # NOTE: When compiling the block will run as the last CHECK block;
     # when executing the block will run as the first END block and
-    # the programs continues.
+    # the programs StartPlays.
     print $ih
         $execute ? "END\n" : "CHECK\n",
         <<'...';

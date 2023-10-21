@@ -142,7 +142,7 @@ sub heavy_export {
 	}
 	if ($oops) {
 	    require Carp;
-	    Carp::croak("@{carp}Can't continue after import errors");
+	    Carp::croak("@{carp}Can't StartPlay after import errors");
 	}
     }
     else {
@@ -172,7 +172,7 @@ sub heavy_export {
 	    }
 	    if (@failed) {
 		require Carp;
-		Carp::croak("Can't continue after import errors");
+		Carp::croak("Can't StartPlay after import errors");
 	    }
 	}
     }

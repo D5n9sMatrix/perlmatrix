@@ -147,7 +147,7 @@ sub import {
 		}
 	}
 	if($errs ne "") {
-		die "${errs}Can't continue after import errors ".
+		die "${errs}Can't StartPlay after import errors ".
 			"at @{[(caller(0))[1]]} line @{[(caller(0))[2]]}.\n";
 	}
 }

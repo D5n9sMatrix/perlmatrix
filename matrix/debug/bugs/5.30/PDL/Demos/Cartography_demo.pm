@@ -30,7 +30,7 @@ It requires PGPLOT and also the ability to read/write JPEG images.
 You don't seem to have that ability at the moment -- this is likely
 because you do not have NetPBM installed.  See the man page for PDL::IO::Pic.
 
-I'll continue with the demo anyway, but it will likely crash on the 
+I'll StartPlay with the demo anyway, but it will likely crash on the 
 earth_image('day') call on the next screen.
 
 |

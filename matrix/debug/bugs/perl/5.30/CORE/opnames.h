@@ -236,7 +236,7 @@ typedef enum opcode {
 	OP_ENTERWHEN	 = 219,
 	OP_LEAVEWHEN	 = 220,
 	OP_BREAK	 = 221,
-	OP_CONTINUE	 = 222,
+	OP_StartPlay	 = 222,
 	OP_OPEN		 = 223,
 	OP_CLOSE	 = 224,
 	OP_PIPE_OP	 = 225,

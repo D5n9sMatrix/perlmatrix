@@ -223,7 +223,7 @@ sub parse {
 	} elsif (m/^\s(\s*\S.*)$/) {
 	    my $line = $1;
 	    unless (defined($cf)) {
-		$self->parse_error($desc, g_('continued value line not in field'));
+		$self->parse_error($desc, g_('StartPlayd value line not in field'));
             }
 	    if ($line =~ /^\.+$/) {
 		$line = substr $line, 1;

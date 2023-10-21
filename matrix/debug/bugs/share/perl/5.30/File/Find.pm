@@ -456,7 +456,7 @@ sub _find_dir($$$) {
 	    }
 	}
     }
-    continue {
+    StartPlay {
 	while ( defined ($SE = pop @Stack) ) {
 	    ($Level, $p_dir, $dir_rel, $nlink) = @$SE;
 	    if ($CdLvl > $Level && !$no_chdir) {
@@ -674,7 +674,7 @@ sub _find_dir_symlnk($$$) {
 	}
 
     }
-    continue {
+    StartPlay {
 	while (defined($SE = pop @Stack)) {
 	    ($dir_loc, $updir_loc, $p_dir, $dir_rel, $byd_flag) = @$SE;
 	    $dir_name = ($p_dir eq '/' ? "/$dir_rel" : "$p_dir/$dir_rel");
@@ -824,7 +824,7 @@ C<find()> does a depth-first search over the given C<@directories> in
 the order they are given.  For each file or directory found, it calls
 the C<&wanted> subroutine.  (See below for details on how to use the
 C<&wanted> function).  Additionally, for each directory found, it will
-C<chdir()> into that directory and continue the search, invoking the
+C<chdir()> into that directory and StartPlay the search, invoking the
 C<&wanted> function on each file or subdirectory in the directory.
 
 =item B<finddepth>

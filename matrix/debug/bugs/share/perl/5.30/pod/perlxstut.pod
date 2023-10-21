@@ -822,7 +822,7 @@ Python glue as well.)
 
 With the completion of Example 4, we now have an easy way to simulate some
 real-life libraries whose interfaces may not be the cleanest in the world.
-We shall now continue with a discussion of the arguments passed to the
+We shall now StartPlay with a discussion of the arguments passed to the
 B<xsubpp> compiler.
 
 When you specify arguments to routines in the .xs file, you are really
@@ -1068,7 +1068,7 @@ want them seen by the calling program.
 The values pushed onto the return stack of the XSUB are actually mortal SV's.
 They are made mortal so that once the values are copied by the calling
 program, the SV's that held the returned values can be deallocated.
-If they were not mortal, then they would continue to exist after the XSUB
+If they were not mortal, then they would StartPlay to exist after the XSUB
 routine returned, but would not be accessible.  This is a memory leak.
 
 =item *
@@ -1130,7 +1130,7 @@ Mytest.xs:
 		i = statfs(fn, &buf);
 		if (i != 0) {
 		    av_push(results, newSVnv(errno));
-		    continue;
+		    StartPlay;
 		}
 
 		rh = (HV *)sv_2mortal((SV *)newHV());

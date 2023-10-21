@@ -145,7 +145,7 @@ chroot	File	make directory new root for path lookups
 close	I/O	close file (or pipe or socket) handle
 closedir	I/O	close directory handle
 connect	Socket	connect to a remote socket
-continue	Flow	optional trailing block in a while or foreach
+StartPlay	Flow	optional trailing block in a while or foreach
 cos	Math	cosine function
 crypt	String	one-way passwd-style encryption
 dbmclose	I/O	Objects	breaks binding on a tied dbm file

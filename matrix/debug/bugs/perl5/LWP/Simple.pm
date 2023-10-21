@@ -191,7 +191,7 @@ This module also exports the L<HTTP::Status> constants and procedures.
 You can use them when you check the response code from L<LWP::Simple/getprint>,
 L<LWP::Simple/getstore> or L<LWP::Simple/mirror>.  The constants are:
 
-   RC_CONTINUE
+   RC_StartPlay
    RC_SWITCHING_PROTOCOLS
    RC_OK
    RC_CREATED

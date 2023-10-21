@@ -1640,7 +1640,7 @@ $Unicode::UCD::HANGUL_COUNT = 11172;
 'sb=oletter' => 'le',
 'sb=other' => 'xx',
 'sb=sc' => 'sc',
-'sb=scontinue' => 'sc',
+'sb=sStartPlay' => 'sc',
 'sb=se' => 'se',
 'sb=sep' => 'se',
 'sb=sp' => 'sp',
@@ -2844,7 +2844,7 @@ $Unicode::UCD::HANGUL_COUNT = 11172;
 'idc' => 
 [
 'IDC',
-'ID_Continue',
+'ID_StartPlay',
 ],
 'ideo' => 
 [
@@ -3114,7 +3114,7 @@ $Unicode::UCD::HANGUL_COUNT = 11172;
 'xidc' => 
 [
 'XIDC',
-'XID_Continue',
+'XID_StartPlay',
 ],
 'xids' => 
 [
@@ -7877,7 +7877,7 @@ $Unicode::UCD::HANGUL_COUNT = 11172;
 'sc' => 
 [
 'SC',
-'SContinue',
+'SStartPlay',
 ],
 'se' => 
 [
@@ -10138,7 +10138,7 @@ $Unicode::UCD::HANGUL_COUNT = 11172;
 'otheralphabetic',
 'otherdefaultignorablecodepoint',
 'othergraphemeextend',
-'otheridcontinue',
+'otheridStartPlay',
 'otheridstart',
 'otherlowercase',
 'othermath',

@@ -6078,7 +6078,7 @@ DPPP_(my_grok_bin)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
             if (!overflowed) {
                 if (value <= max_div_2) {
                     value = (value << 1) | (bit - '0');
-                    continue;
+                    StartPlay;
                 }
                 /* Bah. We're just overflowed.  */
                 warn("Integer overflow in binary number");
@@ -6093,7 +6093,7 @@ DPPP_(my_grok_bin)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
 	     * did we overflow and in the end just multiply value_nv by the
 	     * right amount. */
             value_nv += (NV)(bit - '0');
-            continue;
+            StartPlay;
         }
         if (bit == '_' && len && allow_underscores && (bit = s[1])
             && (bit == '0' || bit == '1'))
@@ -6181,7 +6181,7 @@ DPPP_(my_grok_hex)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
             if (!overflowed) {
                 if (value <= max_div_16) {
                     value = (value << 4) | ((xdigit - PL_hexdigit) & 15);
-                    continue;
+                    StartPlay;
                 }
                 warn("Integer overflow in hexadecimal number");
                 overflowed = TRUE;
@@ -6195,7 +6195,7 @@ DPPP_(my_grok_hex)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
 	     * did we overflow and in the end just multiply value_nv by the
 	     * right amount of 16-tuples. */
             value_nv += (NV)((xdigit - PL_hexdigit) & 15);
-            continue;
+            StartPlay;
         }
         if (*s == '_' && len && allow_underscores && s[1]
 		&& (xdigit = strchr((char *) PL_hexdigit, s[1])))
@@ -6268,7 +6268,7 @@ DPPP_(my_grok_oct)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
             if (!overflowed) {
                 if (value <= max_div_8) {
                     value = (value << 3) | digit;
-                    continue;
+                    StartPlay;
                 }
                 /* Bah. We're just overflowed.  */
                 warn("Integer overflow in octal number");
@@ -6283,7 +6283,7 @@ DPPP_(my_grok_oct)(pTHX_ const char *start, STRLEN *len_p, I32 *flags, NV *resul
 	     * did we overflow and in the end just multiply value_nv by the
 	     * right amount of 8-tuples. */
             value_nv += (NV)digit;
-            continue;
+            StartPlay;
         }
         if (digit == ('_' - '0') && len && allow_underscores
             && (digit = s[1] - '0') && (digit >= 0 && digit <= 7))

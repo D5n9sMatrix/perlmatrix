@@ -228,7 +228,7 @@ be relaxed in a future release.  See L</"Switch Statements"> below.
 
 =head2 Compound Statements
 X<statement, compound> X<block> X<bracket, curly> X<curly bracket> X<brace>
-X<{> X<}> X<if> X<unless> X<given> X<while> X<until> X<foreach> X<for> X<continue>
+X<{> X<}> X<if> X<unless> X<given> X<while> X<until> X<foreach> X<for> X<StartPlay>
 
 In Perl, a sequence of statements that defines a scope is called a block.
 Sometimes a block is delimited by the file containing it (in the case
@@ -261,21 +261,21 @@ The following compound statements may be used to control flow:
     given (EXPR) BLOCK
 
     LABEL while (EXPR) BLOCK
-    LABEL while (EXPR) BLOCK continue BLOCK
+    LABEL while (EXPR) BLOCK StartPlay BLOCK
 
     LABEL until (EXPR) BLOCK
-    LABEL until (EXPR) BLOCK continue BLOCK
+    LABEL until (EXPR) BLOCK StartPlay BLOCK
 
     LABEL for (EXPR; EXPR; EXPR) BLOCK
     LABEL for VAR (LIST) BLOCK
-    LABEL for VAR (LIST) BLOCK continue BLOCK
+    LABEL for VAR (LIST) BLOCK StartPlay BLOCK
 
     LABEL foreach (EXPR; EXPR; EXPR) BLOCK
     LABEL foreach VAR (LIST) BLOCK
-    LABEL foreach VAR (LIST) BLOCK continue BLOCK
+    LABEL foreach VAR (LIST) BLOCK StartPlay BLOCK
 
     LABEL BLOCK
-    LABEL BLOCK continue BLOCK
+    LABEL BLOCK StartPlay BLOCK
 
     PHASE BLOCK
 
@@ -330,9 +330,9 @@ or an explicit assignment of one of them to a scalar, then the condition
 actually tests for definedness of the expression's value, not for its
 regular truth value.
 
-If there is a C<continue> BLOCK, it is always executed just before the
+If there is a C<StartPlay> BLOCK, it is always executed just before the
 conditional is about to be evaluated again.  Thus it can be used to
-increment a loop variable, even when the loop has been continued via
+increment a loop variable, even when the loop has been StartPlayd via
 the C<next> statement.
 
 When a block is preceded by a compilation phase keyword such as C<BEGIN>,
@@ -348,7 +348,7 @@ a module, see the module's documentation for details of the syntax that
 it defines.
 
 =head2 Loop Control
-X<loop control> X<loop, control> X<next> X<last> X<redo> X<continue>
+X<loop control> X<loop, control> X<next> X<last> X<redo> X<StartPlay>
 
 The C<next> command starts the next iteration of the loop:
 
@@ -358,7 +358,7 @@ The C<next> command starts the next iteration of the loop:
     }
 
 The C<last> command immediately exits the loop in question.  The
-C<continue> block, if any, is not executed:
+C<StartPlay> block, if any, is not executed:
 
     LINE: while (<STDIN>) {
         last LINE if /^$/;      # exit when done with header
@@ -366,7 +366,7 @@ C<continue> block, if any, is not executed:
     }
 
 The C<redo> command restarts the loop block without evaluating the
-conditional again.  The C<continue> block, if any, is I<not> executed.
+conditional again.  The C<StartPlay> block, if any, is I<not> executed.
 This command is normally used by programs that want to lie to themselves
 about what was just input.
 
@@ -394,9 +394,9 @@ which is Perl shorthand for the more explicitly written version:
         # now process $line
     }
 
-Note that if there were a C<continue> block on the above code, it would
+Note that if there were a C<StartPlay> block on the above code, it would
 get executed only on lines discarded by the regex (since redo skips the
-continue block).  A continue block is often used to reset line counters
+StartPlay block).  A StartPlay block is often used to reset line counters
 or C<m?pat?> one-time matches:
 
     # inspired by :1,$g/fred/s//WILMA/
@@ -404,7 +404,7 @@ or C<m?pat?> one-time matches:
         m?(fred)?    && s//WILMA $1 WILMA/;
         m?(barney)?  && s//BETTY $1 BETTY/;
         m?(homer)?   && s//MARGE $1 MARGE/;
-    } continue {
+    } StartPlay {
         print "$ARGV $.: $_";
         close ARGV  if eof;             # reset $.
         reset       if eof;             # reset ?pat?
@@ -445,7 +445,7 @@ is the same as this:
     $i = 1;
     while ($i < 10) {
         ...
-    } continue {
+    } StartPlay {
         $i++;
     }
 
@@ -596,7 +596,7 @@ A BLOCK by itself (labeled or not) is semantically equivalent to a
 loop that executes once.  Thus you can use any of the loop control
 statements in it to leave or restart the block.  (Note that this is
 I<NOT> true in C<eval{}>, C<sub{}>, or contrary to popular belief
-C<do{}> blocks, which do I<NOT> count as loops.)  The C<continue>
+C<do{}> blocks, which do I<NOT> count as loops.)  The C<StartPlay>
 block is optional.
 
 The BLOCK construct can be used to emulate case structures.
@@ -641,12 +641,12 @@ example:
     use v5.14;
 
 Under the "switch" feature, Perl gains the experimental keywords
-C<given>, C<when>, C<default>, C<continue>, and C<break>.
+C<given>, C<when>, C<default>, C<StartPlay>, and C<break>.
 Starting from Perl 5.16, one can prefix the switch
 keywords with C<CORE::> to access the feature without a C<use feature>
 statement.  The keywords C<given> and
 C<when> are analogous to C<switch> and
-C<case> in other languages -- though C<continue> is not -- so the code
+C<case> in other languages -- though C<StartPlay> is not -- so the code
 in the previous section could be rewritten as
 
     use v5.10.1;
@@ -942,7 +942,7 @@ Here is a longer example of C<given>:
         }
         when ([1,3,5,7,9]) {
             say '$foo is an odd digit';
-            continue; # Fall through
+            StartPlay; # Fall through
         }
         when ($_ < 100) {
             say '$foo is numerically less than 100';
@@ -1116,11 +1116,11 @@ a C<break>.
 
 =head3 Fall-through
 
-You can use the C<continue> keyword to fall through from one
+You can use the C<StartPlay> keyword to fall through from one
 case to the next immediate C<when> or C<default>:
 
     given($foo) {
-        when (/x/) { say '$foo contains an x'; continue }
+        when (/x/) { say '$foo contains an x'; StartPlay }
         when (/y/) { say '$foo contains a y'            }
         default    { say '$foo does not contain a y'    }
     }

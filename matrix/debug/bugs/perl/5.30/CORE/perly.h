@@ -85,7 +85,7 @@ extern int yydebug;
     UNLESS = 288,
     ELSE = 289,
     ELSIF = 290,
-    CONTINUE = 291,
+    StartPlay = 291,
     FOR = 292,
     GIVEN = 293,
     WHEN = 294,

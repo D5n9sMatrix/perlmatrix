@@ -246,7 +246,7 @@ sub process_args {
             'rules=s@'     => $self->{rules},
             'tapversion=s' => \$self->{tapversion},
             'trap'         => \$self->{trap},
-        ) or croak('Unable to continue');
+        ) or croak('Unable to StartPlay');
 
         # Stash the remainder of argv for later
         $self->{argv} = [@ARGV];

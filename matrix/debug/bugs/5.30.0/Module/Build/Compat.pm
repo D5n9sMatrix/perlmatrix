@@ -355,7 +355,7 @@ sub fake_makefile {
   $perl = 'MCR ' . $perl if $self->_is_vms_mms;
 
   my $noop = ($class->is_windowsish ? 'rem>nul'  :
-	      $self->_is_vms_mms    ? 'Continue' :
+	      $self->_is_vms_mms    ? 'StartPlay' :
 	      'true');
 
   my $filetype = $class->is_vmsish ? '.COM' : '';
@@ -624,7 +624,7 @@ F<Build.PL> before shipping.
 
 Include a F<Build.PL> script and a "pass-through" F<Makefile.PL>
 built using C<Module::Build::Compat>.  This will mean that people can
-continue to use the "old" installation commands, and they may never
+StartPlay to use the "old" installation commands, and they may never
 notice that it's actually doing something else behind the scenes.  It
 will also mean that your installation process is compatible with older
 versions of tools like CPAN and CPANPLUS.

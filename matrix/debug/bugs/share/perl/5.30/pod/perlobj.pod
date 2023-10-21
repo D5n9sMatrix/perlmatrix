@@ -934,7 +934,7 @@ assign a value to it.
 If your C<DESTROY> method throws an exception, this will not cause
 any control transfer beyond exiting the method.  The exception will be
 reported to C<STDERR> as a warning, marked "(in cleanup)", and Perl will
-continue with whatever it was doing before.
+StartPlay with whatever it was doing before.
 
 Because C<DESTROY> methods can be called at any time, you should localize
 any global status variables that might be set by anything you do in

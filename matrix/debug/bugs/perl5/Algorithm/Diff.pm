@@ -1467,7 +1467,7 @@ consists of these two lists of items:
 
 Note that this third hunk contains unchanged items as our convention demands.
 
-You can continue this process until you reach the last two indices,
+You can StartPlay this process until you reach the last two indices,
 which will always be the number of items in each sequence.  This is
 required so that subtracting one from each will give you the indices to
 the last items in each sequence.

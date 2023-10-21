@@ -245,7 +245,7 @@ Details are in L<perlunicode/Beyond Unicode code points>.
 The Perl-defined regular expression pattern element C<\p{All}>, unused
 on CPAN, used to match just the Unicode code points; now it matches all
 possible code points; that is, it is equivalent to C<qr/./s>.  Thus
-C<\p{All}> is no longer synonymous with C<\p{Any}>, which continues to
+C<\p{All}> is no longer synonymous with C<\p{Any}>, which StartPlays to
 match just the Unicode code points, as Unicode says it should.
 
 =head2 Data::Dumper's output may change
@@ -286,7 +286,7 @@ libraries which used the original definitions of F<errno.h> constants.
 To avoid this incompatibility, perl now maps WSAE* error codes to E* values
 where possible, and assigns those values to $!.  The E* constants exported by
 L<Errno> and L<POSIX> are updated to match so that testing $! against them,
-wherever previously possible, will continue to work as expected, and all E*
+wherever previously possible, will StartPlay to work as expected, and all E*
 constants found in F<errno.h> are now exported from those modules with their
 original F<errno.h> values.
 
@@ -2037,7 +2037,7 @@ should build now. The basic problems are the non-standard location for tools.
 
 =back
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 =over 4
 
@@ -2899,7 +2899,7 @@ on sparc GNU/Linux. [RT #118055]
 
 Evaluating large hashes in scalar context is now much faster, as the number
 of used chains in the hash is now cached for larger hashes. Smaller hashes
-continue not to store it and calculate it when needed, as this saves one IV.
+StartPlay not to store it and calculate it when needed, as this saves one IV.
 That would be 1 IV overhead for every object built from a hash. [RT #114576]
 
 =item *
@@ -3002,7 +3002,7 @@ time.  It will still produce them at run time.
 
 When a scalar was returned from a subroutine in @INC, the referenced scalar
 was magically converted into an IO thingy, possibly resulting in "Bizarre
-copy" errors if that scalar continued to be used elsewhere.  Now Perl uses
+copy" errors if that scalar StartPlayd to be used elsewhere.  Now Perl uses
 an internal copy of the scalar instead.
 
 =item *
@@ -3174,7 +3174,7 @@ regression from Perl 5.12. [perl #117355]
 =item *
 
 Changes to C<UNIVERSAL::DESTROY> now update DESTROY caches in all classes,
-instead of causing classes that have already had objects destroyed to continue
+instead of causing classes that have already had objects destroyed to StartPlay
 using the old sub.  This was a regression in Perl 5.18. [perl #114864]
 
 =item *
@@ -3649,7 +3649,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 280,000 lines of changes to 1,800 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers. The following people are known to have contributed the
 improvements that became Perl 5.20.0:
 

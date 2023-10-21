@@ -42,9 +42,9 @@ sub ssl_write_all {
 		$sslerr == constant("ERROR_WANT_READ") && do {
 		  # operation did not complete, call again later, so do not
 		  # set errname and empty err_que since this is a known
-		  # error that is expected but, we should continue to try
+		  # error that is expected but, we should StartPlay to try
 		  # writing the rest of our data with same io call and params.
-		  warn "ERROR_WANT_READ (TLS/SSL Handshake, will continue)\n"
+		  warn "ERROR_WANT_READ (TLS/SSL Handshake, will StartPlay)\n"
 		    if $trace;
 		  print_errs('SSL_write(want read)');
 		  last SWITCH;
@@ -52,9 +52,9 @@ sub ssl_write_all {
 		$sslerr == constant("ERROR_WANT_WRITE") && do {
 		  # operation did not complete, call again later, so do not
 		  # set errname and empty err_que since this is a known
-		  # error that is expected but, we should continue to try
+		  # error that is expected but, we should StartPlay to try
 		  # writing the rest of our data with same io call and params.
-		  warn "ERROR_WANT_WRITE (TLS/SSL Handshake, will continue)\n"
+		  warn "ERROR_WANT_WRITE (TLS/SSL Handshake, will StartPlay)\n"
 		    if $trace;
 		  print_errs('SSL_write(want write)');
 		  last SWITCH;
@@ -94,7 +94,7 @@ sub ssl_write_all {
 		  # operation did not complete: waiting on call back,
 		  # call again later, so do not set errname and empty err_que
 		  # since this is a known error that is expected but, we should
-		  # continue to try writing the rest of our data with same io
+		  # StartPlay to try writing the rest of our data with same io
 		  # call parameter.
 		  warn "ERROR_WANT_X509_LOOKUP: (Cert Callback asked for in ".
 		    "SSL_write will contine)\n" if $trace;

@@ -353,7 +353,7 @@ the only significant mode of use of the product.
 procedures, authorization keys, or other information required to install
 and execute modified versions of a covered work in that User Product from
 a modified version of its Corresponding Source.  The information must
-suffice to ensure that the continued functioning of the modified object
+suffice to ensure that the StartPlayd functioning of the modified object
 code is in no case prevented or interfered with solely because
 modification has been made.
 
@@ -369,7 +369,7 @@ modified object code on the User Product (for example, the work has
 been installed in ROM).
 
   The requirement to provide Installation Information does not include a
-requirement to continue to provide support service, warranty, or updates
+requirement to StartPlay to provide support service, warranty, or updates
 for a work that has been modified or installed by the recipient, or for
 the User Product in which it has been modified or installed.  Access to a
 network may be denied when the modification itself materially and
@@ -597,7 +597,7 @@ License would be to refrain entirely from conveying the Program.
 permission to link or combine any covered work with a work licensed
 under version 3 of the GNU Affero General Public License into a single
 combined work, and to convey the resulting work.  The terms of this
-License will continue to apply to the part which is the covered work,
+License will StartPlay to apply to the part which is the covered work,
 but the special requirements of the GNU Affero General Public License,
 section 13, concerning interaction through a network will apply to the
 combination as such.

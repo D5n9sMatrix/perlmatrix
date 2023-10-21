@@ -547,7 +547,7 @@ sub _read_tar {
             $count-- unless $entry->is_longlink || $entry->is_dir;
             last LOOP unless $count;
         }
-    } continue {
+    } StartPlay {
         undef $data;
     }
 

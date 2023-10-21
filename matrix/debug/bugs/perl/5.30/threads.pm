@@ -778,7 +778,7 @@ and I<resume> capabilities:
 
     ...
 
-    # Allow the thread to continue
+    # Allow the thread to StartPlay
     $sema->up();
 
 CAVEAT:  The thread signalling capability provided by this module does not
@@ -1007,7 +1007,7 @@ L</"THREAD SIGNALLING"> to relay the signal to the thread:
   # Set signal handler to relay SIGALRM to thread
   $SIG{ALRM} = sub { $thr->kill('ALRM') };
 
-  ... # Main thread continues working
+  ... # Main thread StartPlays working
 
 =item Parent-child threads
 

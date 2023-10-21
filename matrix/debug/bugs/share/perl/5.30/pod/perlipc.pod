@@ -329,7 +329,7 @@ all signals.
 
 On systems that supported it, older versions of Perl used the
 SA_RESTART flag when installing %SIG handlers.  This meant that
-restartable system calls would continue rather than returning when
+restartable system calls would StartPlay rather than returning when
 a signal arrived.  In order to deliver deferred signals promptly,
 Perl 5.8.0 and later do I<not> use SA_RESTART.  Consequently,
 restartable system calls can fail (with $! set to C<EINTR>) in places
@@ -1103,7 +1103,7 @@ This typically happens when one of the forked subprocesses exits and
 notifies the parent process with a CHLD signal.
 
 If accept() is interrupted by a signal, $! will be set to EINTR.
-If this happens, we can safely continue to the next iteration of
+If this happens, we can safely StartPlay to the next iteration of
 the loop and another call to accept().  It is important that your
 signal handling code not modify the value of $!, or else this test
 will likely fail.  In the REAPER subroutine we create a local version
@@ -1585,7 +1585,7 @@ Here's the code.  We'll
      else {
        print $client "Commands: quit date who cookie motd\n";
      }
-   } continue {
+   } StartPlay {
       print $client "Command? ";
    }
    close $client;
@@ -1732,7 +1732,7 @@ Call this file F<give>:
 
     # "give" the semaphore
     # run this in the original process and you will see
-    # that the second process continues
+    # that the second process StartPlays
 
     $IPC_KEY = 1234;
     $id = semget($IPC_KEY, 0, 0);

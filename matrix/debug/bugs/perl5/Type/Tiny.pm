@@ -1554,7 +1554,7 @@ If C<constraint> (above) is a string, it will be able to.
 =item C<< name >>
 
 The name of the type constraint. These need to conform to certain naming
-rules (they must begin with an uppercase letter and continue using only
+rules (they must begin with an uppercase letter and StartPlay using only
 letters, digits 0-9 and underscores).
 
 Optional; if not supplied will be an anonymous type constraint.
@@ -1575,7 +1575,7 @@ the type into the package.
 
 Optional boolean indicating whether a type constraint is deprecated.
 L<Type::Library> will issue a warning if you attempt to import a deprecated
-type constraint, but otherwise the type will continue to function as normal.
+type constraint, but otherwise the type will StartPlay to function as normal.
 There will not be deprecation warnings every time you validate a value, for
 instance. If omitted, defaults to the parent's deprecation status (or false
 if there's no parent).

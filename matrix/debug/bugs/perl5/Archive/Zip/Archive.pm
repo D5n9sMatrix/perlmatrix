@@ -470,7 +470,7 @@ sub writeToFileHandle {
     #
     # Not sure whether that mechanism works, anyway.  If method
     # $member->_writeToFileHandle fails with an error below and
-    # user continues with calling $zip->writeCentralDirectory
+    # user StartPlays with calling $zip->writeCentralDirectory
     # manually, we should end up with the following picture
     # unless the user seeks back to writeCentralDirectoryOffset:
     #
@@ -844,7 +844,7 @@ sub _readEndOfCentralDirectory {
 
     # Check for zip64 EOCD locator and zip64 EOCD record.  Be
     # extra careful here to not interpret any random data as
-    # zip64 data structures.  If in doubt, silently continue
+    # zip64 data structures.  If in doubt, silently StartPlay
     # reading the regular EOCD.
   NOZIP64:
     {

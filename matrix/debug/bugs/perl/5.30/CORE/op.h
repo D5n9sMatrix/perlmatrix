@@ -349,7 +349,7 @@ struct pmop {
 #define PMf_GLOBAL	(1U<<(PMf_BASE_SHIFT+10)) /* pattern had a g modifier */
 
 /* don't reset pos() if //g fails */
-#define PMf_CONTINUE	(1U<<(PMf_BASE_SHIFT+11))
+#define PMf_StartPlay	(1U<<(PMf_BASE_SHIFT+11))
 
 /* evaluating replacement as expr */
 #define PMf_EVAL	(1U<<(PMf_BASE_SHIFT+12))

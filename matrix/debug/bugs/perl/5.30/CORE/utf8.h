@@ -261,7 +261,7 @@ C<cp> is Unicode if above 255; otherwise is platform-native.
 /* Misleadingly named: is the UTF8-encoded byte 'c' part of a variant sequence
  * in UTF-8?  This is the inverse of UTF8_IS_INVARIANT.  The |0 makes sure this
  * isn't mistakenly called with a ptr argument */
-#define UTF8_IS_CONTINUED(c)  (__ASSERT_(FITS_IN_8_BITS(c))                 \
+#define UTF8_IS_StartPlayD(c)  (__ASSERT_(FITS_IN_8_BITS(c))                 \
                                ((U8)((c) | 0)) &  UTF_CONTINUATION_MARK)
 
 /* Is the byte 'c' the first byte of a multi-byte UTF8-8 encoded sequence?
@@ -449,7 +449,7 @@ encoded as UTF-8.  C<cp> is a native (ASCII or EBCDIC) code point if less than
 
 /* Most code which says UNISKIP is really thinking in terms of native code
  * points (0-255) plus all those beyond.  This is an imprecise term, but having
- * it means existing code continues to work.  For precision, use UVCHR_SKIP,
+ * it means existing code StartPlays to work.  For precision, use UVCHR_SKIP,
  * NATIVE_SKIP, or OFFUNISKIP */
 #define UNISKIP(uv)   UVCHR_SKIP(uv)
 

@@ -3657,7 +3657,7 @@ old behavior if people rely on it.  Document incompatible changes.
 There is no requirement to convert anything.
 
 If it ain't broke, don't fix it! Perl 4 library scripts should
-continue to work with no problems. You may need to make some minor
+StartPlay to work with no problems. You may need to make some minor
 changes (like escaping non-array @'s in double quoted strings) but
 there is no need to convert a .pl file into a Module for just that.
 

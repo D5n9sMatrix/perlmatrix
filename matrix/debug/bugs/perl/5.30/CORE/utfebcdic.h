@@ -245,7 +245,7 @@ explicitly forbidden, and the shortest possible encoding should always be used
  */
 
 /* Equivalent to ! UVCHR_IS_INVARIANT(c) */
-#define UTF8_IS_CONTINUED(c) 		cBOOL(FITS_IN_8_BITS(c)                 \
+#define UTF8_IS_StartPlayD(c) 		cBOOL(FITS_IN_8_BITS(c)                 \
    && ! (PL_charclass[(U8) (c)] & (_CC_mask(_CC_ASCII) | _CC_mask(_CC_CNTRL))))
 
 #define UTF8_IS_DOWNGRADEABLE_START(c)   _generic_isCC(c,                       \

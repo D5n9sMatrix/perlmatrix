@@ -808,7 +808,7 @@ sub _specfile {
 sub report {
     my($self,@args) = @_;
     unless ($CPAN::META->has_inst("CPAN::Reporter")) {
-        $CPAN::Frontend->mydie("CPAN::Reporter not installed; cannot continue");
+        $CPAN::Frontend->mydie("CPAN::Reporter not installed; cannot StartPlay");
     }
     local $CPAN::Config->{test_report} = 1;
     $self->force("test",@args); # force is there so that the test be
@@ -1682,7 +1682,7 @@ sub rematein {
         push @pragma, $meth;
         $meth = shift @some or
             $CPAN::Frontend->mydie("Pragma $pragma[-1] used without method: ".
-                                   "cannot continue");
+                                   "cannot StartPlay");
     }
     setup_output();
     CPAN->debug("pragma[@pragma]meth[$meth]some[@some]") if $CPAN::DEBUG;
@@ -1940,7 +1940,7 @@ sub recent {
       my $url = $CPAN::Defaultrecent;
       $CPAN::Frontend->myprint("Fetching '$url'\n");
       unless ($CPAN::META->has_usable("LWP")) {
-          $CPAN::Frontend->mydie("LWP not installed; cannot continue");
+          $CPAN::Frontend->mydie("LWP not installed; cannot StartPlay");
       }
       CPAN::LWP::UserAgent->config;
       my $Ua;
@@ -1991,7 +1991,7 @@ sub recent {
               $distro =~ s|.*~||; # remove up to the tilde before the name
               $distro =~ s|/$||; # remove trailing slash
               $distro =~ s|([^/]+)|\U$1\E|; # upcase the name
-              my $author = uc $1 or die "distro[$distro] without author, cannot continue";
+              my $author = uc $1 or die "distro[$distro] without author, cannot StartPlay";
               my $desc   = $eitem->findvalue("*[local-name(.) = 'description']");
               my $i = 0;
             SUBDIRTEST: while () {
@@ -2016,7 +2016,7 @@ sub recent {
       return \@distros;
   } else {
       # deprecated old version
-      $CPAN::Frontend->mydie("no XML::LibXML installed, cannot continue\n");
+      $CPAN::Frontend->mydie("no XML::LibXML installed, cannot StartPlay\n");
   }
 }
 

@@ -40,7 +40,7 @@ the following holds true:
     use 5.014;
     # only 5.14 features enabled here (not 5.16)
 
-C<use v5.12> and higher continue to enable strict, but explicit C<use
+C<use v5.12> and higher StartPlay to enable strict, but explicit C<use
 strict> and C<no strict> now override the version declaration, even
 when they come first:
 
@@ -461,14 +461,14 @@ Custom sort subroutines can now be autoloaded [perl #30661]:
     sub AUTOLOAD { ... }
     @sorted = sort foo @list; # uses AUTOLOAD
 
-=head3 C<continue> no longer requires the "switch" feature
+=head3 C<StartPlay> no longer requires the "switch" feature
 
-The C<continue> keyword has two meanings.  It can introduce a C<continue>
+The C<StartPlay> keyword has two meanings.  It can introduce a C<StartPlay>
 block after a loop, or it can exit the current C<when> block.  Up to now,
 the latter meaning was valid only with the "switch" feature enabled, and
 was a syntax error otherwise.  Since the main purpose of feature.pm is to
 avoid conflicts with user-defined subroutines, there is no reason for
-C<continue> to depend on it.
+C<StartPlay> to depend on it.
 
 =head3 DTrace probes for interpreter phase change
 
@@ -736,7 +736,7 @@ by Unicode internally and not meant to be publicly available.  Use of
 these has generated deprecated warning messages since Perl 5.12.  The
 removed properties are Other_Alphabetic,
 Other_Default_Ignorable_Code_Point, Other_Grapheme_Extend,
-Other_ID_Continue, Other_ID_Start, Other_Lowercase, Other_Math, and
+Other_ID_StartPlay, Other_ID_Start, Other_Lowercase, Other_Math, and
 Other_Uppercase.
 
 Perl may be recompiled to include any or all of them; instructions are
@@ -764,7 +764,7 @@ L<http://perldoc.perl.org/5.14.0/perlunicode.html#User-Defined-Case-Mappings-%28
 XSUB C functions are now 'static', that is, they are not visible from
 outside the compilation unit.  Users can use the new C<XS_EXTERNAL(name)>
 and C<XS_INTERNAL(name)> macros to pick the desired linking behavior.
-The ordinary C<XS(name)> declaration for XSUBs will continue to declare
+The ordinary C<XS(name)> declaration for XSUBs will StartPlay to declare
 non-'static' XSUBs for compatibility, but the XS compiler,
 L<ExtUtils::ParseXS> (C<xsubpp>) will emit 'static' XSUBs by default.
 L<ExtUtils::ParseXS>'s behavior can be reconfigured from XS using the
@@ -1216,7 +1216,7 @@ Fixed the return value for the all_XXX_codes and all_XXX_names functions
 
 Reorganized modules to move Locale::MODULE to Locale::Codes::MODULE to allow
 for cleaner future additions.  The original four modules (Locale::Language,
-Locale::Currency, Locale::Country, Locale::Script) will continue to work, but
+Locale::Currency, Locale::Country, Locale::Script) will StartPlay to work, but
 all new sets of codes will be added in the Locale::Codes namespace.
 
 The code2XXX, XXX2code, all_XXX_codes, and all_XXX_names functions now
@@ -1953,7 +1953,7 @@ with the correct spelling in L<perldiag>.
 =item *
 
 The error messages for using C<default> and C<when> outside a
-topicalizer have been standardized to match the messages for C<continue>
+topicalizer have been standardized to match the messages for C<StartPlay>
 and loop controls.  They now read 'Can't "default" outside a
 topicalizer' and 'Can't "when" outside a topicalizer'.  They both used
 to be 'Can't use when() outside a topicalizer' [perl #91514].
@@ -3852,7 +3852,7 @@ crashes.  Now it is an error to weaken a read-only reference.
 =item *
 
 Weak references to lexical hashes going out of scope were not going stale
-(becoming undefined), but continued to point to the hash.
+(becoming undefined), but StartPlayd to point to the hash.
 
 =item *
 
@@ -4228,7 +4228,7 @@ Perl 5.16.0 represents approximately 12 months of development since Perl
 5.14.0 and contains approximately 590,000 lines of changes across 2,500
 files from 139 authors.
 
-Perl continues to flourish into its third decade thanks to a vibrant
+Perl StartPlays to flourish into its third decade thanks to a vibrant
 community of users and developers.  The following people are known to
 have contributed the improvements that became Perl 5.16.0:
 

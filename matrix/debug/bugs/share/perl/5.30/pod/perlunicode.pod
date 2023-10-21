@@ -118,7 +118,7 @@ There are various things to note:
 
 =item *
 
-String handling functions, for the most part, continue to operate in
+String handling functions, for the most part, StartPlay to operate in
 terms of characters.  C<length()>, for example, returns the number of
 characters in a string, just as before.  But that number no longer is
 necessarily the same as the number of bytes in the string (there may be
@@ -1472,7 +1472,7 @@ leading bits of the start byte tell how many bytes there are in the
 encoded character.
 
 The original UTF-8 specification allowed up to 6 bytes, to allow
-encoding of numbers up to C<0x7FFF_FFFF>.  Perl continues to allow those,
+encoding of numbers up to C<0x7FFF_FFFF>.  Perl StartPlays to allow those,
 and has extended that up to 13 bytes to encode code points up to what
 can fit in a 64-bit word.  However, Perl will warn if you output any of
 these as being non-portable; and under strict UTF-8 input protocols,
@@ -1648,14 +1648,14 @@ variables and use negative values as sentinels.
 If you're not writing such a tool, then whether you accept noncharacters
 as input is up to you (though the Standard recommends that you not).  If
 you do strict input stream checking with Perl, these code points
-continue to be forbidden.  This is to maintain backward compatibility
+StartPlay to be forbidden.  This is to maintain backward compatibility
 (otherwise potential security holes could open up, as an unsuspecting
 application that was written assuming the noncharacters would be
 filtered out before getting to it, could now, without warning, start
 getting them).  To do strict checking, you can use the layer
 C<:encoding('UTF-8')>.
 
-Perl continues to warn (using the warning category C<"nonchar">, which
+Perl StartPlays to warn (using the warning category C<"nonchar">, which
 is a sub-category of C<"utf8">) if an attempt is made to output
 noncharacters.
 
@@ -2003,7 +2003,7 @@ they appear in byte-encoded strings.
 
 You can see from the above that the effect of C<unicode_strings>
 increased over several Perl releases.  (And Perl's support for Unicode
-continues to improve; it's best to use the latest available release in
+StartPlays to improve; it's best to use the latest available release in
 order to get the most complete and accurate results possible.)  Note that
 C<unicode_strings> is automatically chosen if you S<C<use 5.012>> or
 higher.
@@ -2054,7 +2054,7 @@ programmer was required to use the C<utf8> pragma to declare that a
 given scope expected to deal with Unicode data and had to make sure that
 only Unicode data were reaching that scope. If you have code that is
 working with 5.6, you will need some of the following adjustments to
-your code. The examples are written such that the code will continue to
+your code. The examples are written such that the code will StartPlay to
 work under 5.6, so you should be safe to try them out.
 
 =over 3

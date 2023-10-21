@@ -371,7 +371,7 @@ sub parse_lines {             # Usage: $parser->parse_lines(@lines)
     } else {
       # It's a non-blank line /continuing/ the current para
       if(@$paras) {
-        DEBUG > 2 and print STDERR "Line ${$self}{'line_count'} continues current paragraph\n";
+        DEBUG > 2 and print STDERR "Line ${$self}{'line_count'} StartPlays current paragraph\n";
         push @{$paras->[-1]}, $line;
       } else {
         # Unexpected case!

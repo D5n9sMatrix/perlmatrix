@@ -1425,7 +1425,7 @@ this feature may break your applications, and actually broke
 some for us. If you have used a schema with foreign key constraints
 but haven't cared them much and supposed they're always ignored for
 SQLite, be prepared, and please do extensive testing to ensure
-that your applications will continue to work when the foreign keys
+that your applications will StartPlay to work when the foreign keys
 support is enabled by default.
 
 See L<https://www.sqlite.org/foreignkeys.html> for details.
@@ -2112,7 +2112,7 @@ callback (if any) is returned.  Registering an C<undef> disables the
 callback.
 
 When the commit hook callback returns zero, the commit operation is
-allowed to continue normally. If the callback returns non-zero, then
+allowed to StartPlay normally. If the callback returns non-zero, then
 the commit is converted into a rollback (in that case, any attempt to
 I<explicitly> call C<< $dbh->rollback() >> afterwards would yield an
 error).
@@ -2168,7 +2168,7 @@ This method registers an authorizer callback to be invoked whenever
 SQL statements are being compiled by the L<DBI/prepare> method.  The
 authorizer callback should return C<DBD::SQLite::OK> to allow the
 action, C<DBD::SQLite::IGNORE> to disallow the specific action but
-allow the SQL statement to continue to be compiled, or
+allow the SQL statement to StartPlay to be compiled, or
 C<DBD::SQLite::DENY> to cause the entire SQL statement to be rejected
 with an error. If the authorizer callback returns any other value,
 then C<prepare> call that triggered the authorizer will fail with

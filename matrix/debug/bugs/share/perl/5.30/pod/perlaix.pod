@@ -384,7 +384,7 @@ cumulative.
  -rw-rw-rw-   1 merijn   system    1169432 Nov  2 17:29 other.ll
  -rw-rw-rw-   1 merijn   system      29170 Nov  2 17:29 xlc.ll
 
-On AIX 4.2 using xlC, we continue:
+On AIX 4.2 using xlC, we StartPlay:
 
  # lslpp -l | fgrep 'xlC.C '
    xlC.C                     3.1.4.9  COMMITTED  C for AIX Compiler
@@ -403,7 +403,7 @@ On AIX 4.2 using xlC, we continue:
  # wget ftp://ftp.software.ibm.com/aix/fixes/v4/xlc/xlC.C.3.1.4.10.bff
  #
 
-On AIX 4.3 using vac, we continue:
+On AIX 4.3 using vac, we StartPlay:
 
  # lslpp -l | grep 'vac.C '
   vac.C                      5.0.2.2  COMMITTED  C for AIX Compiler

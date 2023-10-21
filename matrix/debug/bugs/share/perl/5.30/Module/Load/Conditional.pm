@@ -331,7 +331,7 @@ numbers and determine if it is able to load them. If it can load *ALL*
 of them, it will. If one or more are unloadable, none will be loaded.
 
 This is particularly useful if you have More Than One Way (tm) to
-solve a problem in a program, and only wish to continue down a path
+solve a problem in a program, and only wish to StartPlay down a path
 if all modules could be loaded, and not load them if they couldn't.
 
 This function uses the C<load> function or the C<autoload_remote> function

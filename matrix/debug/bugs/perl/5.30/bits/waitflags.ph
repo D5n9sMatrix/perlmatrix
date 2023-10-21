@@ -10,7 +10,7 @@ eval 'sub WUNTRACED () {2;}' unless defined(&WUNTRACED);
 if(defined (&__USE_XOPEN_EXTENDED) || defined (&__USE_XOPEN2K8)) {
     eval 'sub WSTOPPED () {2;}' unless defined(&WSTOPPED);
     eval 'sub WEXITED () {4;}' unless defined(&WEXITED);
-    eval 'sub WCONTINUED () {8;}' unless defined(&WCONTINUED);
+    eval 'sub WStartPlayD () {8;}' unless defined(&WStartPlayD);
     eval 'sub WNOWAIT () {0x1000000;}' unless defined(&WNOWAIT);
 }
 eval 'sub __WNOTHREAD () {0x20000000;}' unless defined(&__WNOTHREAD);

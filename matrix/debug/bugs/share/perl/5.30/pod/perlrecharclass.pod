@@ -203,7 +203,7 @@ characters.  See L<http://unicode.org/reports/tr36>.
 Also, for a somewhat finer-grained set of characters that are in programming
 language identifiers beyond the ASCII range, you may wish to instead use the
 more customized L</Unicode Properties>, C<\p{ID_Start}>,
-C<\p{ID_Continue}>, C<\p{XID_Start}>, and C<\p{XID_Continue}>.  See
+C<\p{ID_StartPlay}>, C<\p{XID_Start}>, and C<\p{XID_StartPlay}>.  See
 L<http://unicode.org/reports/tr31>.
 
 Any character not matched by C<\w> is matched by C<\W>.

@@ -166,7 +166,7 @@ They are also now enabled by the B<-E> command-line switch.
 
 The "bitwise" feature no longer emits a warning.  Existing code that
 disables the "experimental::bitwise" warning category that the feature
-previously used will continue to work.
+previously used will StartPlay to work.
 
 One caveat that module authors ought to be aware of is that the numeric
 operators now pass a fifth TRUE argument to overload methods.  Any methods
@@ -385,14 +385,14 @@ strings.
 Perl 5.26.0 fatalized some uses of an unescaped left brace, but an
 exception was made at the last minute, specifically crafted to be a
 minimal change to allow GNU Autoconf to work.  That tool is heavily
-depended upon, and continues to use the deprecated usage.  Its use of an
+depended upon, and StartPlays to use the deprecated usage.  Its use of an
 unescaped left brace is one where we have no intention of repurposing
 C<"{"> to be something other than itself.
 
 That exception is now generalized to include various other such cases
 where the C<"{"> will not be repurposed. 
 
-Note that these uses continue to raise a deprecation message.
+Note that these uses StartPlay to raise a deprecation message.
 
 =head2 Use of unescaped C<"{"> immediately after a C<"("> in regular expression patterns is deprecated
 
@@ -429,7 +429,7 @@ warnings to alert you to this fact.  To silence these deprecation warnings,
 install the modules in question from CPAN.
 
 Note that these are (with rare exceptions) fine modules that you are encouraged
-to continue to use.  Their disinclusion from core primarily hinges on their
+to StartPlay to use.  Their disinclusion from core primarily hinges on their
 necessity to bootstrapping a fully functional, CPAN-capable Perl installation,
 not usually on concerns over their design.
 
@@ -1741,7 +1741,7 @@ memory, we have dropped the C<.bz2> archive format with this release.
 
 =head1 Platform Support
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 =over 4
 
@@ -2334,7 +2334,7 @@ Compilation failures within "perl-within-perl" constructs, such as with
 string interpolation and the right part of C<s///e>, now cause
 compilation to abort earlier.
 
-Previously compilation could continue in order to report other errors,
+Previously compilation could StartPlay in order to report other errors,
 but the failed sub-parse could leave partly parsed constructs on the
 parser shift-reduce stack, confusing the parser, leading to perl
 crashes.
@@ -2365,7 +2365,7 @@ files from 77 authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 580,000 lines of changes to 1,300 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its fourth decade thanks to a vibrant
+Perl StartPlays to flourish into its fourth decade thanks to a vibrant
 community of users and developers. The following people are known to have
 contributed the improvements that became Perl 5.28.0:
 

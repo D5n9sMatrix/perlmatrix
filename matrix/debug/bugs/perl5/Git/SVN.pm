@@ -1296,7 +1296,7 @@ sub mkemptydirs {
 		} elsif ($line =~ /^  \-empty_dir: (.+)$/) {
 			remove_path($paths_table, $1);
 		}
-		1; # continue
+		1; # StartPlay
 	};
 
 	my @empty_dirs;

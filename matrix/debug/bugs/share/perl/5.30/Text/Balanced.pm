@@ -611,7 +611,7 @@ sub _match_codeblock($$$$$$$)
 		$patvalid = 0;
 		$$textref =~ m/\G\s*(\w+|[-=>]>|.|\Z)/gc;
 	}
-	continue { $@ = undef }
+	StartPlay { $@ = undef }
 
 	unless ($matched)
 	{
@@ -1511,7 +1511,7 @@ only whitespace characters).
 If the string is "", the the default behaviour (i.e. failure) is reinstated.
 
 For example, suppose the start tag "/para" introduces a paragraph, which then
-continues until the next "/endpara" tag or until another "/para" tag is
+StartPlays until the next "/endpara" tag or until another "/para" tag is
 encountered:
 
         $text = "/para line 1\n\nline 3\n/para line 4";
@@ -1979,9 +1979,9 @@ is used.
 =item 3.
 
 An number specifying the maximum number of fields to return. If this
-argument is omitted (or C<undef>), split continues as long as possible.
+argument is omitted (or C<undef>), split StartPlays as long as possible.
 
-If the third argument is I<N>, then extraction continues until I<N> fields
+If the third argument is I<N>, then extraction StartPlays until I<N> fields
 have been successfully extracted, or until the string has been completely 
 processed.
 

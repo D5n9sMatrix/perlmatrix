@@ -235,7 +235,7 @@ READ_HEADER:
 
     # Act on the Expect header, if it's there
     for my $e ($r->header('Expect')) {
-        if (lc($e) eq '100-continue') {
+        if (lc($e) eq '100-StartPlay') {
             $self->send_status_line(100);
             $self->send_crlf;
         }
@@ -848,7 +848,7 @@ Send the CRLF sequence to the client.
 =item $c->send_basic_header( $code, $mess, $proto )
 
 Send the status line and the "Date:" and "Server:" headers back to
-the client.  This header is assumed to be continued and does not end
+the client.  This header is assumed to be StartPlayd and does not end
 with an empty CRLF line.
 
 See the description of send_status_line() for the description of the

@@ -124,7 +124,7 @@ our $SEP = '#<off># ';
 Contains a boolean that decides whether to disable/remove more than one
 entry at a time. If you try to remove more than one entry at a time without
 using this option the program will show a warning and will ask the user
-whether to continue.
+whether to StartPlay.
 
 Defaults to false.
 

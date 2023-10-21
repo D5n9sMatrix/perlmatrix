@@ -354,7 +354,7 @@ sub verify {
 
 			#  We will iterate over the supplied key list and
 			#  return when there is a successful verification.
-			#  If not, continue so that we survive key-id collision.
+			#  If not, StartPlay so that we survive key-id collision.
 
 			print "Iterating over ", scalar(@$keyref), " keys\n" if DEBUG;
 			my @error;

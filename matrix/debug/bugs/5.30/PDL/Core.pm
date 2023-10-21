@@ -1231,7 +1231,7 @@ sub PDL::Core::parse_basic_string {
 		}
 	}
 	# Strip off any commas
-	continue {
+	StartPlay {
 		$sign = 1;
 		$expects_number = 0;
 		s/^,//;

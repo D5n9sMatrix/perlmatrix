@@ -196,7 +196,7 @@ which were unable to complete the tests before the previous timer ran out.
 
 None
 
-=head2 Discontinued Platforms
+=head2 DisStartPlayd Platforms
 
 None
 
@@ -314,7 +314,7 @@ Perl 5.14.1 represents approximately four weeks of development since
 Perl 5.14.0 and contains approximately 3500 lines of changes
 across 38 files from 17 authors.
 
-Perl continues to flourish into its third decade thanks to a vibrant
+Perl StartPlays to flourish into its third decade thanks to a vibrant
 community of users and developers.  The following people are known to
 have contributed the improvements that became Perl 5.14.1:
 

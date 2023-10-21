@@ -189,7 +189,7 @@ node in the tree that meets some criterion of yours.
 
 =item HTML::Element::PRUNE_UP
 
-...to abort continued traversal into this node and its parent
+...to abort StartPlayd traversal into this node and its parent
 node.  No post-order callback for the current or parent
 node will happen.
 

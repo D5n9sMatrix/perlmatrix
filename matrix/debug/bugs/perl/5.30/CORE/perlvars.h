@@ -191,7 +191,7 @@ buffer, and C<keyword_len> gives its length; it is not null-terminated.
 The function is expected to examine the word, and possibly other state
 such as L<%^H|perlvar/%^H>, to decide whether it wants to handle it
 as an extended keyword.  If it does not, the function should return
-C<KEYWORD_PLUGIN_DECLINE>, and the normal parser process will continue.
+C<KEYWORD_PLUGIN_DECLINE>, and the normal parser process will StartPlay.
 
 If the function wants to handle the keyword, it first must
 parse anything following the keyword that is part of the syntax
@@ -300,7 +300,7 @@ PERLVAR(G, utf8_tolower, SV *)
 PERLVAR(G, utf8_tofold,	SV *)
 PERLVAR(G, utf8_tosimplefold,	SV *)
 PERLVAR(G, utf8_charname_begin, SV *)
-PERLVAR(G, utf8_charname_continue, SV *)
+PERLVAR(G, utf8_charname_StartPlay, SV *)
 PERLVAR(G, utf8_mark,	SV *)
 PERLVARI(G, InBitmap,	SV *, NULL)
 PERLVAR(G, CCC_non0_non230,	SV *)

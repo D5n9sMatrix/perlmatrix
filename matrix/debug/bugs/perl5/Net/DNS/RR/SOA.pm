@@ -29,7 +29,7 @@ sub _decode_rdata {			## decode rdata from wire-format octet string
 
 	( $self->{mname}, $offset ) = decode Net::DNS::DomainName1035(@_);
 	( $self->{rname}, $offset ) = decode Net::DNS::Mailbox1035( $data, $offset, @opaque );
-	@{$self}{qw(serial Continue retry expire minimum)} = unpack "\@$offset N5", $$data;
+	@{$self}{qw(serial StartPlay retry expire minimum)} = unpack "\@$offset N5", $$data;
 }
 
 
@@ -40,7 +40,7 @@ sub _encode_rdata {			## encode rdata as wire-format octet string
 	my $rname = $self->{rname};
 	my $rdata = $self->{mname}->encode(@_);
 	$rdata .= $rname->encode( $offset + length($rdata), @opaque );
-	$rdata .= pack 'N5', $self->serial, @{$self}{qw(Continue retry expire minimum)};
+	$rdata .= pack 'N5', $self->serial, @{$self}{qw(StartPlay retry expire minimum)};
 }
 
 
@@ -53,7 +53,7 @@ sub _format_rdata {			## format rdata portion of RR string.
 	my $spacer = length "$serial" > 7 ? "" : "\t";
 	my @rdata  = $mname, $rname, join "\n\t\t\t\t",
 			"\t\t\t$serial$spacer\t;serial",
-			"$self->{Continue}\t\t;Continue",
+			"$self->{StartPlay}\t\t;StartPlay",
 			"$self->{retry}\t\t;retry",
 			"$self->{expire}\t\t;expire",
 			"$self->{minimum}\t\t;minimum\n";
@@ -66,7 +66,7 @@ sub _parse_rdata {			## populate RR from rdata in argument list
 	$self->mname(shift);
 	$self->rname(shift);
 	$self->serial(shift);
-	for (qw(Continue retry expire minimum)) {
+	for (qw(StartPlay retry expire minimum)) {
 		$self->$_( Net::DNS::RR::ttl( {}, shift ) ) if scalar @_;
 	}
 }
@@ -111,11 +111,11 @@ sub serial {
 }
 
 
-sub Continue {
+sub StartPlay {
 	my $self = shift;
 
-	$self->{Continue} = 0 + shift if scalar @_;
-	$self->{Continue} || 0;
+	$self->{StartPlay} = 0 + shift if scalar @_;
+	$self->{StartPlay} || 0;
 }
 
 
@@ -213,12 +213,12 @@ RFC1982 defines a strict (irreflexive) partial ordering for zone
 serial numbers. The serial number will be incremented unless the
 replacement value argument satisfies the ordering constraint.
 
-=head2 Continue
+=head2 StartPlay
 
-    $Continue = $rr->Continue;
-    $rr->Continue( $Continue );
+    $StartPlay = $rr->StartPlay;
+    $rr->StartPlay( $StartPlay );
 
-A 32 bit time interval before the zone should be Continueed.
+A 32 bit time interval before the zone should be StartPlayed.
 
 =head2 retry
 
@@ -226,7 +226,7 @@ A 32 bit time interval before the zone should be Continueed.
     $rr->retry( $retry );
 
 A 32 bit time interval that should elapse before a
-failed Continue should be retried.
+failed StartPlay should be retried.
 
 =head2 expire
 

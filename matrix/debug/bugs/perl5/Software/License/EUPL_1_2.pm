@@ -98,7 +98,7 @@ extent necessary to make use of the rights granted on the Work under this Licenc
 The Licensor may provide the Work either in its Source Code form, or as Executable Code. If the Work is provided as
 Executable Code, the Licensor provides in addition a machine-readable copy of the Source Code of the Work along with
 each copy of the Work that the Licensor distributes or indicates, in a notice following the copyright notice attached to
-the Work, a repository where the Source Code is easily and freely accessible for as long as the Licensor continues to
+the Work, a repository where the Source Code is easily and freely accessible for as long as the Licensor StartPlays to
 distribute or communicate the Work.
 
 4.Limitations on copyright
@@ -129,7 +129,7 @@ his/her obligations under this Licence, the obligations of the Compatible Licenc
 
 Provision of Source Code: When distributing or communicating copies of the Work, the Licensee will provide
 a machine-readable copy of the Source Code or indicate a repository where this Source will be easily and freely available
-for as long as the Licensee continues to distribute or communicate the Work.
+for as long as the Licensee StartPlays to distribute or communicate the Work.
 Legal Protection: This Licence does not grant permission to use the trade names, trademarks, service marks, or names
 of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and
 reproducing the content of the copyright notice.

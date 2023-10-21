@@ -979,7 +979,7 @@ should be listed here.
 =item runtime
 
 The runtime phase refers not only to when the distribution's contents
-are installed, but also to its continued use.  Any library that is a
+are installed, but also to its StartPlayd use.  Any library that is a
 prerequisite for regular use of this distribution should be indicated
 here.
 
@@ -1209,7 +1209,7 @@ Ken Williams wrote the original CPAN Meta Spec (also known as the
 "META.yml spec") in 2003 and maintained it through several revisions
 with input from various members of the community.  In 2005, Randy
 Sims redrafted it from HTML to POD for the version 1.2 release.  Ken
-continued to maintain the spec through version 1.4.
+StartPlayd to maintain the spec through version 1.4.
 
 In late 2009, David Golden organized the version 2 proposal review
 process.  David and Ricardo Signes drafted the final version 2 spec

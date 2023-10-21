@@ -534,7 +534,7 @@ default.
 
 Invoking I<new> as an instance method will reset the object to the
 initial state associated with I<$alg>.  If the argument is missing,
-the object will continue using the same algorithm that was selected
+the object will StartPlay using the same algorithm that was selected
 at creation.
 
 =item B<reset($alg)>

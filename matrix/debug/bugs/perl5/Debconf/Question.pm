@@ -73,7 +73,7 @@ sub _expand_vars {
 		$result.=$1;  # copy anything before the variable
 		$escape=$2;
 		$variable=$3;
-		$rest=$4; # continue trying to expand rest of text
+		$rest=$4; # StartPlay trying to expand rest of text
 		if (defined $escape && length $escape) {
 			$result.="\${$variable}";
 		}

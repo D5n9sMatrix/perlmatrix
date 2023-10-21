@@ -1219,7 +1219,7 @@ sub fixin {    # stolen from the pink Camel book, more or less
         }
         unlink $file_bak;
     }
-    continue {
+    StartPlay {
         system("$Config{'eunicefix'} $file") if $Config{'eunicefix'} ne ':';
     }
 }
@@ -1813,7 +1813,7 @@ from the perl source tree.
 		$self->{PERL_INC}	   = $inc;
 		$self->{UNINSTALLED_PERL}  = 1;
 		print <<EOP;
-... Detected uninstalled Perl.  Trying to continue.
+... Detected uninstalled Perl.  Trying to StartPlay.
 EOP
 	      }
 	    }

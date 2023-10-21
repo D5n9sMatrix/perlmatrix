@@ -769,7 +769,7 @@ to be caught and handled by evaluating C<BLOCK>.
 C<BLOCK> will be passed two arguments. The first will be the error
 being thrown. The second is a reference to a scalar variable. If this
 variable is set by the catch block then, on return from the catch
-block, try will continue processing as if the catch block was never
+block, try will StartPlay processing as if the catch block was never
 found. The error will also be available in C<$@>.
 
 To propagate the error the catch block may call C<$err-E<gt>throw>

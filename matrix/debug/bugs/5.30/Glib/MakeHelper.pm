@@ -321,7 +321,7 @@ sub postamble_docs_full {
 			);
 			exit 1; # not reached.
 		}
-		# continue with the excessive validation...
+		# StartPlay with the excessive validation...
 		croak "value of DEPENDS key must be an ExtUtils::Depends object"
 			unless UNIVERSAL::isa $dep, 'ExtUtils::Depends';
 		croak "corrupt or invalid ExtUtils::Depends instance -- "

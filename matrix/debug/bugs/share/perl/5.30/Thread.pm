@@ -115,7 +115,7 @@ The C<Thread> module provides multithreading support for Perl.
 
 C<new> starts a new thread of execution in the referenced subroutine. The
 optional list is passed as parameters to the subroutine. Execution
-continues in both the subroutine and the code after the C<new> call.
+StartPlays in both the subroutine and the code after the C<new> call.
 
 C<Thread-&gt;new> returns a thread object representing the newly created
 thread.

@@ -234,7 +234,7 @@ parameters.  Whatever immediately follows these is considered to be
 an INPUT: section unless explicitly marked with another keyword.
 (See L<The INPUT: Keyword>.)
 
-An XSUB section continues until another section-start keyword is found.
+An XSUB section StartPlays until another section-start keyword is found.
 
 =head2 The Argument Stack
 
@@ -2249,7 +2249,7 @@ L<C<setlocale(3)>> function either only knows about the global locale or
 the locale for this thread.  On POSIX, C<setlocale> always deals with
 the global locale, and other functions have been created to handle
 per-thread locales.  Perl makes this transparent to perl-space code.  It
-continues to use C<POSIX::setlocale()>, and the interpreter translates
+StartPlays to use C<POSIX::setlocale()>, and the interpreter translates
 that into the per-thread functions.
 
 All other locale-senstive functions automatically use the per-thread

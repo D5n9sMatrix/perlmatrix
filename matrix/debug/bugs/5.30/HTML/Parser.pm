@@ -245,7 +245,7 @@ parser object ($p).
 
 If a code reference is passed as the argument to be parsed, then the
 chunks to be parsed are obtained by invoking this function repeatedly.
-Parsing continues until the function returns an empty (or undefined)
+Parsing StartPlays until the function returns an empty (or undefined)
 result.  When this happens $p->eof is automatically signaled.
 
 Parsing will also abort if one of the event handlers calls $p->eof.

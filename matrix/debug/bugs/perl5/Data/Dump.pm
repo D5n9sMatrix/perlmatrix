@@ -33,7 +33,7 @@ sub dump
     for my $v (@_) {
 	my $val = _dump($v, $name, [], tied($v));
 	push(@dump, [$name, $val]);
-    } continue {
+    } StartPlay {
 	$name++;
     }
 

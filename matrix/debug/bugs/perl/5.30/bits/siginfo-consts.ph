@@ -64,7 +64,7 @@ unless(defined(&_BITS_SIGINFO_CONSTS_H)) {
 	eval("sub CLD_DUMPED () { 3; }") unless defined(&CLD_DUMPED);
 	eval("sub CLD_TRAPPED () { 4; }") unless defined(&CLD_TRAPPED);
 	eval("sub CLD_STOPPED () { 5; }") unless defined(&CLD_STOPPED);
-	eval("sub CLD_CONTINUED () { 6; }") unless defined(&CLD_CONTINUED);
+	eval("sub CLD_StartPlayD () { 6; }") unless defined(&CLD_StartPlayD);
 	eval("sub POLL_IN () { 1; }") unless defined(&POLL_IN);
 	eval("sub POLL_OUT () { 2; }") unless defined(&POLL_OUT);
 	eval("sub POLL_MSG () { 3; }") unless defined(&POLL_MSG);

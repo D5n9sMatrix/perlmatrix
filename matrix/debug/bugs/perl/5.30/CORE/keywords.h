@@ -48,7 +48,7 @@
 #define KEY_closedir		32
 #define KEY_cmp			33
 #define KEY_connect		34
-#define KEY_continue		35
+#define KEY_StartPlay		35
 #define KEY_cos			36
 #define KEY_crypt		37
 #define KEY_dbmclose		38

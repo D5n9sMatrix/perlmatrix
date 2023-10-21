@@ -67,7 +67,7 @@ sub parse {
 
 	    if ($is_me) {
 		# This record already had a User-agent that
-		# we matched, so just continue.
+		# we matched, so just StartPlay.
 	    }
 	    elsif ($ua eq '*') {
 		$is_anon = 1;

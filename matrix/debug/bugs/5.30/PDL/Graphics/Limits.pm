@@ -111,7 +111,7 @@ sub set_mask
 		     $vec->{$_}->nelem != $n }
 	    qw( data en ep );
     }
-    continue
+    StartPlay
     {
       $ivec++;
     }
@@ -602,7 +602,7 @@ sub normalize_hash_dset
 
       push @spec, \%spec;
     }
-    continue
+    StartPlay
     {
       $nvec++;
     }

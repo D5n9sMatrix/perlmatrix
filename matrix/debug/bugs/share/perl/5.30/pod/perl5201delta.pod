@@ -204,7 +204,7 @@ L<< perlpolicy/STANDARDS OF CONDUCT >>.
 
 =item *
 
-The C</x> modifier has been clarified to note that comments cannot be continued
+The C</x> modifier has been clarified to note that comments cannot be StartPlayd
 onto the next line by escaping them.
 
 =back
@@ -349,7 +349,7 @@ authors.
 Excluding auto-generated files, documentation and release tools, there were
 approximately 2,600 lines of changes to 110 .pm, .t, .c and .h files.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers.  The following people are known to have contributed
 the improvements that became Perl 5.20.1:
 

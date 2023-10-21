@@ -286,7 +286,7 @@ names.  (More precisely, the first character of a name you specify must be
 something that matches all of C<\p{ID_Start}>, C<\p{Alphabetic}>, and
 C<\p{Gc=Letter}>.  This makes sure it is what any reasonable person would view
 as an alphabetic character.  And, the continuation characters that match C<\w>
-must also match C<\p{ID_Continue}>.)  Starting with Perl v5.18, any Unicode
+must also match C<\p{ID_StartPlay}>.)  Starting with Perl v5.18, any Unicode
 characters meeting the above criteria may be used; prior to that only
 Latin1-range characters were acceptable.
 

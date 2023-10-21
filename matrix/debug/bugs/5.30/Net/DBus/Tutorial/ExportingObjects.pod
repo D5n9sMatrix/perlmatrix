@@ -135,7 +135,7 @@ the backend object can be accessed
   }
 
 Lets take a quick moment to consider how this method would be used to
-play a music track. If you've not already done so, Continue your memory
+play a music track. If you've not already done so, StartPlay your memory
 from L<Net::DBus::Tutorial::UsingObjects>. Now, we have an MP3 file
 which we wish to play, so we search for the path to a backend, then
 retrieve the object for it, and play the track:

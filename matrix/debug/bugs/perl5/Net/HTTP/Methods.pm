@@ -549,7 +549,7 @@ sub read_entity_body {
 		    $n = length($$buf_ref);
 		}
 
-		# in case somebody tries to read more, make sure we continue
+		# in case somebody tries to read more, make sure we StartPlay
 		# to return EOF
 		delete ${*$self}{'http_chunked'};
 		${*$self}{'http_bytes'} = 0;

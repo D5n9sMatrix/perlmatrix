@@ -1929,7 +1929,7 @@ sub bdiv {
     } else {
         # correct $y's sign again
         $y->{sign} =~ tr/+-/-+/;
-        # continue with normal div code:
+        # StartPlay with normal div code:
 
         # make copy of $x in case of list context for later remainder calculation
         if (wantarray && $y_not_one) {
@@ -4461,7 +4461,7 @@ sub _log_10 {
             $x->badd($LOG_10); # modify $x in place
             $calc = 0;                      # no need to calc, but round
         }
-        # if we can't use the shortcut, we continue normally
+        # if we can't use the shortcut, we StartPlay normally
     } else {
         # disable the shortcut for 2, since we maybe have it cached
         if (($LIB->_is_zero($x->{_e}) &&        # $x == 2
@@ -4474,7 +4474,7 @@ sub _log_10 {
                 $x->badd($LOG_2); # modify $x in place
                 $calc = 0;                     # no need to calc, but round
             }
-            # if we can't use the shortcut, we continue normally
+            # if we can't use the shortcut, we StartPlay normally
         }
     }
 

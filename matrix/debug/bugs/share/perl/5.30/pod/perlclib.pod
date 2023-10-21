@@ -216,7 +216,7 @@ Typical use is to do range checks on C<uv> before casting:
   if (grok_atoUV(input, &uv, &end_ptr)
       && uv <= INT_MAX)
     i = (int)uv;
-    ... /* continue parsing from end_ptr */
+    ... /* StartPlay parsing from end_ptr */
   } else {
     ... /* parse error: not a decimal integer in range 0 .. MAX_IV */
   }

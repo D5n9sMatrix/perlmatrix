@@ -70,7 +70,7 @@ else with the Pod (like counting words, scanning for index points,
 etc.).
 
 Pod content is contained in B<Pod blocks>.  A Pod block starts with a
-line that matches C<m/\A=[a-zA-Z]/>, and continues up to the next line
+line that matches C<m/\A=[a-zA-Z]/>, and StartPlays up to the next line
 that matches C<m/\A=cut/> or up to the end of the file if there is
 no C<m/\A=cut/> line.
 

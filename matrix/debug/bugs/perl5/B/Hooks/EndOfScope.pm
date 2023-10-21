@@ -71,7 +71,7 @@ While L<Variable::Magic> has access to some very dark sorcery to make it
 possible to throw an exception from within a callback, the pure-perl
 implementation does not have access to these hacks. Therefore, what
 would have been a B<compile-time exception> is instead B<converted to a
-warning>, and your execution will continue as if the exception never
+warning>, and your execution will StartPlay as if the exception never
 happened.
 
 To explicitly request an XS (or PP) implementation one has two choices. Either

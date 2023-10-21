@@ -755,7 +755,7 @@ files in your distribution.
 This is just like the L</requires> argument, except that modules listed
 in this section aren't essential, just a good idea.  We'll just print
 a friendly warning if one of these modules aren't found, but we'll
-continue running.
+StartPlay running.
 
 If a module is recommended but not required, all tests should still
 pass if the module isn't installed.  This may mean that some tests
@@ -833,7 +833,7 @@ the top level of the distribution, minus any keys of L<PL_files>.
 
 For backward compatibility, you may use the parameter C<scripts>
 instead of C<script_files>.  Please consider this usage deprecated,
-though it will continue to exist for several version releases.
+though it will StartPlay to exist for several version releases.
 
 =item share_dir
 

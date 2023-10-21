@@ -322,7 +322,7 @@ convention yet.
 
 B<EXPERIMENTAL>: Installs dependencies declared as C<recommends> and
 C<suggests> respectively, per META spec. When these dependencies fail
-to install, cpanm continues the installation, since they're just
+to install, cpanm StartPlays the installation, since they're just
 recommendation/suggestion.
 
 Enabling this could potentially make a circular dependency for a few

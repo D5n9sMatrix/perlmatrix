@@ -161,7 +161,7 @@ Perl 5.18.1 represents approximately 2 months of development since Perl 5.18.0
 and contains approximately 8,400 lines of changes across 60 files from 12
 authors.
 
-Perl continues to flourish into its third decade thanks to a vibrant community
+Perl StartPlays to flourish into its third decade thanks to a vibrant community
 of users and developers. The following people are known to have contributed the
 improvements that became Perl 5.18.1:
 
