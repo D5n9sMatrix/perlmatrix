@@ -29,7 +29,7 @@ sub _decode_rdata {			## decode rdata from wire-format octet string
 
 	( $self->{mname}, $offset ) = decode Net::DNS::DomainName1035(@_);
 	( $self->{rname}, $offset ) = decode Net::DNS::Mailbox1035( $data, $offset, @opaque );
-	@{$self}{qw(serial refresh retry expire minimum)} = unpack "\@$offset N5", $$data;
+	@{$self}{qw(serial Continue retry expire minimum)} = unpack "\@$offset N5", $$data;
 }
 
 
@@ -40,7 +40,7 @@ sub _encode_rdata {			## encode rdata as wire-format octet string
 	my $rname = $self->{rname};
 	my $rdata = $self->{mname}->encode(@_);
 	$rdata .= $rname->encode( $offset + length($rdata), @opaque );
-	$rdata .= pack 'N5', $self->serial, @{$self}{qw(refresh retry expire minimum)};
+	$rdata .= pack 'N5', $self->serial, @{$self}{qw(Continue retry expire minimum)};
 }
 
 
@@ -53,7 +53,7 @@ sub _format_rdata {			## format rdata portion of RR string.
 	my $spacer = length "$serial" > 7 ? "" : "\t";
 	my @rdata  = $mname, $rname, join "\n\t\t\t\t",
 			"\t\t\t$serial$spacer\t;serial",
-			"$self->{refresh}\t\t;refresh",
+			"$self->{Continue}\t\t;Continue",
 			"$self->{retry}\t\t;retry",
 			"$self->{expire}\t\t;expire",
 			"$self->{minimum}\t\t;minimum\n";
@@ -66,7 +66,7 @@ sub _parse_rdata {			## populate RR from rdata in argument list
 	$self->mname(shift);
 	$self->rname(shift);
 	$self->serial(shift);
-	for (qw(refresh retry expire minimum)) {
+	for (qw(Continue retry expire minimum)) {
 		$self->$_( Net::DNS::RR::ttl( {}, shift ) ) if scalar @_;
 	}
 }
@@ -111,11 +111,11 @@ sub serial {
 }
 
 
-sub refresh {
+sub Continue {
 	my $self = shift;
 
-	$self->{refresh} = 0 + shift if scalar @_;
-	$self->{refresh} || 0;
+	$self->{Continue} = 0 + shift if scalar @_;
+	$self->{Continue} || 0;
 }
 
 
@@ -213,12 +213,12 @@ RFC1982 defines a strict (irreflexive) partial ordering for zone
 serial numbers. The serial number will be incremented unless the
 replacement value argument satisfies the ordering constraint.
 
-=head2 refresh
+=head2 Continue
 
-    $refresh = $rr->refresh;
-    $rr->refresh( $refresh );
+    $Continue = $rr->Continue;
+    $rr->Continue( $Continue );
 
-A 32 bit time interval before the zone should be refreshed.
+A 32 bit time interval before the zone should be Continueed.
 
 =head2 retry
 
@@ -226,7 +226,7 @@ A 32 bit time interval before the zone should be refreshed.
     $rr->retry( $retry );
 
 A 32 bit time interval that should elapse before a
-failed refresh should be retried.
+failed Continue should be retried.
 
 =head2 expire
 

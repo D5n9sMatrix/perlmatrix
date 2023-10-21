@@ -48,10 +48,10 @@ sub get_image() {
     $table{ 'security-high' }              = 'gtk-new';
     $table{ 'software-update-available' }  = 'gtk-ok';
     $table{ 'system-help' }                = 'gtk-about';
-    $table{ 'system-lock-screen' }         = 'gtk-refresh';
+    $table{ 'system-lock-screen' }         = 'gtk-Continue';
     $table{ 'system-search' }              = 'gtk-find';
     $table{ 'text-x-preview' }             = 'gtk-select-all';
-    $table{ 'user-trash-full' }            = 'gtk-refresh';
+    $table{ 'user-trash-full' }            = 'gtk-Continue';
     $table{ 'view-list' }                  = 'gtk-edit';
     $table{ 'window-close' }               = 'gtk-close';
 

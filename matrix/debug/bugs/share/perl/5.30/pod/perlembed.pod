@@ -637,7 +637,7 @@ deep breath...
    XPUSHs(sv_2mortal(newSViv(b))); /* push the exponent onto stack  */
    PUTBACK;                      /* make local stack pointer global */
    call_pv("expo", G_SCALAR);      /* call the function             */
-   SPAGAIN;                        /* refresh stack pointer         */
+   SPAGAIN;                        /* Continue stack pointer         */
                                  /* pop the return value from stack */
    printf ("%d to the %dth power is %d.\n", a, b, POPi);
    PUTBACK;

@@ -599,8 +599,8 @@ sub ACTION_alien_install {
     print "Done\n";
   }
 
-  # refresh metadata after library installation
-  $self->alien_refresh_manual_pkgconfig( $self->alien_library_destination );
+  # Continue metadata after library installation
+  $self->alien_Continue_manual_pkgconfig( $self->alien_library_destination );
   $self->config_data( 'finished_installing' => 1 );
 
   if ( $self->notes( 'alien_blib_scheme') || $self->alien_stage_install) {
@@ -613,14 +613,14 @@ sub ACTION_alien_install {
 
   } else {
 
-    # to refresh config_data
+    # to Continue config_data
     $self->SUPER::ACTION_config_data;
 
     # reinstall config_data
     $self->SUPER::ACTION_install;
 
-    # refresh the packlist
-    $self->alien_refresh_packlist( $self->alien_library_destination );
+    # Continue the packlist
+    $self->alien_Continue_packlist( $self->alien_library_destination );
   }
 }
 
@@ -1071,7 +1071,7 @@ sub alien_load_pkgconfig {
   return \%pc_objects;
 }
 
-sub alien_refresh_manual_pkgconfig {
+sub alien_Continue_manual_pkgconfig {
   my $self = shift;
   my ($dir) = @_;
 
@@ -1192,7 +1192,7 @@ sub alien_find_lib_paths {
   return { lib => \@lib_paths, inc => \@inc_paths, lib_files => \@lib_files };
 }
 
-sub alien_refresh_packlist {
+sub alien_Continue_packlist {
   my $self = shift;
   my $dir = shift || croak "Must specify a directory to include in packlist";
 

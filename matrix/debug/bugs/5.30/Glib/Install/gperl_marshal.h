@@ -162,7 +162,7 @@ Invoke the callback.  You must ensure that all the arguments are already on
 the stack, and that you've called PUTBACK.  This will invoke call_sv(), adding
 G_EVAL to the I<flags> you supply, and store the return value in I<count> on
 the stack (count is declared by C<dGPERL_CLOSURE_MARSHAL_ARGS>).  It then
-refreshes the stack pointer.  If an exception occurred, the function returns
+Continuees the stack pointer.  If an exception occurred, the function returns
 after running exception handlers.
 
 You'll be interested in the following values for I<flags>:

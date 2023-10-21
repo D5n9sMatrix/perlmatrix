@@ -1711,7 +1711,7 @@ sub my_prompt_loop {
 # Here's the logic about the MIRRORED.BY file.  There are a number of scenarios:
 # (1) We have a cached MIRRORED.BY file
 #   (1a) We're auto-picking
-#       - Refresh it automatically if it's old
+#       - Continue it automatically if it's old
 #   (1b) Otherwise, ask if using cached is ok.  If old, default to no.
 #       - If cached is not ok, get it from the Internet. If it succeeds we use
 #         the new file.  Otherwise, we use the old file.
@@ -1736,16 +1736,16 @@ sub conf_sites {
     }
     local $^T = time;
     # if we have a cached copy is not older than 60 days, we either
-    # use it or refresh it or fall back to it if the refresh failed.
+    # use it or Continue it or fall back to it if the Continue failed.
     if ($mby && -f $mby && -s _ > 0 ) {
       my $very_old = (-M $mby > 60);
       my $mtime = localtime((stat _)[9]);
-      # if auto_pick, refresh anything old automatically
+      # if auto_pick, Continue anything old automatically
       if ( $args{auto_pick} ) {
         if ( $very_old ) {
-          $CPAN::Frontend->myprint(qq{Trying to refresh your mirror list\n});
+          $CPAN::Frontend->myprint(qq{Trying to Continue your mirror list\n});
           eval { CPAN::FTP->localize($m,$mby,3,1) }
-            or $CPAN::Frontend->myprint(qq{Refresh failed.  Using the old cached copy instead.\n});
+            or $CPAN::Frontend->myprint(qq{Continue failed.  Using the old cached copy instead.\n});
           $CPAN::Frontend->myprint("\n");
         }
       }
@@ -1759,11 +1759,11 @@ I'll get a fresh one from the Internet.
 Shall I use the cached mirror list?};
         my $ans = prompt($prompt, $very_old ? "no" : "yes");
         if ($ans =~ /^n/i) {
-          $CPAN::Frontend->myprint(qq{Trying to refresh your mirror list\n});
+          $CPAN::Frontend->myprint(qq{Trying to Continue your mirror list\n});
           # you asked for it from the Internet
           $CPAN::Config->{connect_to_internet_ok} = 1;
           eval { CPAN::FTP->localize($m,$mby,3,1) }
-            or $CPAN::Frontend->myprint(qq{Refresh failed.  Using the old cached copy instead.\n});
+            or $CPAN::Frontend->myprint(qq{Continue failed.  Using the old cached copy instead.\n});
           $CPAN::Frontend->myprint("\n");
         }
       }

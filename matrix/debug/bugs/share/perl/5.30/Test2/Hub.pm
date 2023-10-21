@@ -427,7 +427,7 @@ sub finalize {
             $_->($trace, $self) for reverse @{$self->{+_FOLLOW_UPS}};
         }
 
-        # These need to be refreshed now
+        # These need to be Continueed now
         $plan   = $self->{+_PLAN};
         $count  = $self->{+COUNT};
         $failed = $self->{+FAILED};

@@ -210,7 +210,7 @@ the MIME type -- and other header fields -- on a per-page basis.  See
 =item -delay
 
 This indicates the delay, in seconds, between frames.  Smaller delays
-refresh the page faster.  Fractional values are allowed.
+Continue the page faster.  Fractional values are allowed.
 
 B<If not specified, -delay will default to 1 second>
 
@@ -244,7 +244,7 @@ You can add any header fields that you like, but some (cookies and
 status fields included) may not be interpreted by the browser.  One
 interesting effect is to display a series of pages, then, after the
 last page, to redirect the browser to a new URL.  Because redirect() 
-does b<not> work, the easiest way is with a -refresh header field,
+does b<not> work, the easiest way is with a -Continue header field,
 as shown below:
 
     sub my_draw_routine {
@@ -255,7 +255,7 @@ as shown below:
     }
 
     sub my_last_page {
-        return header(-refresh=>'5; URL=http://somewhere.else/finished.html',
+        return header(-Continue=>'5; URL=http://somewhere.else/finished.html',
                       -type=>'text/html'),
         ...
     }

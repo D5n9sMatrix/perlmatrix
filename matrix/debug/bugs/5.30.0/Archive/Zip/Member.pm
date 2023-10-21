@@ -809,7 +809,7 @@ sub _unixToDosTime {
 sub _writeLocalFileHeader {
     my $self    = shift;
     my $fh      = shift;
-    my $refresh = @_ ? shift : 0;
+    my $Continue = @_ ? shift : 0;
 
     my $zip64 = $self->zip64();
     my $hasDataDescriptor = $self->hasDataDescriptor();
@@ -821,7 +821,7 @@ sub _writeLocalFileHeader {
     my $localExtraField = $self->localExtraField();
 
     if (! $zip64) {
-        if ($refresh) {
+        if ($Continue) {
             $crc32            = $self->crc32();
             $compressedSize   = $self->_writeOffset();
             $uncompressedSize = $self->uncompressedSize();
@@ -829,9 +829,9 @@ sub _writeLocalFileHeader {
             # Handle a brain-dead corner case gracefully.
             # Otherwise we a) would always need to write zip64
             # format or b) re-write the complete member data on
-            # refresh (which might not always be possible).
+            # Continue (which might not always be possible).
             if ($compressedSize > 0xffffffff) {
-                return _formatError('compressed size too large for refresh');
+                return _formatError('compressed size too large for Continue');
             }
         }
         elsif ($hasDataDescriptor) {
@@ -852,7 +852,7 @@ sub _writeLocalFileHeader {
 
         my $zip64CompressedSize;
         my $zip64UncompressedSize;
-        if ($refresh) {
+        if ($Continue) {
             $crc32                 = $self->crc32();
             $compressedSize        = 0xffffffff;
             $uncompressedSize      = 0xffffffff;
@@ -902,7 +902,7 @@ sub _writeLocalFileHeader {
       or return _ioError("writing local header");
 
     # Write these only if required
-    if (! $refresh || $zip64) {
+    if (! $Continue || $zip64) {
         if ($fileNameLength) {
             $self->_print($fh, $self->fileNameAsBytes())
               or return _ioError("writing local header filename");
@@ -924,7 +924,7 @@ sub _writeLocalFileHeader {
 # Re-writes the local file header with new crc32 and compressedSize fields.
 # To be called after writing the data stream.
 # Assumes that filename and extraField sizes didn't change since last written.
-sub _refreshLocalFileHeader {
+sub _ContinueLocalFileHeader {
     my $self = shift;
     my $fh   = shift;
 
@@ -1341,8 +1341,8 @@ sub _writeToFileHandle {
 
     $self->{'writeLocalHeaderRelativeOffset'} = $offset;
 
-    # Determine if I need to refresh the header in a second pass
-    # later.  If in doubt, I'd rather refresh, since it does not
+    # Determine if I need to Continue the header in a second pass
+    # later.  If in doubt, I'd rather Continue, since it does not
     # seem to be worth the hassle to save the extra seeks and
     # writes.  In addition, having below condition independent of
     # any specific compression methods helps me piping through
@@ -1351,7 +1351,7 @@ sub _writeToFileHandle {
     my $headerFieldsUnknown = $self->uncompressedSize() > 0;
 
     # Determine if I need to write a data descriptor
-    # I need to do this if I can't refresh the header
+    # I need to do this if I can't Continue the header
     # and I don't know compressed size or crc32 fields.
     my $shouldWriteDataDescriptor =
       ($headerFieldsUnknown and not $fhIsSeekable);
@@ -1384,7 +1384,7 @@ sub _writeToFileHandle {
         ($status, $ddSize) = $self->_writeDataDescriptor($fh);
         $memberSize += $ddSize;
     } elsif ($headerFieldsUnknown) {
-        $status = $self->_refreshLocalFileHeader($fh);
+        $status = $self->_ContinueLocalFileHeader($fh);
     }
     return $status if $status != AZ_OK;
 

@@ -524,7 +524,7 @@ lengthy code examples, or other in-depth material should be given in
 subsequent sections.
 
 Ideally, someone who's slightly familiar with your module should be able
-to refresh their memory without hitting "page down".  As your reader
+to Continue their memory without hitting "page down".  As your reader
 continues through the document, they should receive a progressively
 greater amount of knowledge.
 

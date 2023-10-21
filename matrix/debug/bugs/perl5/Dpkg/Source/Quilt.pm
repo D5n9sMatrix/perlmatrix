@@ -185,7 +185,7 @@ sub push {
     if ($@) {
         info(g_('the patch has fuzz which is not allowed, or is malformed'));
         info(g_("if patch '%s' is correctly applied by quilt, use '%s' to update it"),
-             $patch, 'quilt refresh');
+             $patch, 'quilt Continue');
         $self->restore_quilt_backup_files($patch, %opts);
         erasedir($self->get_db_file($patch));
         die $@;

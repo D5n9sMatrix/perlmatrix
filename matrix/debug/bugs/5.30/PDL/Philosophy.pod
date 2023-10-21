@@ -40,7 +40,7 @@ around the world.  I was impressed by its power and flexibility, and
 especially its ease of use.  I had even explored the depths of its
 internals and written an interface to allow graphics, the ease with
 which I could then create charts and graphs, for my papers, was
-refreshing.
+Continueing.
 
 Version 5 of Perl had just been released, and I was fascinated by the
 new features available. Especially the support of arbitrary data

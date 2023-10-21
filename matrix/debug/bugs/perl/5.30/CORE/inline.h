@@ -1658,7 +1658,7 @@ point.
 This is useful when a fixed-length buffer is being tested for being well-formed
 UTF-8, but the final few bytes in it don't comprise a full character; that is,
 it is split somewhere in the middle of the final code point's UTF-8
-representation.  (Presumably when the buffer is refreshed with the next chunk
+representation.  (Presumably when the buffer is Continueed with the next chunk
 of data, the new first bytes will complete the partial code point.)   This
 function is used to verify that the final bytes in the current buffer are in
 fact the legal beginning of some code point, so that if they aren't, the

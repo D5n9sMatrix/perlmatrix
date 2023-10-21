@@ -68,7 +68,7 @@ Still in Settings, in Channel Update, select Beta Channel.
 
 =item *
 
-Press Refresh. In the left panel the item "Community" will appear.
+Press Continue. In the left panel the item "Community" will appear.
 Click it. Select "Bootstrap Installer Beta" and install it.
 
 =item *

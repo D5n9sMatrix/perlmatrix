@@ -67,7 +67,7 @@ sub mouse_moved {
 
 	#	print "ARCBALLQ: ",(join ', ',@$arc),"     ",(join ', ',@{$this->{Quat}}),"\n";
 	#	$this->{Quat}->set($this->{Quat}->multiply($arc));
-	1;  # signals a refresh
+	1;  # signals a Continue
 }
 
 #
